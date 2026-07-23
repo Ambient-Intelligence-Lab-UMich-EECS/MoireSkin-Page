@@ -1,8 +1,3 @@
-# MoiréSkin Project Page
+# MoiréSkin
 
-This repository hosts the project page for:
-
-**MoiréSkin: Ultra-Sensitive Sensor–Actuator Visuo-Tactile Skin Using Moiré Patterns**
-
-- Project page: https://ambient-intelligence-lab-umich-eecs.github.io/MoireSkin-Page/
-- Paper: https://ambient-intelligence-lab-umich-eecs.github.io/MoireSkin-Page/moireskin-paper.pdf
+Project demonstrations and website assets.
