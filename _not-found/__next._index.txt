@@ -2,4 +2,4 @@
 2:I[9699,[],""]
 3:I[431,[],""]
 :HL["/MoireSkin-Page/_next/static/css/6ec04e2c25514cc8.css","style"]
-0:{"rsc":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/MoireSkin-Page/_next/static/css/6ec04e2c25514cc8.css","precedence":"next"}]],["$","html",null,{"lang":"en","children":["$","body",null,{"children":["$","$L2",null,{"parallelRouterKey":"children","template":["$","$L3",null,{}]}]}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"uQjE_dZkhTPwsRPFHKS8Z"}
+0:{"rsc":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/MoireSkin-Page/_next/static/css/6ec04e2c25514cc8.css","precedence":"next"}]],["$","html",null,{"lang":"en","children":["$","body",null,{"children":["$","$L2",null,{"parallelRouterKey":"children","template":["$","$L3",null,{}]}]}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"d6J5G_lO5GWo92QIKfMXZ"}

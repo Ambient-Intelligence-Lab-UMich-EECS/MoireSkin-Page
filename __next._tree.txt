@@ -1,2 +1,2 @@
 :HL["/MoireSkin-Page/_next/static/css/6ec04e2c25514cc8.css","style"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}},"staleTime":300,"buildId":"uQjE_dZkhTPwsRPFHKS8Z"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}},"staleTime":300,"buildId":"d6J5G_lO5GWo92QIKfMXZ"}
