@@ -1,5 +1,5 @@
 1:"$Sreact.fragment"
-2:I[9699,[],""]
-3:I[431,[],""]
+2:I[1119,[],""]
+3:I[5619,[],""]
 4:[]
-0:{"rsc":["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","template":["$","$L3",null,{}]}]]}],"isPartial":false,"staleTime":300,"varyParams":"$W4","buildId":"d6J5G_lO5GWo92QIKfMXZ"}
+0:{"rsc":["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","template":["$","$L3",null,{}]}]]}],"isPartial":false,"staleTime":300,"varyParams":"$W4","buildId":"l_cdNh-THIvbOUiog7oOU"}
