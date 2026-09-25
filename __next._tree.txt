@@ -1,7 +1,7 @@
-:HL["/MoireSkin-Page/_next/static/css/f83e5b85b9e20031.css","style"]
-:HL["authors/linzhen-zhu.png","image"]
-:HL["authors/liuxi-xing.png","image"]
-:HL["authors/runqiu-wang.png","image"]
-:HL["authors/ke-sun.png","image"]
-:HL["ami-lab-logo.png","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}},"staleTime":300,"buildId":"FOn2XixNcTnkTyCgNaJPL"}
+:HL["/MoireSkin-Page/_next/static/css/901f68b770331796.css","style"]
+:HL["authors/linzhen-zhu.webp","image"]
+:HL["authors/liuxi-xing.webp","image"]
+:HL["authors/runqiu-wang.webp","image"]
+:HL["authors/ke-sun.webp","image"]
+:HL["ami-lab-logo.webp","image"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}},"staleTime":300,"buildId":"rQ8mBFkm1OaEY2C4k1dbx"}
