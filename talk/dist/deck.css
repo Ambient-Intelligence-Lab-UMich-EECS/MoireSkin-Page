@@ -275,7 +275,6 @@ body.blackout #blackout {
   border: 1px solid var(--line);
   border-radius: 22px;
   background: var(--panel);
-  backdrop-filter: blur(14px);
 }
 
 .card h3 {
@@ -602,6 +601,11 @@ svg text {
 .flow {
   stroke-dasharray: 10 10;
   animation: flow 0.9s linear infinite;
+}
+
+/* In the export the dashes step with the 4-s loop of the inference slide. */
+html.export .flow {
+  animation-duration: 1s;
 }
 
 /* Bars grow from the axis; chart points pop in one after another. */
@@ -1106,4 +1110,8 @@ html.export .video-captions li {
   border-radius: 50%;
   box-shadow: 0 16px 40px rgb(0 0 0 / 50%);
   object-position: 42% 50%;
+}
+
+html.export .video-steps li {
+  transition: none;
 }
