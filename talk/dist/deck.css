@@ -1115,3 +1115,34 @@ html.export .video-captions li {
 html.export .video-steps li {
   transition: none;
 }
+
+/* Authors on the title slide, as in the demo video. */
+.authors {
+  display: flex;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.authors li {
+  display: grid;
+  justify-items: center;
+  gap: 12px;
+  width: 150px;
+}
+
+.authors img {
+  width: 116px;
+  height: 116px;
+  border: 2px solid rgb(238 243 251 / 30%);
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.authors span {
+  color: var(--ink);
+  font-size: 22px;
+  font-weight: 600;
+  white-space: nowrap;
+}
