@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Presenter · MoiréSkin talk</title>
+<link rel="stylesheet" href="dist/deck.css">
+<style>
+  html, body { overflow: auto; background: #04070d; }
+  body { margin: 0; padding: 36px 44px; font-family: Inter, "Helvetica Neue", Arial, sans-serif; color: #eef3fb; }
+  header { display: flex; align-items: baseline; justify-content: space-between; gap: 24px; }
+  .where { color: #6e7b90; font-size: 18px; font-weight: 650; letter-spacing: 0.14em; text-transform: uppercase; }
+  h1 { margin: 10px 0 0; font-size: 44px; letter-spacing: -0.035em; }
+  .clock { text-align: right; }
+  .clock .time { font-size: 64px; font-weight: 760; font-variant-numeric: tabular-nums; letter-spacing: -0.04em; line-height: 1; }
+  .clock .pace { margin-top: 8px; font-size: 18px; font-weight: 650; }
+  .ahead { color: #d9f272; }
+  .behind { color: #ff8a65; }
+  .notes { display: block; margin: 30px 0; padding: 28px 32px; border: 1px solid rgb(238 243 251 / 14%); border-radius: 20px; background: rgb(9 16 29 / 72%); color: #dfe7f3; font-size: 30px; line-height: 1.5; max-width: 1200px; }
+  footer { display: flex; align-items: center; justify-content: space-between; gap: 24px; color: #aab6c8; font-size: 20px; }
+  button { padding: 12px 22px; border: 1px solid rgb(238 243 251 / 28%); border-radius: 12px; background: transparent; color: #eef3fb; font: inherit; font-weight: 650; cursor: pointer; }
+  button:hover { border-color: #d9f272; }
+  .next b { color: #eef3fb; }
+</style>
+</head>
+<body>
+<header>
+  <div>
+    <div class="where" id="where">Waiting for the deck…</div>
+    <h1 id="title">Press S in the deck window</h1>
+  </div>
+  <div class="clock">
+    <div class="time" id="time">0:00</div>
+    <div class="pace" id="pace">Timer starts on the first slide change</div>
+  </div>
+</header>
+<div class="notes" id="notes"></div>
+<footer>
+  <div class="next">Next: <b id="next">—</b></div>
+  <div>
+    <button id="prev">← Back</button>
+    <button id="forward">Next →</button>
+    <button id="reset">Reset timer</button>
+  </div>
+</footer>
+<script>
+  // Talks to the deck window through postMessage (works from file:// too).
+  const deck = window.opener;
+  let state = null;
+  let started = null;
+  const $ = (id) => document.getElementById(id);
+  const fmt = (s) => `${Math.floor(s / 60)}:${String(Math.floor(s % 60)).padStart(2, "0")}`;
+
+  function send(action, extra = {}) {
+    deck?.postMessage({ type: "nav", action, ...extra }, "*");
+  }
+
+  window.addEventListener("message", (event) => {
+    if (event.data?.type !== "state") return;
+    if (state && (event.data.index !== state.index || event.data.step !== state.step) && started === null) {
+      started = performance.now();
+    }
+    state = event.data;
+    $("where").textContent = `Slide ${state.index + 1} / ${state.total} · step ${state.step + 1} / ${state.steps} · planned ${state.duration}s`;
+    $("title").textContent = state.title;
+    $("notes").textContent = state.notes;
+    $("next").textContent = state.next;
+  });
+
+  setInterval(() => {
+    if (!state) return;
+    const elapsed = started === null ? 0 : (performance.now() - started) / 1000;
+    $("time").textContent = fmt(elapsed);
+    const plannedStart = state.plan.slice(0, state.index).reduce((sum, s) => sum + s.duration, 0);
+    const total = state.plan.reduce((sum, s) => sum + s.duration, 0);
+    if (started !== null) {
+      const delta = elapsed - plannedStart;
+      const pace = $("pace");
+      pace.className = `pace ${delta > 15 ? "behind" : "ahead"}`;
+      pace.textContent = `${delta > 0 ? "+" : "−"}${fmt(Math.abs(delta))} vs plan · plan total ${fmt(total)}`;
+    }
+  }, 250);
+
+  $("prev").addEventListener("click", () => send("prev"));
+  $("forward").addEventListener("click", () => send("next"));
+  $("reset").addEventListener("click", () => { started = performance.now(); });
+  window.addEventListener("keydown", (event) => {
+    if (["ArrowRight", "ArrowDown", "PageDown", " "].includes(event.key)) { event.preventDefault(); send("next"); }
+    if (["ArrowLeft", "ArrowUp", "PageUp"].includes(event.key)) { event.preventDefault(); send("prev"); }
+  });
+  deck?.postMessage({ type: "hello" }, "*");
+</script>
+</body>
+</html>
