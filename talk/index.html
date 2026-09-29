@@ -15,7 +15,7 @@
 <main id="slides">
 
 
-<section class="slide" id="title" data-shots="hero" data-chrome="off" data-title="MoiréSkin" data-duration="25">
+<section class="slide" id="title" data-shots="hero" data-chrome="off" data-title="MoiréSkin" data-duration="20">
   <p class="block eyebrow r" style="left:120px; top:240px">ACM MobiCom 2026 · Austin, TX</p>
   <h1 class="block display r" style="left:110px; top:292px">MoiréSkin</h1>
   <p class="block lead r" style="left:120px; top:470px; width:820px; color:var(--ink); font-size:38px">Ultra-Sensitive Sensor–Actuator<br>Visuo-Tactile Skin using Moiré Patterns</p>
@@ -35,10 +35,10 @@
       <div class="wordmark"><b>Ambient Intelligence Lab</b><span>AMI Lab</span></div>
     </div>
   </div>
-  <aside class="notes">Hi everyone, I'm Linzhen Zhu from the University of Michigan. In this talk, I'll introduce MoiréSkin: an ultra-sensitive visuo-tactile skin that is also a soft pneumatic actuator. This is joint work with Liuxi Xing, Runqiu Wang and Ke Sun.</aside>
+  <aside class="notes">Hi everyone, I'm Linzhen Zhu from the Ambient Intelligence Lab at the University of Michigan. In this presentation, I'll introduce MoiréSkin: an ultra-sensitive visuo-tactile sensor that is also a soft inflatable actuator.</aside>
 </section>
 
-<section class="slide" id="vts" data-shots="icon" data-title="Robot touch" data-duration="25">
+<section class="slide" id="vts" data-shots="icon" data-title="Robot touch" data-duration="40">
   <p class="block eyebrow r" style="left:120px; top:110px">Robot touch</p>
   <h2 class="block h1 r" style="left:120px; top:152px; width:1600px">A camera watches a soft gel.</h2>
   <figure class="block r" style="left:120px; top:292px; width:1680px; margin:0">
@@ -50,10 +50,10 @@
     </ol>
     <figcaption class="caption" style="font-size:18px; margin-top:10px">Video: GelSight · youtube.com/watch?v=wCZZnyo7k44</figcaption>
   </figure>
-  <aside class="notes">Delicate grasping needs skin that feels tiny forces and adjusts its softness. Most visuo-tactile sensors, like this one on a gripper, use structured light and a camera to image a soft gel as it is pressed.</aside>
+  <aside class="notes">So what is a visuo-tactile sensor? Tactile sensors give a robot what vision alone misses, such as how an object deforms and what it is made of, and this helps dexterous manipulation. Most visuo-tactile sensors, like this one on a gripper, use structured light and a camera to image a soft gel as it is pressed. Because they sense with light, they are immune to electromagnetic interference, and they are one of the most sensitive, highest-resolution classes of tactile sensors today.</aside>
 </section>
 
-<section class="slide" id="hook" data-shots="hook" data-title="A 0.67-gram test" data-duration="40">
+<section class="slide" id="hook" data-shots="hook" data-title="A 0.67-gram test" data-duration="70">
   <p class="block eyebrow r" style="left:120px; top:110px">A 0.67-gram test</p>
   <h2 class="block h1 r" style="left:120px; top:152px; width:1300px; white-space:nowrap">Can robot skin feel a&nbsp;peanut?</h2>
   <div class="block r" style="left:120px; top:320px; display:flex; gap:24px; align-items:center">
@@ -66,10 +66,10 @@
     <div class="photo contain" style="width:359px; height:270px; background:#fff"><img src="assets/img/hook-moire-peanut.webp" alt="MoiréSkin fringes bending under the peanut"></div>
     <div style="width:280px"><p class="tag" style="margin:0"><span class="value fluo" style="font-size:44px">MoiréSkin</span><span class="name">fringes bend</span></p></div>
   </div>
-  <aside class="notes">But for a stable image, their gel is stiff and opaque. Here is a 0.67-gram peanut. On DIGIT, a widely used visuo-tactile sensor, the image barely changes. On MoiréSkin, the fringes clearly bend where the peanut rests. So: can robot skin feel a peanut, and still stay soft?</aside>
+  <aside class="notes">Traditional visuo-tactile sensors are already very sensitive, but look at this simple test with a 0.67-gram peanut. Take DIGIT, one of the most widely used visuo-tactile sensors: with the peanut on it, the image barely changes. That is because most of them use a rigid, opaque sensing surface. (Hold up a real sensor to show its rigid, opaque surface.) On MoiréSkin, however, the fringes clearly bend where the peanut rests. Here is the paradox: to be sensitive, earlier visuo-tactile sensors put their gel on a rigid support, because their imaging needs the gel to deform enough under force. On a soft support, a light press would just spread out: the whole surface sinks a little, and the local deformation becomes too small for the camera to see. So they give up softness for sensitivity, and still miss a touch this light.</aside>
 </section>
 
-<section class="slide" id="paradox" data-shots="paradox" data-title="Sensitive, or soft?" data-duration="60">
+<section class="slide" id="paradox" data-shots="paradox" data-title="Sensitive, or soft?" data-duration="45">
   <p class="block eyebrow r" style="left:120px; top:110px">Visuo-tactile sensors today</p>
   <h2 class="block h1 r" style="left:120px; top:152px">Sensitive, or soft?</h2>
   <svg class="block r" style="left:160px; top:270px" width="1600" height="720" viewBox="0 0 1600 720" aria-label="Force error of visuo-tactile sensors by compliance, from Table 1 of the paper">
@@ -103,10 +103,10 @@
     <text x="1300" y="72" fill="#d9f272" font-size="30" font-weight="760" text-anchor="end">MoiréSkin</text>
     <text x="1300" y="104" fill="#c9d2df" font-size="22" font-weight="600" text-anchor="end">senses + actuates · sees through</text>
   </svg>
-  <aside class="notes">This is not just DIGIT. Here are the visuo-tactile sensors we compare against, with their reported force error, roughly ordered from rigid to soft. Rigid designs like GelSlim and GelSight give high resolution, but their stiff elastomers saturate and cannot comply with irregular contact. Even MoiréTac, which also uses moiré, sits on a rigid substrate. Soft designs like Soft-Bubble comply, but stay around sub-newton precision. Their opaque gels hide the object, and almost none of them can actuate. MoiréSkin aims for the top-right corner: sensitive and soft, and it also actuates and sees through.</aside>
+  <aside class="notes">This is not just DIGIT. Placed by compliance and force error, today's visuo-tactile sensors fall into two groups. Rigid ones, built on a rigid base or a stiff dome, are sensitive but not compliant. Compliant ones, like Soft-Bubble, are soft but far less sensitive. A robot needs both: sensitivity to handle fragile things without crushing them, and compliance to conform to irregular shapes and grip gently. So we aim to build a sensor that achieves both. But how can our soft skin also be highly sensitive?</aside>
 </section>
 
-<section class="slide" id="insight" data-shots="insight" data-title="Our insight: moiré" data-duration="40">
+<section class="slide" id="insight" data-shots="insight" data-title="Our insight: moiré" data-duration="35">
   <p class="block eyebrow r" style="left:120px; top:110px">Our insight</p>
   <h2 class="block h1 r" style="left:120px; top:152px; width:820px">Let moiré<br>amplify touch.</h2>
   <svg class="block r" data-widget="dentView" style="left:100px; top:360px" width="520" height="190" viewBox="0 0 520 190" aria-label="Side view of the film: a press makes only a tiny dent"></svg>
@@ -116,10 +116,10 @@
     <video muted playsinline loop data-autoplay poster="assets/media/real-light-contact.webp" src="assets/media/real-light-contact.mp4"></video>
     <figcaption>Real · light touch</figcaption>
   </figure>
-  <aside class="notes">Our key idea is moiré. Two fine gratings, overlapped, form broad moiré fringes. On the left, the film from the side: a touch dents it by only micrometres, far too little for a camera to see. But a tiny shift between the two gratings moves the fringes a lot, by millimetres, easy for any camera to see. The lens shows the real lines of both gratings. (Hover over the membrane to press it.)</aside>
+  <aside class="notes">Our key idea is to let moiré amplify touch. On the left, the film from the side: a touch dents it by only micrometres, far too little for a camera to see. Moiré amplifies this: the same tiny dent moves the fringes by millimetres, easy for any camera to see. (Hover over the membrane to press it.)</aside>
 </section>
 
-<section class="slide" id="stack" data-shots="stack" data-title="Inside MoiréSkin" data-duration="45">
+<section class="slide" id="stack" data-shots="stack" data-title="Inside MoiréSkin" data-duration="50">
   <p class="block eyebrow r" style="left:120px; top:110px">Hardware</p>
   <h2 class="block h1 r" style="left:120px; top:152px; width:900px">One skin, two jobs.</h2>
   <figure class="block micro-fig r" style="left:120px; top:300px; width:760px; margin:0">
@@ -141,10 +141,10 @@
   <div class="callout r" data-anchor="camera" data-x="1520"><b>Camera</b><span>1080p · 160°</span></div>
   <div class="callout r" data-anchor="led" data-x="1520"><b>LED ring</b><span>faces down · blue</span></div>
   <div class="callout r" data-anchor="reflector" data-x="1520"><b>Diffuse reflector</b></div>
-  <aside class="notes">Here is the hardware. The sensing layer is one soft film with two fine gratings, 330 micrometres in pitch, one on each face; here is our film under a microscope. Add an air chamber below it with a pump, and a camera with an LED ring, and one skin both senses and actuates.</aside>
+  <aside class="notes">Here is the hardware, in three modules. On top are the sensing layers: two fine gratings, 330 micrometres in pitch, plus functional layers for protection, support and isolation; on the left is our film under a microscope. In the middle, an air chamber and a pump make the skin compliant and let it actuate by inflating and deflating. At the bottom, an LED ring lights the gratings and a camera captures the fringes. So far we have talked about sensing, but with this design we build not just a sensor, but also an actuator, in the same cell.</aside>
 </section>
 
-<section class="slide" id="design" data-shots="design" data-title="Optical design" data-duration="40">
+<section class="slide" id="design" data-shots="design" data-title="Optical design" data-duration="65">
   <p class="block eyebrow r" style="left:120px; top:110px">Optical design</p>
   <h2 class="block h1 r" style="left:120px; top:152px; width:1100px">Clear skin, clear fringes.</h2>
   <div class="block tiles cycling r" style="left:120px; top:320px; width:1160px">
@@ -168,10 +168,10 @@
       <p>≈ $50 for the whole system</p>
     </div>
   </div>
-  <aside class="notes">A few small designs make this work. First, the lower grating is fluorescent: blue LEDs make it glow, so the fringes stay high-contrast in any ambient light. Second, the skin stays see-through: light from the object passes through the clear cover, which only filters out red light, to the camera. Here, a phone screen, a USB plug and a power adapter seen through it. And each cell costs under two dollars in materials, with no cleanroom; the whole system is about fifty dollars. (Hover a tile to show it on the sensor.)</aside>
+  <aside class="notes">A few additional small designs make this work. First, the lower grating is fluorescent: blue LEDs make it glow, so the fringes stay high-contrast in any ambient light, or even in complete darkness. Second, the skin stays see-through: light from the object passes through the transparent skin, so the robot can see an object before it even touches it. That lets it recognize what it is about to grasp and line up with it before contact, instead of feeling around blindly. It even solves a problem we all know: which way up a USB plug goes. And each cell costs under two dollars in materials, with no cleanroom; the whole system, including the camera and LEDs, is about fifty dollars. (Hover a tile to show it on the sensor.)</aside>
 </section>
 
-<section class="slide" id="principle" data-shots="pApart pOverlap pAmplify pPressure pWeather pLight pZero" data-title="How it works" data-duration="250">
+<section class="slide" id="principle" data-shots="pApart pOverlap pAmplify pPressure pWeather pLight pZero" data-title="How it works" data-duration="255">
   <p class="block eyebrow r" style="left:120px; top:92px">How it works</p>
   <div class="block tabs r" style="left:120px; top:140px; width:1680px">
     <span data-tab="0">Apart</span><span data-tab="1">Overlap</span><span data-tab="2">Amplify</span><span data-tab="3">Pressure</span><span data-tab="4-5">Drift</span><span data-tab="6">Zero</span>
@@ -225,10 +225,10 @@
     <figcaption>Real · inflation</figcaption>
   </figure>
 
-  <aside class="notes">[Step 1] So how does it work? One scene for the whole story: on the right, the membrane as our camera sees it; on the left, a cross-section of the film. Two fine gratings, an upper one and a fluorescent lower one, 330 micrometres apart: too fine for the camera to track. (Scroll to bring them together.) [Step 2] They sit on the two faces of one film, overlapped at a small angle, and broad moiré fringes appear, about ten times larger than the lines. [Step 3] The angle sets the gain, and this is our first design challenge. A smaller angle gives more gain: a tiny deformation turns the fringes more, so sensitivity rises. But the fringes also get wider, and spatial resolution drops. The two curves cross at 6.31 degrees: ten fringes across 30 millimetres, with about nine-times gain. Now a touch: it dents the film, the upper face is compressed and the lower face stretched, and the fringes distort locally around the contact. In the corner, the real sensor under a finger. (Scroll to change the angle; hover to press.) [Step 4] The same skin also feels its own pressure. Inflation rotates the entire fringe pattern, while touch distorts it locally, so one camera tells internal inflation from external touch, and the fringe angle gives us the chamber pressure, our actuation state. In the corner, the real sensor inflating. (Scroll to pump.) [Step 5] Which brings our second challenge: zero drifts. The chamber is sealed, but the weather is not. Outside air pressure drifts by 10 to 20 hectopascals a day, comparable to our whole actuation range, and the fringes turn although nobody touched or pumped anything. [Step 6] Light does the same. Because the cover is transparent, a lamp outside the skin shifts the apparent fringe angle by a few degrees. (Move the mouse: it steers the lamp.) So where is zero? [Step 7] We use the clamp. The film meets the frame flat, so near the rim its bend reverses: when the film sags or bulges, the centre and rim fringes turn opposite ways, as the two dials show. Only when the film is flat are they parallel. A PID loop pumps against the bend until they line up, within two seconds. That is the zero state, found from a single image, without any pressure sensor.</aside>
+  <aside class="notes">[Step 1] So how does it work? When two identical fine patterns overlap at a small angle, they form a broad, low-frequency pattern: moiré. You have seen it when taking a phone photo of a screen: the camera's fine pixel grid overlaps the screen's pixels. Our skin has two such fine gratings, an upper one and a fluorescent lower one, each with a 330-micrometre pitch: too fine for the camera to track. (Scroll to bring them together.) [Step 2] Overlapped at a small angle, the two gratings produce broad, low-frequency moiré fringes. If one grating stretches or shrinks slightly relative to the other, the fringes rotate: one way for stretch, the other way for compression. [Step 3] The angle sets the gain, and this is our first design challenge. A smaller angle gives more gain: a tiny deformation turns the fringes more, so sensitivity rises. But the fringes also get wider, and spatial resolution drops. So we choose a balanced angle that resolves this trade-off between force sensitivity and spatial resolution. When we touch the skin, it dents the film, so the upper face is compressed and the lower face stretched, and the fringes rotate locally around the contact. The video in the corner shows the same effect on the real sensor, pressed by a finger. (Scroll to change the angle; hover to press.) [Step 4] Besides external forces, the skin also feels its own internal pressure: that is the feedback the pump needs to control actuation, for example to firm up a grip as a load gets heavier. When the skin inflates, the film bulges: in the centre its upper face is stretched, but near the rim, where the film is held flat, the bend reverses and it is compressed, so the centre and rim fringes rotate in opposite directions, as the cross-section on the left shows. Touch, by contrast, changes the fringes only locally, so one camera tells inflation from touch, and the fringe angles give us the chamber pressure; the corner video shows the real sensor inflating. (Scroll to pump.) [Step 5] Which brings our second challenge: zero drifts. The chamber is sealed, but the weather is not. Outside air pressure drifts by 10 to 20 hectopascals a day, comparable to our whole actuation range, and the fringes turn although nobody touched or pumped anything. [Step 6] Light does the same. Because the cover is transparent, any light source outside the skin shifts the apparent fringe angle by a few degrees. (Move the mouse: it steers the lamp.) So where is zero? [Step 7] The answer comes from how the film is held: its edge is fixed flat in a rigid frame. So, as we saw, whenever the film sags or bulges, the centre and rim fringes turn in opposite directions, as the two dials show. Only when the film is flat are they parallel. A PID loop pumps against the bend until they line up, within two seconds. That is the zero state, found by the sensor itself, without any extra pressure sensor.</aside>
 </section>
 
-<section class="slide" id="inference" data-shots="inference" data-title="Two images in, force and position out" data-duration="45">
+<section class="slide" id="inference" data-shots="inference" data-title="Two images in, force and position out" data-duration="40">
   <p class="block eyebrow r" style="left:120px; top:110px">Sensing</p>
   <h2 class="block h1 r" style="left:120px; top:152px; width:1500px">Two images → force + position.</h2>
   <svg class="block r" style="left:790px; top:310px" width="1000" height="577" viewBox="0 0 1040 600" aria-label="Two-stage tactile inference pipeline, after Fig. 9 of the paper">
@@ -280,10 +280,10 @@
     <text x="968" y="154" fill="#d9f272" font-size="25" font-weight="760">Force</text>
     <text x="968" y="404" fill="#6b98ff" font-size="25" font-weight="760">Position</text>
   </svg>
-  <aside class="notes">Now sensing. Images before and after touch estimate contact position and normal force. We feed both images as two channels to a ResNet-50 with an attention module. Stage one predicts coarse force and position; stage two refines each with the other, because stiffness varies across the inflated skin and inflation shifts positions. In our ablation, the pre-contact image cuts the tiny-force error by 45 percent.</aside>
+  <aside class="notes">With the skin at its zero state, we can read touch from the fringes. We use images before and after touch to estimate contact position and normal force. We feed both images as two channels to a ResNet-50 with an attention module. Stage one predicts coarse force and position; stage two refines each with the other, because the inflated skin is softer in the centre than near the rim, and because bulging shifts where a contact appears.</aside>
 </section>
 
-<section class="slide" id="results" data-shots="results" data-title="Millinewton precision" data-duration="50">
+<section class="slide" id="results" data-shots="results" data-title="Millinewton precision" data-duration="20">
   <p class="block eyebrow r" style="left:120px; top:110px">Sensing</p>
   <h2 class="block h1 r" style="left:120px; top:152px; width:1300px">Millinewton precision.</h2>
   <div class="block r" style="left:120px; top:330px; width:780px">
@@ -301,10 +301,10 @@
     </div>
   </div>
   <svg class="block r" data-widget="forceBars" style="left:960px; top:400px" width="840" height="500" viewBox="0 0 840 500" aria-label="Force error of MoiréSkin and prior visuo-tactile sensors"></svg>
-  <aside class="notes">In the tiny-force tests, a 0.72-millimetre probe up to 0.4 newtons at the zero state, on unseen positions, MoiréSkin reaches 3.78 millinewtons of force error and 0.094 millimetres of position error. Under random inflation up to 4 newtons, 94.9 percent of force errors stay below 0.1 newton. On the right, the same sensors as before: from GelSight at 1.9 newtons to ViTacTip at 0.01. MoiréSkin reaches 0.0038, on a skin that also actuates. Inference runs in under a millisecond on a GPU and 22 milliseconds on a laptop.</aside>
+  <aside class="notes">MoiréSkin reaches a force error of 3.78 millinewtons and a position error of 0.094 millimetres. That makes it the most sensitive visuo-tactile sensor reported to date.</aside>
 </section>
 
-<section class="slide" id="softness" data-shots="softness" data-title="Sense + actuate: active probing" data-duration="45">
+<section class="slide" id="softness" data-shots="softness" data-title="Sense + actuate: active probing" data-duration="60">
   <p class="block eyebrow r" style="left:120px; top:110px">Sense + actuate</p>
   <h2 class="block h1 r" style="left:120px; top:152px; width:1100px">An active probe.</h2>
   <div class="block r" style="left:120px; top:320px; width:520px; display:grid; gap:34px">
@@ -316,10 +316,10 @@
     <video muted playsinline loop data-autoplay poster="assets/media/real-soft.webp" src="assets/media/real-soft.mp4"></video>
     <figcaption>Real sensor</figcaption>
   </figure>
-  <aside class="notes">Now sensing and actuation together. MoiréSkin can act as an active probe. A soft sphere sits between the skin and a rigid support; the skin first just holds it, then inflates to press against it. How the fringes change between the two states tells its stiffness. We distinguish seven ultra-soft materials, as soft as tofu, from 8.7 to 21.7 kilopascals: 92.7 percent with 5 shots and 99.7 percent with 10, using our tactile backbone without fine-tuning and a simple LDA classifier.</aside>
+  <aside class="notes">Because the same skin can also actuate, it can act as an active probe. A soft ball sits between the skin and a rigid support; the skin first just holds it, then inflates to press against it. How the fringes change between the two states tells its stiffness, just like gently pinching something between our fingertips to feel how soft it is. These balls are as soft as tofu: because the skin is compliant, it does not crush them, and because it is sensitive, it still tells them apart. We distinguish seven ultra-soft materials, from 8.7 to 21.7 kilopascals: 92.7 percent with 5 shots and 99.7 percent with 10, using our tactile backbone without fine-tuning and a simple LDA classifier.</aside>
 </section>
 
-<section class="slide" id="shear" data-shots="shear" data-title="Sense + actuate: dynamic load" data-duration="35">
+<section class="slide" id="shear" data-shots="shear" data-title="Sense + actuate: dynamic load" data-duration="30">
   <p class="block eyebrow r" style="left:120px; top:110px">Sense + actuate</p>
   <h2 class="block h1 r" style="left:120px; top:152px; width:1100px">Weighing a filling cup.</h2>
   <div class="block r" style="left:120px; top:320px; width:560px; display:grid; gap:34px">
@@ -331,10 +331,10 @@
     <img src="assets/img/cup-setup.webp" alt="Cup held against MoiréSkin in a bench vise">
     <figcaption>Real setup</figcaption>
   </figure>
-  <aside class="notes">And a changing load. The skin inflates to clamp a cup against a jaw, then holds while water is poured in, up to about 300 millilitres. From the fringes, MoiréSkin tracks the liquid mass with 4.15 grams mean error and 4.75 grams RMSE on an unseen session.</aside>
+  <aside class="notes">MoiréSkin can also hold a cup: it inflates to clamp the cup against a jaw. Then it keeps holding while water is poured in, up to about 300 millilitres. From the fringes, it tracks the liquid mass with 4.15 grams mean error and 4.75 grams RMSE on an unseen session.</aside>
 </section>
 
-<section class="slide" id="lego" data-shots="icon" data-title="Application: toy LEGO arm" data-duration="45">
+<section class="slide" id="lego" data-shots="icon" data-title="Application: toy LEGO arm" data-duration="60">
   <p class="block eyebrow r" style="left:120px; top:110px">Application</p>
   <h2 class="block h1 r" style="left:120px; top:152px; width:1600px">A toy arm, a precise touch.</h2>
   <figure class="block r" style="left:120px; top:300px; width:900px; margin:0">
@@ -347,7 +347,7 @@
     <li data-from="21.7" data-to="41.4"><b>3</b>Feels the weight, inflates</li>
     <li data-from="41.4" data-to="61"><b>4</b>Holds steady, sets it down</li>
   </ol>
-  <aside class="notes">Now on robots. In this demo, MoiréSkin enables a toy LEGO robotic arm to manipulate objects with professional-level precision. The arm grasps a cup; water pours in; the skin feels the added weight and inflates to firm its grip; then it holds steady and sets the cup down. Its ultrasensitive tactile feedback helps compensate for errors in the arm's control.</aside>
+  <aside class="notes">This even works on a cheap toy arm. In this demo, MoiréSkin lets a LEGO robotic arm manipulate objects with professional-level precision. The arm grasps a cup; water pours in; the skin feels the added weight and inflates to firm its grip; then it holds steady and sets the cup down. Its ultrasensitive tactile feedback helps compensate for errors in the arm's control.</aside>
 </section>
 
 <section class="slide" id="umi" data-shots="icon" data-title="Application: handheld gripper" data-duration="35">
@@ -361,10 +361,10 @@
     <p class="tag" style="margin:0"><span class="value fluo" style="font-size:52px">Senses tactile contact</span><span class="name">from fringe changes</span></p>
     <p class="tag" style="margin:0"><span class="value" style="font-size:52px">Sees the berry</span><span class="name">through the skin</span></p>
   </div>
-  <aside class="notes">We also built a UMI-style handheld gripper with MoiréSkin, for collecting manipulation data in future work. Here it picks up a strawberry: MoiréSkin senses the tactile contact from the fringe changes, while the same camera sees through the skin to identify the grasped object as a strawberry. Both demos are qualitative.</aside>
+  <aside class="notes">We also built a UMI-style handheld gripper with MoiréSkin. Here it picks up a strawberry: MoiréSkin senses the tactile contact from the fringe changes, while the same camera sees through the skin to identify the grasped object as a strawberry. We hope to use it to collect manipulation data and train our own robot policies with MoiréSkin.</aside>
 </section>
 
-<section class="slide" id="closing" data-shots="closing" data-chrome="off" data-title="Takeaways" data-duration="35">
+<section class="slide" id="closing" data-shots="closing" data-chrome="off" data-title="Takeaways" data-duration="30">
   <ol class="block steps-list big r" style="left:120px; top:130px; width:860px; gap:22px">
     <li data-n="01"><span><b>Ultra-sensitive</b> · 3.78 mN</span></li>
     <li data-n="02"><span><b>Soft &amp; actuated</b> · feels its own pressure</span></li>
