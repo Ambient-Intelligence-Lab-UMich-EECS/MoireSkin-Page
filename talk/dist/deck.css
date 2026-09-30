@@ -1004,6 +1004,11 @@ html.export .tiles.cycling .tile .tile-visual {
   font-size: 24px;
 }
 
+.slide.is-active .video-steps[data-hover-loop] li {
+  cursor: pointer;
+  pointer-events: auto;
+}
+
 .video-steps li.current {
   background: rgb(217 242 114 / 12%);
   color: var(--ink);
