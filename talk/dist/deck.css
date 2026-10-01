@@ -312,12 +312,41 @@ body.blackout #blackout {
   transform: translateX(-50%);
 }
 
+/* From the first object to the second: an arrow, not just a rule. */
 .soft-scale .bar {
-  width: 150px;
+  width: 138px;
   height: 4px;
-  margin: 0 12px;
-  border-radius: 2px;
-  background: var(--fluo);
+  margin: 0 24px 0 12px;
+  border-radius: 2px 0 0 2px;
+  background: linear-gradient(90deg, rgb(217 242 114 / 25%), var(--fluo));
+}
+
+.soft-scale .bar::after {
+  position: absolute;
+  top: -8px;
+  right: -14px;
+  border: 10px solid transparent;
+  border-right: 0;
+  border-left: 16px solid var(--fluo);
+  content: "";
+}
+
+/* An everyday object under a stat, for scale. */
+.stat .like {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 14px;
+  color: #a9c2ff;
+  font-size: 21px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.stat .like svg {
+  flex: none;
+  width: 40px;
+  height: 40px;
 }
 
 .soft-scale .lt {
