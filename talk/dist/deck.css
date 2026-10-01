@@ -126,6 +126,17 @@ body.blackout #blackout {
   opacity: 0;
 }
 
+/* Revealed and settled (set by the deck once the reveal has finished). */
+.slide .r.is-on,
+.slide [data-step].is-on {
+  opacity: 1;
+}
+
+/* Not on screen at this step: out of painting altogether (set by the deck). */
+.slide .is-off {
+  visibility: hidden;
+}
+
 .notes {
   display: none;
 }
