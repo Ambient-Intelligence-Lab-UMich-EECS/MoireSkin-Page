@@ -1376,16 +1376,6 @@ html.export .video-captions li {
   white-space: nowrap;
 }
 
-/* Points at what goes wrong in a clip: a word and an arrow, in amber (a limitation). */
-.video-captions li.mark {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding-right: 14px;
-  color: #ffbe7d;
-  box-shadow: 0 0 0 1.5px rgb(255 190 125 / 55%), 0 0 22px rgb(255 190 125 / 30%);
-}
-
 /* Points at our skin in a clip: its name in a capsule and an arrow down to it, in the
    skin's colour. left/top are where the arrow's tip is. */
 .video-captions li.pointer {

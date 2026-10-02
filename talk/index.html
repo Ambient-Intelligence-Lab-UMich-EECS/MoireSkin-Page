@@ -533,19 +533,18 @@
   <h2 class="block h1 r" style="left:120px; top:152px; width:1600px"><span class="grad">Dexterity</span> for even a toy arm.</h2>
   <!-- The clip is the recorded demo with two changes. It waits 2 s on the frame where the skin
        has just lit up (0.79-2.79 s), while a label points at it. And it has one insert (step 4):
-       the same pour side by side, dissolving in at 15.58-15.83 s and out at 21.67-21.92 s. The
-       steps' times leave the two dissolves out, so a step that loops under the pointer shows
-       only its own picture. Left: the cup composited to slide through the
-       grip; no such run was filmed, so its caption says "illustration". Right: the footage as
-       recorded. The dashed line in the clip is the height the real cup's rim ends at. Made by
+       the same pour side by side, dissolving in at 15.58-15.83 s and out at 21.00-21.25 s. Left:
+       the cup composited to tip out of the grip and fall once the pour ends (19.5 s), leaving
+       the gripper empty; no such run was filmed, so its caption says "illustration". Right: the
+       footage as recorded. The steps' times leave the two dissolves out, so a step that loops
+       under the pointer shows only its own picture. Made by
        teaser_video/experiments/slip/lego_with_comparison.py from lego-arm.mp4. -->
   <figure class="block r" style="left:120px; top:300px; width:900px; margin:0">
     <div class="photo" style="height:586px; background:#000"><video id="lego-video" muted playsinline loop data-autoplay poster="assets/media/lego-arm.webp" src="assets/media/lego-arm-compare.mp4" style="object-fit:contain"></video></div>
     <ol class="video-captions" data-video-steps="#lego-video">
       <li class="pointer" data-from="0.7" data-to="2.75" style="left:265px; top:250px"><span>MoiréSkin</span><svg width="24" height="58" viewBox="0 0 24 58" aria-hidden="true"><path d="M12 2V50M3 40l9 12 9-12" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg></li>
-      <li class="side" data-from="15.71" data-to="21.79" style="left:16px; top:16px">Failure case · illustration</li>
-      <li class="side ours" data-from="15.71" data-to="21.79" style="left:466px; top:16px">MoiréSkin · sensing + actuation</li>
-      <li class="mark" data-from="18.1" data-to="21.79" style="left:26px; top:390px">Slip<svg width="70" height="24" viewBox="0 0 70 24" aria-hidden="true"><path d="M2 12H62M50 3l13 9-13 9" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg></li>
+      <li class="side" data-from="15.71" data-to="21.12" style="left:16px; top:16px">Failure case · illustration</li>
+      <li class="side ours" data-from="15.71" data-to="21.12" style="left:466px; top:16px">MoiréSkin · sensing + actuation</li>
     </ol>
   </figure>
   <p class="block chip r" style="left:1100px; top:310px">Toy-grade, low-precision arm</p>
@@ -553,10 +552,10 @@
     <li data-from="0" data-to="9"><b>1</b>Grasp the cup</li>
     <li data-from="9" data-to="10.93"><b>2</b>Water pours in</li>
     <li data-from="10.93" data-to="15.58"><b>3</b>Feels the weight, inflates</li>
-    <li data-from="15.88" data-to="21.66"><b>4</b>Without feedback, it would slip</li>
-    <li data-from="21.92" data-to="29"><b>5</b>Holds steady, sets it down</li>
+    <li data-from="15.88" data-to="20.99"><b>4</b>Without feedback, it would fall</li>
+    <li data-from="21.25" data-to="29"><b>5</b>Holds steady, sets it down</li>
   </ol>
-  <aside class="notes">And one more thing: MoiréSkin brings dexterity even to a 50-dollar, low-precision LEGO toy arm. (The label points at the skin on its gripper.) Here it grasps a cup. Water is poured in. The skin feels the weight and inflates to firm its grip. (Side by side, the same pour: on the left, an illustration of the cup slipping without tactile feedback as the water adds weight; on the right, the real run with feedback.) It holds the cup steady and sets it down gently.</aside>
+  <aside class="notes">And one more thing: MoiréSkin brings dexterity even to a 50-dollar, low-precision LEGO toy arm. (The label points at the skin on its gripper.) Here it grasps a cup. Water is poured in. The skin feels the weight and inflates to firm its grip. (Side by side, the same pour: on the left, an illustration of the cup falling out of the grip without tactile feedback; on the right, the real run with feedback.) It holds the cup steady and sets it down gently.</aside>
 </section>
 
 <section class="slide" id="umi" data-shots="icon" data-title="Data collection kit" data-duration="25">
