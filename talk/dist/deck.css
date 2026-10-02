@@ -1358,6 +1358,17 @@ html.export .video-captions li {
   transition: none;
 }
 
+/* A caption over footage of our own skin at work: the real-sensor capsule, with its rim in
+   the deck's gradient and a glow in its two colours. */
+.video-captions li.ours {
+  padding: 8px 18px;
+  border: 2px solid transparent;
+  background: linear-gradient(95deg, rgb(217 242 114 / 24%) 0%, rgb(165 227 194 / 20%) 42%, rgb(134 173 255 / 28%) 100%) padding-box,
+    linear-gradient(rgb(9 15 28 / 92%), rgb(9 15 28 / 92%)) padding-box,
+    linear-gradient(95deg, var(--fluo) 0%, #a5e3c2 42%, var(--air) 100%) border-box;
+  box-shadow: -12px 0 28px rgb(217 242 114 / 24%), 12px 0 28px rgb(134 173 255 / 30%);
+}
+
 /* Points at what goes wrong in a clip: a word and an arrow, in amber (a limitation). */
 .video-captions li.mark {
   display: flex;
