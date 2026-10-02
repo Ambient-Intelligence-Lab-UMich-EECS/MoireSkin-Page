@@ -11,13 +11,14 @@
 <div id="stage">
 <canvas id="scene" aria-hidden="true"></canvas>
 <svg id="hud" viewBox="0 0 1920 1080" aria-hidden="true"></svg>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><filter id="pill-glow" x="-40%" y="-120%" width="180%" height="340%"><feGaussianBlur stdDeviation="9"/></filter><linearGradient id="grad-ink" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#d9f272"/><stop offset="0.42" stop-color="#a5e3c2"/><stop offset="1" stop-color="#86adff"/></linearGradient></defs></svg>
 
 <main id="slides">
 
 
 <section class="slide" id="title" data-shots="hero" data-chrome="off" data-title="MoiréSkin" data-duration="20">
-  <p class="block eyebrow r" style="left:120px; top:240px">ACM MobiCom 2026 · Austin, TX</p>
-  <h1 class="block display r" style="left:110px; top:292px">MoiréSkin</h1>
+  <p class="block eyebrow r" style="left:120px; top:228px">ACM MobiCom 2026 · Austin, TX</p>
+  <h1 class="block display r" style="left:110px; top:292px"><span class="grad">MoiréSkin</span></h1>
   <p class="block lead r" style="left:120px; top:470px; width:820px; color:var(--ink); font-size:38px">Ultra-Sensitive Sensor–Actuator<br>Visuo-Tactile Skin using Moiré Patterns</p>
   <ul class="block authors r" style="left:120px; top:610px">
     <li><img src="assets/img/authors/linzhen.webp" alt=""><span>Linzhen Zhu</span></li>
@@ -39,7 +40,7 @@
 </section>
 
 <section class="slide" id="vts" data-shots="icon" data-title="Visuo-tactile sensor" data-duration="15">
-  <p class="block eyebrow r" style="left:120px; top:110px">Visuo-tactile sensor</p>
+  <p class="block eyebrow r" style="left:120px; top:98px">Visuo-tactile sensor</p>
   <h2 class="block h1 r" style="left:120px; top:152px; width:1600px">Tactile → visual: a camera reads touch.</h2>
   <figure class="block r" style="left:120px; top:292px; width:1680px; margin:0">
     <div class="photo" style="height:640px; background:#000"><video id="gel-video" muted playsinline loop data-autoplay poster="assets/media/gelsight-gripper.webp" src="assets/media/gelsight-gripper.mp4"></video></div>
@@ -47,15 +48,15 @@
       <li data-from="0" data-to="99" style="left:28px; top:28px">A robot gripper with visuo-tactile sensors</li>
       <li data-from="0" data-to="99" style="right:28px; bottom:calc(100% - 612px)">GelSight</li>
     </ol>
-    <figcaption class="caption" style="font-size:18px; margin-top:10px">Video: GelSight · youtube.com/watch?v=wCZZnyo7k44</figcaption>
+    <figcaption class="caption" style="font-size:20px; margin-top:10px">Video: GelSight · youtube.com/watch?v=wCZZnyo7k44</figcaption>
   </figure>
-  <aside class="notes">So what is a visuo-tactile sensor? Tactile sensing tells a robot how an object deforms and how much force is applied.</aside>
+  <aside class="notes">So what is a visuo-tactile sensor? Just like the sensor on the gripper. Tactile sensing tells a robot how an object deforms and how much force is applied.</aside>
 </section>
 
 <!-- The second scene of the same clip. Same header, shown at once (no .r),
      so moving here only crossfades the video. -->
 <section class="slide" id="vts-press" data-shots="icon" data-title="Visuo-tactile sensor: camera view" data-duration="15">
-  <p class="block eyebrow" style="left:120px; top:110px">Visuo-tactile sensor</p>
+  <p class="block eyebrow" style="left:120px; top:98px">Visuo-tactile sensor</p>
   <h2 class="block h1" style="left:120px; top:152px; width:1600px">Tactile → visual: a camera reads touch.</h2>
   <figure class="block" style="left:120px; top:292px; width:1680px; margin:0">
     <div class="photo" style="height:640px; background:#000"><video id="gel-press-video" muted playsinline loop data-autoplay poster="assets/media/gelsight-press.webp" src="assets/media/gelsight-press.mp4"></video></div>
@@ -63,15 +64,15 @@
       <li data-from="0" data-to="99" style="left:28px; top:28px">Imaging a pressed screw</li>
       <li data-from="0" data-to="99" style="right:28px; bottom:calc(100% - 612px)">GelSight</li>
     </ol>
-    <figcaption class="caption" style="font-size:18px; margin-top:10px">Video: GelSight · youtube.com/watch?v=wCZZnyo7k44</figcaption>
+    <figcaption class="caption" style="font-size:20px; margin-top:10px">Video: GelSight · youtube.com/watch?v=wCZZnyo7k44</figcaption>
   </figure>
   <aside class="notes">A visuo-tactile sensor turns touch into an image: a camera watches a soft gel deform as it is pressed, here by a screw.</aside>
 </section>
 
 
-<section class="slide" id="related" data-shots="icon" data-title="Related works: sensitive, or compliant?" data-duration="40">
-  <p class="block eyebrow r" style="left:120px; top:110px">Visuo-tactile sensors today</p>
-  <h2 class="block h1 r" style="left:120px; top:152px; width:1500px">Related works: sensitive, or compliant?</h2>
+<section class="slide" id="related" data-shots="icon" data-title="Related works: sensitive, or compliant?" data-duration="35">
+  <p class="block eyebrow r" style="left:120px; top:98px">Visuo-tactile sensors today</p>
+  <h2 class="block h1 r" style="left:120px; top:152px; width:1500px">Related works: <span class="grad">sensitive, or compliant?</span></h2>
   <svg class="block r" style="left:160px; top:270px" width="1600" height="720" viewBox="0 0 1600 720" aria-label="Force error of visuo-tactile sensors by compliance, from Table 1 of the paper">
     <g stroke="rgb(238 243 251 / 18%)" stroke-width="1.5">
       <line x1="120" y1="40" x2="120" y2="600"/><line x1="120" y1="600" x2="1500" y2="600"/>
@@ -79,58 +80,58 @@
       <line x1="120" y1="334" x2="1500" y2="334" stroke-dasharray="4 9"/>
       <line x1="120" y1="154" x2="1500" y2="154" stroke-dasharray="4 9"/>
     </g>
-    <g fill="#a9c2ff" font-size="23" font-weight="700" text-anchor="end">
-      <text x="104" y="522">1 N</text><text x="104" y="342">0.1 N</text><text x="104" y="162">0.01 N</text>
+    <g fill="#ffffff" font-size="26" font-weight="760" text-anchor="end">
+      <text data-pill="axis" x="96" y="522">1 N</text><text data-pill="axis" x="96" y="342">0.1 N</text><text data-pill="axis" x="96" y="162">0.01 N</text>
     </g>
     <!-- An everyday object that weighs about as much as each force. -->
-    <g transform="translate(136 462) scale(1.9)" fill="none" stroke="#a9c2ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 7.4C9.4 5.4 4.8 6.4 4.8 11.4c0 4.6 3 9.1 5.6 9.1.8 0 1.1-.5 1.6-.5s.8.5 1.6.5c2.6 0 5.6-4.5 5.6-9.1 0-5-4.6-6-7.2-4Z"/><path d="M12 7.4c0-2 .8-3.3 2.2-4.2"/><path d="M14.6 4.4c1.2-.9 2.6-.9 3.6-.4-.4 1.2-1.6 2-3 2"/></g><g transform="translate(136 282) scale(1.9)" fill="none" stroke="#a9c2ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21.5C6.5 18 3.8 13.2 4.6 9.6 5.4 6.4 9 5.6 12 7.2c3-1.6 6.6-.8 7.4 2.4.8 3.6-1.9 8.4-7.4 11.9Z"/><path d="M8.6 4.6 12 7.2l3.4-2.6M12 7.2V3"/><path d="M9 11.2h.01M12 13.6h.01M15 11.2h.01M10.4 16h.01M13.6 16h.01" stroke-width="2.2"/></g><g transform="translate(136 102) scale(1.9)" fill="none" stroke="#a9c2ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21.4 11.1l-9.2 9.2a6 6 0 0 1-8.5-8.5l9.2-9.2a4 4 0 0 1 5.7 5.7l-9.2 9.2a2 2 0 0 1-2.8-2.8l8.5-8.5"/></g>
-    <g fill="#a9c2ff" font-size="21" font-weight="600">
+    <g transform="translate(136 462) scale(1.9)" fill="none" stroke="#ffffff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 7.4C9.4 5.4 4.8 6.4 4.8 11.4c0 4.6 3 9.1 5.6 9.1.8 0 1.1-.5 1.6-.5s.8.5 1.6.5c2.6 0 5.6-4.5 5.6-9.1 0-5-4.6-6-7.2-4Z"/><path d="M12 7.4c0-2 .8-3.3 2.2-4.2"/><path d="M14.6 4.4c1.2-.9 2.6-.9 3.6-.4-.4 1.2-1.6 2-3 2"/></g><g transform="translate(136 282) scale(1.9)" fill="none" stroke="#ffffff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21.5C6.5 18 3.8 13.2 4.6 9.6 5.4 6.4 9 5.6 12 7.2c3-1.6 6.6-.8 7.4 2.4.8 3.6-1.9 8.4-7.4 11.9Z"/><path d="M8.6 4.6 12 7.2l3.4-2.6M12 7.2V3"/><path d="M9 11.2h.01M12 13.6h.01M15 11.2h.01M10.4 16h.01M13.6 16h.01" stroke-width="2.2"/></g><g transform="translate(136 102) scale(1.9)" fill="none" stroke="#ffffff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21.4 11.1l-9.2 9.2a6 6 0 0 1-8.5-8.5l9.2-9.2a4 4 0 0 1 5.7 5.7l-9.2 9.2a2 2 0 0 1-2.8-2.8l8.5-8.5"/></g>
+    <g fill="#ffffff" font-size="24" font-weight="700">
       <text x="190" y="498">≈ an apple</text><text x="190" y="318">≈ a strawberry</text><text x="190" y="138">≈ a paperclip</text>
     </g>
-    <text x="120" y="22" fill="#c9d2df" font-size="22" font-weight="700" letter-spacing="2">MORE SENSITIVE ↑ · FORCE ERROR, LOG</text>
+    <text x="120" y="22" fill="#ffffff" font-size="25" font-weight="760" letter-spacing="2">MORE SENSITIVE ↑ · FORCE ERROR, LOG</text>
   </svg>
   <!-- One column per click, left to right; then the empty corner. -->
   <svg class="block" data-step="1" style="left:160px; top:270px" width="1600" height="720" viewBox="0 0 1600 720" aria-label="Rigid-base sensors: sensitive, not compliant">
-    <text x="300" y="640" fill="#a9c2ff" font-size="23" font-weight="700" text-anchor="middle">Rigid base</text>
-    <g fill="#8f99ab" font-size="22" font-weight="600"><circle cx="300" cy="262" r="13"/><text x="324" y="270" fill="#c9d2df">GelSlim 4.0</text><circle cx="300" cy="406" r="13"/><text x="324" y="414" fill="#c9d2df">MoiréTac</text></g>
+    <text data-pill="rigid" x="300" y="638" fill="#ffffff" font-size="25" font-weight="760" text-anchor="middle">Rigid base</text>
+    <g fill="#8f99ab" font-size="26" font-weight="650"><circle cx="300" cy="262" r="13"/><text x="324" y="270" fill="#dce4ee">GelSlim 4.0</text><circle cx="300" cy="406" r="13"/><text x="324" y="414" fill="#dce4ee">MoiréTac</text></g>
   </svg>
   <svg class="block" data-step="2" style="left:160px; top:270px" width="1600" height="720" viewBox="0 0 1600 720" aria-label="Elastomer on a rigid base">
-    <text x="650" y="640" fill="#a9c2ff" font-size="23" font-weight="700" text-anchor="middle">Elastomer on rigid base</text>
-    <g fill="#8f99ab" font-size="22" font-weight="600"><circle cx="650" cy="564" r="13"/><text x="674" y="572" fill="#c9d2df">GelSight</text><circle cx="632" cy="444" r="13"/><text x="608" y="456" fill="#c9d2df" text-anchor="end">DenseTact 2.0</text><circle cx="668" cy="422" r="13"/><text x="692" y="426" fill="#c9d2df">9DTact</text></g>
+    <text data-pill="rigid" x="650" y="638" fill="#ffffff" font-size="25" font-weight="760" text-anchor="middle">Elastomer on rigid base</text>
+    <g fill="#8f99ab" font-size="26" font-weight="650"><circle cx="650" cy="564" r="13"/><text x="674" y="572" fill="#dce4ee">GelSight</text><circle cx="632" cy="444" r="13"/><text x="608" y="456" fill="#dce4ee" text-anchor="end">DenseTact 2.0</text><circle cx="668" cy="422" r="13"/><text x="692" y="426" fill="#dce4ee">9DTact</text></g>
   </svg>
   <svg class="block" data-step="3" style="left:160px; top:270px" width="1600" height="720" viewBox="0 0 1600 720" aria-label="Shaped or dome sensors">
-    <text x="1000" y="640" fill="#a9c2ff" font-size="23" font-weight="700" text-anchor="middle">Shaped / dome</text>
-    <g fill="#8f99ab" font-size="22" font-weight="600"><circle cx="1000" cy="240" r="13"/><text x="1024" y="248" fill="#c9d2df">Insight</text><circle cx="1000" cy="154" r="13"/><text x="1024" y="162" fill="#c9d2df">ViTacTip</text></g>
+    <text data-pill="rigid" x="1000" y="638" fill="#ffffff" font-size="25" font-weight="760" text-anchor="middle">Shaped / dome</text>
+    <g fill="#8f99ab" font-size="26" font-weight="650"><circle cx="1000" cy="240" r="13"/><text x="1024" y="248" fill="#dce4ee">Insight</text><circle cx="1000" cy="154" r="13"/><text x="1024" y="162" fill="#dce4ee">ViTacTip</text></g>
     <!-- The three so far share one trait. -->
-    <path d="M215 656C215 665 215 665 231 665L644 665C660 665 660 665 660 674C660 665 660 665 676 665L1089 665C1105 665 1105 665 1105 656" fill="none" stroke="#ffbe7d" stroke-width="2.5" stroke-linecap="round"/><text x="660" y="706" fill="#ffbe7d" font-size="28" font-weight="760" text-anchor="middle">Rigid</text>
+    <path d="M215 660C215 668 215 668 231 668L644 668C660 668 660 668 660 676C660 668 660 668 676 668L1089 668C1105 668 1105 668 1105 660" fill="none" stroke="#ffbe7d" stroke-width="2.5" stroke-linecap="round"/><text x="660" y="710" fill="#ffbe7d" font-size="28" font-weight="760" text-anchor="middle">Rigid</text>
   </svg>
   <svg class="block" data-step="4" style="left:160px; top:270px" width="1600" height="720" viewBox="0 0 1600 720" aria-label="Air-inflated sensors: compliant, but far less sensitive">
-    <text x="1350" y="640" fill="#a9c2ff" font-size="23" font-weight="700" text-anchor="middle">Air-inflated</text>
-    <g fill="#8f99ab" font-size="22" font-weight="600"><circle cx="1350" cy="497" r="13"/><text x="1374" y="505" fill="#c9d2df">Soft-Bubble</text></g>
-    <path d="M1255 656C1255 665 1255 665 1271 665L1334 665C1350 665 1350 665 1350 674C1350 665 1350 665 1366 665L1429 665C1445 665 1445 665 1445 656" fill="none" stroke="#7da6ff" stroke-width="2.5" stroke-linecap="round"/><text x="1350" y="706" fill="#7da6ff" font-size="28" font-weight="760" text-anchor="middle">Compliant</text>
+    <text data-pill="soft" x="1350" y="638" fill="#ffffff" font-size="25" font-weight="760" text-anchor="middle">Air-inflated</text>
+    <g fill="#8f99ab" font-size="26" font-weight="650"><circle cx="1350" cy="497" r="13"/><text x="1374" y="505" fill="#dce4ee">Soft-Bubble</text></g>
+    <path d="M1255 660C1255 668 1255 668 1271 668L1334 668C1350 668 1350 668 1350 676C1350 668 1350 668 1366 668L1429 668C1445 668 1445 668 1445 660" fill="none" stroke="#7da6ff" stroke-width="2.5" stroke-linecap="round"/><text x="1350" y="710" fill="#7da6ff" font-size="28" font-weight="760" text-anchor="middle">Compliant</text>
   </svg>
   <div class="block gap-mark" data-step="5" style="left:1466px; top:305px" aria-label="Nothing yet is both compliant and sensitive">?</div>
-  <aside class="notes">To answer that, start with what a robot needs: first, sensitivity, to handle fragile things, and second, compliance, to grip them gently. But here is the paradox: no visuo-tactile sensor today has both. Rigid ones, like those built on a rigid base or a stiff dome, are sensitive but not compliant, and compliant ones, like Soft-Bubble, are soft but far less sensitive. So how can one skin be both?</aside>
+  <aside class="notes">Today's visuo-tactile sensors face a paradox: none is both sensitive and compliant. Rigid ones, like those built on a rigid base or a stiff dome, are sensitive but not compliant, and compliant ones, like Soft-Bubble, are soft but far less sensitive. So this corner is still empty.</aside>
 </section>
 
 <!-- Why the gap matters: a hand that cannot feel crushes what it holds. Only
      the "without tactile feedback" half of the clip is shown. -->
-<section class="slide" id="crush" data-shots="icon" data-title="Robots need both" data-duration="15">
-  <p class="block eyebrow r" style="left:120px; top:110px">Why it matters</p>
-  <h2 class="block h1 r" style="left:120px; top:152px; width:1400px">Robots need both.</h2>
+<section class="slide" id="crush" data-shots="icon" data-title="Robots need both" data-duration="16">
+  <p class="block eyebrow r" style="left:120px; top:98px">Why it matters</p>
+  <h2 class="block h1 r" style="left:120px; top:152px; width:1400px">Robots need <span class="grad">both</span>.</h2>
   <p class="block tag r" style="left:120px; top:350px; margin:0; width:900px"><span class="value fluo" style="font-size:104px">Sensitivity</span><span class="name" style="font-size:28px">to handle fragile things</span></p>
   <p class="block lens-op r" style="left:124px; top:538px">+</p>
   <p class="block tag r" style="left:120px; top:640px; margin:0; width:900px"><span class="value" style="font-size:104px; color:#9dbaff">Compliance</span><span class="name" style="font-size:28px">to grip them gently</span></p>
   <figure class="block r" style="left:1160px; top:292px; width:640px; margin:0">
     <div class="photo" style="height:640px; background:#000"><video id="crush-video" muted playsinline loop data-autoplay poster="assets/media/crush-robotis.webp" src="assets/media/crush-robotis.mp4"></video></div>
-    <figcaption class="caption" style="font-size:18px; margin-top:10px">Video: ROBOTIS · youtube.com/watch?v=1-ymnFMMVgk</figcaption>
+    <figcaption class="caption" style="font-size:20px; margin-top:10px">Video: ROBOTIS · youtube.com/watch?v=1-ymnFMMVgk</figcaption>
   </figure>
-  <aside class="notes"></aside>
+  <aside class="notes">But a robot needs both: sensitivity, to handle fragile things, and compliance, to grip them gently. Otherwise, a fragile object ends up crushed, like this.</aside>
 </section>
 
-<section class="slide" id="paradox" data-shots="paradox" data-title="MoiréSkin fills the gap" data-duration="10">
-  <p class="block eyebrow r" style="left:120px; top:110px">Our goal</p>
-  <h2 class="block h1 r" style="left:120px; top:152px; width:1500px">MoiréSkin fills the gap.</h2>
+<section class="slide" id="paradox" data-shots="paradox" data-title="MoiréSkin fills the gap" data-duration="13">
+  <p class="block eyebrow r" style="left:120px; top:98px">Our goal</p>
+  <h2 class="block h1 r" style="left:120px; top:152px; width:1500px"><span class="grad">MoiréSkin</span> fills the gap.</h2>
   <svg class="block r" style="left:160px; top:270px" width="1600" height="720" viewBox="0 0 1600 720" aria-label="The same chart with MoiréSkin in the empty corner: compliant and sensitive">
     <g stroke="rgb(238 243 251 / 18%)" stroke-width="1.5">
       <line x1="120" y1="40" x2="120" y2="600"/><line x1="120" y1="600" x2="1500" y2="600"/>
@@ -138,42 +139,42 @@
       <line x1="120" y1="334" x2="1500" y2="334" stroke-dasharray="4 9"/>
       <line x1="120" y1="154" x2="1500" y2="154" stroke-dasharray="4 9"/>
     </g>
-    <g fill="#a9c2ff" font-size="23" font-weight="700" text-anchor="end">
-      <text x="104" y="522">1 N</text><text x="104" y="342">0.1 N</text><text x="104" y="162">0.01 N</text>
+    <g fill="#ffffff" font-size="26" font-weight="760" text-anchor="end">
+      <text data-pill="axis" x="96" y="522">1 N</text><text data-pill="axis" x="96" y="342">0.1 N</text><text data-pill="axis" x="96" y="162">0.01 N</text>
     </g>
     <!-- An everyday object that weighs about as much as each force. -->
-    <g transform="translate(136 462) scale(1.9)" fill="none" stroke="#a9c2ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 7.4C9.4 5.4 4.8 6.4 4.8 11.4c0 4.6 3 9.1 5.6 9.1.8 0 1.1-.5 1.6-.5s.8.5 1.6.5c2.6 0 5.6-4.5 5.6-9.1 0-5-4.6-6-7.2-4Z"/><path d="M12 7.4c0-2 .8-3.3 2.2-4.2"/><path d="M14.6 4.4c1.2-.9 2.6-.9 3.6-.4-.4 1.2-1.6 2-3 2"/></g><g transform="translate(136 282) scale(1.9)" fill="none" stroke="#a9c2ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21.5C6.5 18 3.8 13.2 4.6 9.6 5.4 6.4 9 5.6 12 7.2c3-1.6 6.6-.8 7.4 2.4.8 3.6-1.9 8.4-7.4 11.9Z"/><path d="M8.6 4.6 12 7.2l3.4-2.6M12 7.2V3"/><path d="M9 11.2h.01M12 13.6h.01M15 11.2h.01M10.4 16h.01M13.6 16h.01" stroke-width="2.2"/></g><g transform="translate(136 102) scale(1.9)" fill="none" stroke="#a9c2ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21.4 11.1l-9.2 9.2a6 6 0 0 1-8.5-8.5l9.2-9.2a4 4 0 0 1 5.7 5.7l-9.2 9.2a2 2 0 0 1-2.8-2.8l8.5-8.5"/></g>
-    <g fill="#a9c2ff" font-size="21" font-weight="600">
+    <g transform="translate(136 462) scale(1.9)" fill="none" stroke="#ffffff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 7.4C9.4 5.4 4.8 6.4 4.8 11.4c0 4.6 3 9.1 5.6 9.1.8 0 1.1-.5 1.6-.5s.8.5 1.6.5c2.6 0 5.6-4.5 5.6-9.1 0-5-4.6-6-7.2-4Z"/><path d="M12 7.4c0-2 .8-3.3 2.2-4.2"/><path d="M14.6 4.4c1.2-.9 2.6-.9 3.6-.4-.4 1.2-1.6 2-3 2"/></g><g transform="translate(136 282) scale(1.9)" fill="none" stroke="#ffffff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21.5C6.5 18 3.8 13.2 4.6 9.6 5.4 6.4 9 5.6 12 7.2c3-1.6 6.6-.8 7.4 2.4.8 3.6-1.9 8.4-7.4 11.9Z"/><path d="M8.6 4.6 12 7.2l3.4-2.6M12 7.2V3"/><path d="M9 11.2h.01M12 13.6h.01M15 11.2h.01M10.4 16h.01M13.6 16h.01" stroke-width="2.2"/></g><g transform="translate(136 102) scale(1.9)" fill="none" stroke="#ffffff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21.4 11.1l-9.2 9.2a6 6 0 0 1-8.5-8.5l9.2-9.2a4 4 0 0 1 5.7 5.7l-9.2 9.2a2 2 0 0 1-2.8-2.8l8.5-8.5"/></g>
+    <g fill="#ffffff" font-size="24" font-weight="700">
       <text x="190" y="498">≈ an apple</text><text x="190" y="318">≈ a strawberry</text><text x="190" y="138">≈ a paperclip</text>
     </g>
-    <text x="120" y="22" fill="#c9d2df" font-size="22" font-weight="700" letter-spacing="2">MORE SENSITIVE ↑ · FORCE ERROR, LOG</text>
-    <g fill="#a9c2ff" font-size="23" font-weight="700" text-anchor="middle">
-      <text x="300" y="640">Rigid base</text>
-      <text x="650" y="640">Elastomer on rigid base</text>
-      <text x="1000" y="640">Shaped / dome</text>
-      <text x="1350" y="640">Air-inflated</text>
+    <text x="120" y="22" fill="#ffffff" font-size="25" font-weight="760" letter-spacing="2">MORE SENSITIVE ↑ · FORCE ERROR, LOG</text>
+    <g fill="#ffffff" font-size="25" font-weight="760" text-anchor="middle">
+      <text data-pill="rigid" x="300" y="638">Rigid base</text>
+      <text data-pill="rigid" x="650" y="638">Elastomer on rigid base</text>
+      <text data-pill="rigid" x="1000" y="638">Shaped / dome</text>
+      <text data-pill="soft" x="1350" y="638">Air-inflated</text>
     </g>
-    <path d="M215 656C215 665 215 665 231 665L644 665C660 665 660 665 660 674C660 665 660 665 676 665L1089 665C1105 665 1105 665 1105 656" fill="none" stroke="#ffbe7d" stroke-width="2.5" stroke-linecap="round"/><text x="660" y="706" fill="#ffbe7d" font-size="28" font-weight="760" text-anchor="middle">Rigid</text>
-    <path d="M1255 656C1255 665 1255 665 1271 665L1334 665C1350 665 1350 665 1350 674C1350 665 1350 665 1366 665L1429 665C1445 665 1445 665 1445 656" fill="none" stroke="#7da6ff" stroke-width="2.5" stroke-linecap="round"/><text x="1350" y="706" fill="#7da6ff" font-size="28" font-weight="760" text-anchor="middle">Compliant</text>
-    <g fill="#8f99ab" font-size="22" font-weight="600">
-      <g><circle cx="300" cy="262" r="13"/><text x="324" y="270" fill="#c9d2df">GelSlim 4.0</text></g>
-      <g><circle cx="300" cy="406" r="13"/><text x="324" y="414" fill="#c9d2df">MoiréTac</text></g>
-      <g><circle cx="650" cy="564" r="13"/><text x="674" y="572" fill="#c9d2df">GelSight</text></g>
-      <g><circle cx="632" cy="444" r="13"/><text x="608" y="456" fill="#c9d2df" text-anchor="end">DenseTact 2.0</text></g>
-      <g><circle cx="668" cy="422" r="13"/><text x="692" y="426" fill="#c9d2df">9DTact</text></g>
-      <g><circle cx="1000" cy="240" r="13"/><text x="1024" y="248" fill="#c9d2df">Insight</text></g>
-      <g><circle cx="1000" cy="154" r="13"/><text x="1024" y="162" fill="#c9d2df">ViTacTip</text></g>
-      <g><circle cx="1350" cy="497" r="13"/><text x="1374" y="505" fill="#c9d2df">Soft-Bubble</text></g>
+    <path d="M215 660C215 668 215 668 231 668L644 668C660 668 660 668 660 676C660 668 660 668 676 668L1089 668C1105 668 1105 668 1105 660" fill="none" stroke="#ffbe7d" stroke-width="2.5" stroke-linecap="round"/><text x="660" y="710" fill="#ffbe7d" font-size="28" font-weight="760" text-anchor="middle">Rigid</text>
+    <path d="M1255 660C1255 668 1255 668 1271 668L1334 668C1350 668 1350 668 1350 676C1350 668 1350 668 1366 668L1429 668C1445 668 1445 668 1445 660" fill="none" stroke="#7da6ff" stroke-width="2.5" stroke-linecap="round"/><text x="1350" y="710" fill="#7da6ff" font-size="28" font-weight="760" text-anchor="middle">Compliant</text>
+    <g fill="#8f99ab" font-size="26" font-weight="650">
+      <g><circle cx="300" cy="262" r="13"/><text x="324" y="270" fill="#dce4ee">GelSlim 4.0</text></g>
+      <g><circle cx="300" cy="406" r="13"/><text x="324" y="414" fill="#dce4ee">MoiréTac</text></g>
+      <g><circle cx="650" cy="564" r="13"/><text x="674" y="572" fill="#dce4ee">GelSight</text></g>
+      <g><circle cx="632" cy="444" r="13"/><text x="608" y="456" fill="#dce4ee" text-anchor="end">DenseTact 2.0</text></g>
+      <g><circle cx="668" cy="422" r="13"/><text x="692" y="426" fill="#dce4ee">9DTact</text></g>
+      <g><circle cx="1000" cy="240" r="13"/><text x="1024" y="248" fill="#dce4ee">Insight</text></g>
+      <g><circle cx="1000" cy="154" r="13"/><text x="1024" y="162" fill="#dce4ee">ViTacTip</text></g>
+      <g><circle cx="1350" cy="497" r="13"/><text x="1374" y="505" fill="#dce4ee">Soft-Bubble</text></g>
     </g>
-    <text x="1270" y="72" fill="#d9f272" font-size="30" font-weight="760" text-anchor="end">MoiréSkin</text>
-    <text x="1270" y="104" fill="#c9d2df" font-size="22" font-weight="600" text-anchor="end">senses + actuates · sees through</text>
+    <text x="1270" y="72" fill="url(#grad-ink)" font-size="30" font-weight="760" text-anchor="end">MoiréSkin</text>
+    <text x="1270" y="106" fill="#dce4ee" font-size="26" font-weight="650" text-anchor="end">senses + actuates · sees through</text>
   </svg>
-  <aside class="notes"></aside>
+  <aside class="notes">MoiréSkin fills this gap: it is compliant, and more sensitive than any of them. So how can one skin be both?</aside>
 </section>
 
 <!-- What moiré is in general, then what is different about ours. -->
-<section class="slide" id="moire" data-shots="icon moireFilm" data-title="What is a moiré pattern?" data-duration="25">
-  <p class="block eyebrow r" style="left:120px; top:110px">Background</p>
+<section class="slide" id="moire" data-shots="icon moireFilm" data-title="What is a moiré pattern?" data-duration="38">
+  <p class="block eyebrow r" style="left:120px; top:98px">Background</p>
   <h2 class="block h1 r" style="left:120px; top:152px; width:1500px">What is a moiré pattern?</h2>
   <figure class="block r" style="left:120px; top:300px; width:1000px; margin:0">
     <div class="photo" style="height:563px; background:#000"><video id="moire-video" muted playsinline loop data-autoplay poster="assets/media/moire-phone-screen.webp" src="assets/media/moire-phone-screen.mp4"></video></div>
@@ -182,22 +183,22 @@
       <li data-from="5.45" data-to="99" style="left:28px; top:28px">Moiré in the viewfinder</li>
       <li data-from="0" data-to="99" style="right:28px; bottom:calc(100% - 535px)">Mediastorm</li>
     </ol>
-    <figcaption class="caption" style="font-size:18px; margin-top:10px">Video: Mediastorm 影视飓风 · youtube.com/watch?v=I48vtTxdaeQ</figcaption>
+    <figcaption class="caption" style="font-size:20px; margin-top:10px">Video: Mediastorm 影视飓风 · youtube.com/watch?v=I48vtTxdaeQ</figcaption>
   </figure>
   <p class="block tag r" style="left:1200px; top:310px; margin:0; width:600px"><span class="value" style="font-size:52px">Everyday moiré</span><span class="name">two separate objects</span></p>
-  <p class="block tag" data-step="1" style="left:1200px; top:470px; margin:0; width:600px"><span class="value fluo" style="font-size:52px">Ours: a metasurface</span><span class="name">generate moiré on one single object</span></p>
-  <aside class="notes"></aside>
+  <p class="block tag" data-step="1" style="left:1200px; top:470px; margin:0; width:600px"><span class="value" style="font-size:52px">Ours: a <span class="grad">metasurface</span></span><span class="name">generate moiré<br>on one single object</span></p>
+  <aside class="notes">The answer is moiré. You may have seen it when filming a screen with a phone: broad stripes appear in the viewfinder. Two fine patterns overlap, and a tiny shift between them moves the stripes a lot. But that takes two separate objects. We put both gratings on one film, a metasurface, so one object generates moiré by itself.</aside>
 </section>
 
 <section class="slide" id="insight" data-shots="insight insightReal" data-title="Our insight: moiré" data-duration="30">
-  <p class="block eyebrow r" style="left:120px; top:110px">Our insight</p>
-  <h2 class="block h1 r" style="left:120px; top:152px; width:900px">A moiré metasurface<br>amplifies touch.</h2>
+  <p class="block eyebrow r" style="left:120px; top:98px">Our insight</p>
+  <h2 class="block h1 r" style="left:120px; top:152px; width:900px">A moiré metasurface<br><span class="grad">amplifies touch</span>.</h2>
   <svg class="block r" data-widget="dentView" style="left:100px; top:360px" width="520" height="190" viewBox="0 0 520 190" aria-label="Side view of the film: a press makes only a tiny dent"></svg>
   <p class="block tag r" style="left:120px; top:585px; margin:0; width:460px"><span class="value">μm</span><span class="name">the film barely bends</span></p>
   <p class="block tag r" style="left:120px; top:745px; margin:0; width:460px"><span class="value fluo">mm</span><span class="name">the fringes move a lot</span></p>
-  <figure class="block real round r" data-until="0" style="left:1712px; top:790px; width:168px; height:168px">
+  <figure class="block real round r" data-until="0" style="left:1698px; top:770px; width:168px; height:168px">
     <video muted playsinline loop data-autoplay data-fringe="19.0" poster="assets/media/real-light-contact.webp" src="assets/media/real-light-contact.mp4"></video>
-    <figcaption>Real · light touch</figcaption>
+    <figcaption>Real sensor</figcaption>
   </figure>
   <figure class="block real-cover" data-step="1">
     <video muted playsinline loop data-autoplay data-track="light" data-fringe="19.0" poster="assets/media/real-light-contact.webp" src="assets/media/real-light-contact.mp4"></video>
@@ -207,8 +208,8 @@
 </section>
 
 <section class="slide" id="stack" data-shots="stack" data-title="Inside MoiréSkin" data-duration="45">
-  <p class="block eyebrow r" style="left:120px; top:110px">Hardware</p>
-  <h2 class="block h1 r" style="left:120px; top:152px; width:900px">One skin, two jobs.</h2>
+  <p class="block eyebrow r" style="left:120px; top:98px">Hardware</p>
+  <h2 class="block h1 r" style="left:120px; top:152px; width:900px">One skin, <span class="grad">two jobs</span>.</h2>
   <figure class="block micro-fig r" style="left:120px; top:300px; width:760px; margin:0">
     <div class="micro-frame">
       <img src="assets/img/grating-micrograph.webp" alt="Our grating film under a microscope: fine parallel lines">
@@ -219,20 +220,20 @@
     </div>
     <figcaption class="caption">Our film under a microscope</figcaption>
   </figure>
-  <div class="callout r" data-anchor="cover" data-x="1520"><b>Cover</b><span>clear TPU</span></div>
-  <div class="callout r" data-anchor="upper" data-x="1520"><b>Upper grating</b><span>330 μm</span></div>
-  <div class="callout r" data-anchor="substrate" data-x="1520"><b>Substrate</b><span>soft silicone</span></div>
-  <div class="callout r" data-anchor="lower" data-x="1520"><b class="fluo">Lower grating</b><span>fluorescent</span></div>
-  <div class="callout r" data-step="1" data-anchor="chamber" data-x="1520"><b class="air">Air chamber</b></div>
-  <div class="callout r" data-step="1" data-anchor="pump" data-x="1520"><b class="air">Pump</b><span>one controller</span></div>
-  <div class="callout r" data-step="2" data-anchor="camera" data-x="1520"><b>Camera</b><span>1080p · 160°</span></div>
-  <div class="callout r" data-step="2" data-anchor="led" data-x="1520"><b>LED ring</b><span>faces down · blue</span></div>
-  <div class="callout r" data-step="2" data-anchor="reflector" data-x="1520"><b>Diffuse reflector</b></div>
+  <div class="callout r" data-anchor="cover" data-x="1420" data-group="Sensing" data-group-color="#d9f272"><b>Cover</b><span>clear TPU</span></div>
+  <div class="callout r" data-anchor="upper" data-x="1420" data-group="Sensing" data-group-color="#d9f272"><b>Upper grating</b><span>330 μm</span></div>
+  <div class="callout r" data-anchor="substrate" data-x="1420" data-group="Sensing" data-group-color="#d9f272"><b>Substrate</b><span>soft silicone</span></div>
+  <div class="callout r" data-anchor="lower" data-x="1420" data-group="Sensing" data-group-color="#d9f272"><b class="fluo">Lower grating</b><span>fluorescent</span></div>
+  <div class="callout r" data-step="1" data-anchor="chamber" data-x="1420" data-group="Actuation" data-group-color="#7da6ff"><b class="air">Air chamber</b></div>
+  <div class="callout r" data-step="1" data-anchor="pump" data-x="1420" data-group="Actuation" data-group-color="#7da6ff"><b class="air">Pump</b><span>one controller</span></div>
+  <div class="callout r" data-step="2" data-anchor="camera" data-x="1420" data-group="Imaging" data-group-color="#ffffff"><b>Camera</b><span>1080p · 160°</span></div>
+  <div class="callout r" data-step="2" data-anchor="led" data-x="1420" data-group="Imaging" data-group-color="#ffffff"><b>LED ring</b><span>faces down · blue</span></div>
+  <div class="callout r" data-step="2" data-anchor="reflector" data-x="1420" data-group="Imaging" data-group-color="#ffffff"><b>Diffuse reflector</b></div>
   <aside class="notes">Here is our hardware, in three modules. On top, two fine gratings, 330 micrometres in pitch, with protective layers; the left shows our film under a microscope. In the middle, an air chamber and a pump make it compliant and let it actuate. At the bottom, an LED ring lights the gratings and a camera captures the fringes. So this is not just a sensor, but also an actuator, in one cell.</aside>
 </section>
 
 <section class="slide" id="fabrication" data-shots="icon" data-title="Fabrication" data-duration="10">
-  <p class="block eyebrow r" style="left:120px; top:110px">Fabrication</p>
+  <p class="block eyebrow r" style="left:120px; top:98px">Fabrication</p>
   <h2 class="block h1 r" style="left:120px; top:152px; width:1060px">Two gratings → one soft film.</h2>
   <ol class="block steps-list r" style="left:120px; top:320px; width:960px; gap:30px">
     <li data-n="1–6"><span><b>Fluorescent lower grating</b> · print it, cure at 65 °C, cast clear silicone over it, peel off</span></li>
@@ -247,7 +248,7 @@
 </section>
 
 <section class="slide" id="design" data-shots="design" data-title="Optical design" data-duration="45">
-  <p class="block eyebrow r" style="left:120px; top:110px">Optical design</p>
+  <p class="block eyebrow r" style="left:120px; top:98px">Optical design</p>
   <h2 class="block h1 r" style="left:120px; top:152px; width:1100px">Clear skin, clear fringes.</h2>
   <div class="block tiles cycling r" style="left:120px; top:320px; width:1160px">
     <div class="tile" data-feature="glow">
@@ -274,7 +275,7 @@
 </section>
 
 <section class="slide" id="principle" data-shots="pApart pOverlap pAmplify pAmplifyReal pPressure pPressureReal pWeather pLight pZero pZeroReal" data-title="How it works" data-duration="229" data-step-durations="15 10 60 8 55 8 20 20 25 8">
-  <p class="block eyebrow r" style="left:120px; top:92px">How it works</p>
+  <p class="block eyebrow r" style="left:120px; top:80px">How it works</p>
   <div class="block tabs r" style="left:120px; top:140px; width:1680px">
     <span data-tab="0">Apart</span><span data-tab="1">Overlap</span><span data-tab="2-3">Amplify</span><span data-tab="4-5">Pressure</span><span data-tab="6-7">Drift</span><span data-tab="8-9">Zero</span>
   </div>
@@ -282,17 +283,17 @@
 
   <h2 class="block h1" data-step="0" data-until="0" style="left:120px; top:240px; width:780px; font-size:72px">Two fine gratings.</h2>
   <p class="block tag" data-step="0" data-until="0" style="left:120px; top:730px; margin:0"><span class="value">330 μm</span><span class="name">too fine for the camera</span></p>
-  <p class="block micro fluo" data-step="0" data-until="0" style="left:996px; top:830px; width:320px; text-align:center">Lower · fluorescent</p>
-  <p class="block micro" data-step="0" data-until="0" style="left:1444px; top:830px; width:320px; text-align:center; color:#9dbaff">Upper · clear</p>
+  <p class="block micro fluo" data-step="0" data-until="0" style="left:936px; top:830px; width:440px; text-align:center">Lower · fluorescent</p>
+  <p class="block micro" data-step="0" data-until="0" style="left:1384px; top:830px; width:440px; text-align:center; color:#9dbaff">Upper · clear</p>
 
   <h2 class="block h1" data-step="1" data-until="1" style="left:120px; top:240px; width:780px; font-size:72px">Overlap: moiré fringes.</h2>
   <p class="block tag" data-step="1" data-until="1" style="left:120px; top:730px; margin:0"><span class="value">0.33 <span class="fluo">→ 3 mm</span></span><span class="name">lines → fringes</span></p>
   <p class="block chip" data-step="0" data-until="1" style="left:120px; top:900px">Scroll ↕ to bring them together</p>
 
-  <h2 class="block h1" data-step="2" data-until="3" style="left:120px; top:240px; width:780px; font-size:72px">The angle is a trade-off.</h2>
-  <p class="block flag" data-step="2" data-until="3" style="left:120px; top:326px">Challenge · sensitivity vs resolution</p>
-  <svg class="block" data-step="2" data-until="3" data-widget="alphaChart" style="left:100px; top:708px" width="560" height="259" viewBox="0 0 800 370" aria-label="Spatial resolution and sensitivity versus grating angle"></svg>
-  <p class="block chip" data-step="2" data-until="2" style="left:700px; top:910px">Scroll ↕ to change the angle · hover to press</p>
+  <h2 class="block h1" data-step="2" data-until="3" style="left:120px; top:240px; width:780px; font-size:72px">The angle is a <span class="grad">trade-off</span>.</h2>
+  <p class="block flag warn" data-step="2" data-until="3" style="left:120px; top:326px">Challenge · sensitivity vs resolution</p>
+  <svg class="block" data-step="2" data-until="3" data-widget="alphaChart" style="left:100px; top:694px" width="640" height="296" viewBox="0 0 800 370" aria-label="Spatial resolution and sensitivity versus grating angle"></svg>
+  <p class="block chip" data-step="2" data-until="2" style="left:780px; top:898px">Scroll ↕ to change the angle · hover to press</p>
 
   <h2 class="block h1" data-step="4" data-until="5" style="left:120px; top:240px; width:780px; font-size:72px">Sensing inner pressure.</h2>
   <p class="block flag" data-step="4" data-until="5" style="left:120px; top:326px">For actuator control</p>
@@ -303,7 +304,7 @@
   <p class="block chip air" data-step="4" data-until="4" style="left:120px; top:900px">Scroll ↕ to pump air</p>
 
   <h2 class="block h1" data-step="6" data-until="6" style="left:120px; top:240px; width:940px; font-size:72px">Air pressure turns them.</h2>
-  <p class="block flag" data-step="6" data-until="7" style="left:120px; top:326px">Challenge · drift without any force</p>
+  <p class="block flag warn" data-step="6" data-until="7" style="left:120px; top:326px">Challenge · drift without any force</p>
   <dl class="block readouts" data-step="6" data-until="6" style="left:120px; top:720px; width:600px; grid-template-columns:1.2fr 1fr">
     <div><dt>Outside air</dt><dd data-readout="ambient" class="air">1013.2 hPa</dd></div>
     <div><dt>Fringe turn</dt><dd data-readout="dthetaInflate">0.0°</dd></div>
@@ -319,17 +320,17 @@
     <div><dt>Pump</dt><dd data-readout="calibStatus">Zero ✓</dd></div>
   </dl>
 
-  <figure class="block real round" data-step="2" data-until="2" style="left:1712px; top:790px; width:168px; height:168px">
+  <figure class="block real round" data-step="2" data-until="2" style="left:1698px; top:770px; width:168px; height:168px">
     <video muted playsinline loop data-autoplay data-fringe="20.7" poster="assets/media/real-touch.webp" src="assets/media/real-touch.mp4"></video>
-    <figcaption>Real · touch</figcaption>
+    <figcaption>Real sensor</figcaption>
   </figure>
   <figure class="block real-cover" data-step="3" data-until="3">
     <video muted playsinline loop data-autoplay data-track="touch" data-fringe="20.7" poster="assets/media/real-touch.webp" src="assets/media/real-touch.mp4"></video>
     <figcaption>Real sensor · touch</figcaption>
   </figure>
-  <figure class="block real round" data-step="4" data-until="4" style="left:1712px; top:790px; width:168px; height:168px">
+  <figure class="block real round" data-step="4" data-until="4" style="left:1698px; top:770px; width:168px; height:168px">
     <video muted playsinline loop data-autoplay data-fringe="19.8" poster="assets/media/real-inflate.webp" src="assets/media/real-inflate.mp4"></video>
-    <figcaption>Real · inflation</figcaption>
+    <figcaption>Real sensor</figcaption>
   </figure>
   <figure class="block real-cover" data-step="5" data-until="5" style="--gap:70px">
     <video muted playsinline loop data-autoplay data-track="inflate" data-fringe="19.8" poster="assets/media/real-inflate.webp" src="assets/media/real-inflate.mp4"></video>
@@ -345,9 +346,9 @@
 </section>
 
 <section class="slide" id="inference" data-shots="inference" data-title="How we detect force and position" data-duration="25">
-  <p class="block eyebrow r" style="left:120px; top:110px">Sensing</p>
+  <p class="block eyebrow r" style="left:120px; top:98px">Sensing</p>
   <h2 class="block h1 r" style="left:120px; top:152px; width:1500px">How we detect force + position.</h2>
-  <svg class="block r" style="left:740px; top:315px" width="1060" height="544" viewBox="0 0 1170 600" aria-label="Two-stage tactile inference pipeline, after Fig. 9 of the paper">
+  <svg class="block r" style="left:600px; top:292px" width="1200" height="615" viewBox="0 0 1170 600" aria-label="Two-stage tactile inference pipeline, after Fig. 9 of the paper">
     <defs>
       <clipPath id="clip-pre"><circle cx="85" cy="125" r="85"/></clipPath>
       <clipPath id="clip-post"><circle cx="85" cy="385" r="85"/></clipPath>
@@ -356,11 +357,11 @@
     <circle cx="85" cy="125" r="85" fill="none" stroke="rgb(238 243 251 / 40%)" stroke-width="2"/>
     <image data-fringe="post" x="0" y="300" width="170" height="170" clip-path="url(#clip-post)"/>
     <circle cx="85" cy="385" r="85" fill="none" stroke="#d9f272" stroke-width="2.5"/>
-    <g font-size="23" font-weight="680" text-anchor="middle">
-      <text x="85" y="250" fill="#c9d2df">Pre-contact</text>
+    <g font-size="26" font-weight="700" text-anchor="middle">
+      <text x="85" y="250" fill="#dce4ee">Pre-contact</text>
       <text x="85" y="510" fill="#d9f272">Post-contact</text>
     </g>
-    <g fill="none" stroke="#c9d2df" stroke-width="2.5">
+    <g fill="none" stroke="#dce4ee" stroke-width="2.5">
       <path class="flow" d="M178 125 C215 125 215 250 248 262"/>
       <path class="flow" d="M178 385 C215 385 215 290 248 278"/>
     </g>
@@ -369,54 +370,54 @@
       <rect x="262" y="190" width="96" height="164" rx="10" fill="rgb(38 52 78 / 90%)"/>
       <rect x="252" y="202" width="96" height="144" rx="10" fill="rgb(48 64 94 / 92%)"/>
     </g>
-    <text x="305" y="402" fill="#eef3fb" font-size="24" font-weight="740" text-anchor="middle">ResNet-50</text>
-    <path class="flow" d="M372 270 L404 270" stroke="#c9d2df" stroke-width="2.5"/>
+    <text x="305" y="402" fill="#eef3fb" font-size="27" font-weight="740" text-anchor="middle">ResNet-50</text>
+    <path class="flow" d="M372 270 L404 270" stroke="#dce4ee" stroke-width="2.5"/>
     <rect x="408" y="100" width="54" height="340" rx="12" fill="rgb(9 16 29 / 90%)" stroke="rgb(238 243 251 / 50%)" stroke-width="1.5"/>
-    <text x="435" y="270" fill="#eef3fb" font-size="22" font-weight="700" text-anchor="middle" transform="rotate(-90 435 270)" dominant-baseline="middle">Attention module</text>
-    <text x="580" y="78" fill="#c9d2df" font-size="21" font-weight="700" text-anchor="middle" letter-spacing="1.5">STAGE 1 · COARSE</text>
-    <text x="850" y="78" fill="#c9d2df" font-size="21" font-weight="700" text-anchor="middle" letter-spacing="1.5">STAGE 2 · REFINED</text>
+    <text x="435" y="270" fill="#eef3fb" font-size="24" font-weight="700" text-anchor="middle" transform="rotate(-90 435 270)" dominant-baseline="middle">Attention module</text>
+    <text x="580" y="78" fill="#dce4ee" font-size="24" font-weight="700" text-anchor="middle" letter-spacing="1.5">STAGE 1 · COARSE</text>
+    <text x="850" y="78" fill="#dce4ee" font-size="24" font-weight="700" text-anchor="middle" letter-spacing="1.5">STAGE 2 · REFINED</text>
     <path class="flow" d="M462 145 L500 145" stroke="#d9f272" stroke-width="2.5"/>
-    <path class="flow" d="M462 395 L500 395" stroke="#6b98ff" stroke-width="2.5"/>
+    <path class="flow" d="M462 395 L500 395" stroke="#86adff" stroke-width="2.5"/>
     <g font-size="23" font-weight="720" text-anchor="middle">
       <rect x="504" y="105" width="152" height="80" rx="14" fill="rgb(217 242 114 / 10%)" stroke="#d9f272" stroke-width="2"/>
-      <text x="580" y="141" fill="#eef3fb" font-size="20">Normal force<tspan x="580" dy="25">head</tspan></text>
-      <rect x="504" y="355" width="152" height="80" rx="14" fill="rgb(107 152 255 / 12%)" stroke="#6b98ff" stroke-width="2"/>
-      <text x="580" y="391" fill="#eef3fb" font-size="20">Position<tspan x="580" dy="25">head</tspan></text>
+      <text x="580" y="141" fill="#eef3fb" font-size="21">Normal force<tspan x="580" dy="25">head</tspan></text>
+      <rect x="504" y="355" width="152" height="80" rx="14" fill="rgb(107 152 255 / 12%)" stroke="#86adff" stroke-width="2"/>
+      <text x="580" y="391" fill="#eef3fb" font-size="21">Position<tspan x="580" dy="25">head</tspan></text>
       <rect x="774" y="105" width="152" height="80" rx="14" fill="rgb(217 242 114 / 16%)" stroke="#d9f272" stroke-width="2.5"/>
-      <text x="850" y="141" fill="#eef3fb" font-size="20">Normal force<tspan x="850" dy="25">head</tspan></text>
-      <rect x="774" y="355" width="152" height="80" rx="14" fill="rgb(107 152 255 / 18%)" stroke="#6b98ff" stroke-width="2.5"/>
-      <text x="850" y="391" fill="#eef3fb" font-size="20">Position<tspan x="850" dy="25">head</tspan></text>
+      <text x="850" y="141" fill="#eef3fb" font-size="21">Normal force<tspan x="850" dy="25">head</tspan></text>
+      <rect x="774" y="355" width="152" height="80" rx="14" fill="rgb(107 152 255 / 18%)" stroke="#86adff" stroke-width="2.5"/>
+      <text x="850" y="391" fill="#eef3fb" font-size="21">Position<tspan x="850" dy="25">head</tspan></text>
     </g>
     <path class="flow" d="M656 145 C715 145 715 395 770 395" fill="none" stroke="#d9f272" stroke-width="3"/>
-    <path class="flow" d="M656 395 C715 395 715 145 770 145" fill="none" stroke="#6b98ff" stroke-width="3"/>
+    <path class="flow" d="M656 395 C715 395 715 145 770 145" fill="none" stroke="#86adff" stroke-width="3"/>
     <path class="flow" d="M462 270 L850 270 M850 270 L850 190 M850 270 L850 350" fill="none" stroke="#eef3fb" stroke-width="2.5"/>
-    <text x="478" y="300" fill="#c9d2df" font-size="20" font-weight="600">shared features</text>
+    <text x="478" y="300" fill="#dce4ee" font-size="24" font-weight="650">shared features</text>
     <path class="flow" d="M926 145 L962 145" stroke="#d9f272" stroke-width="3"/>
-    <path class="flow" d="M926 395 L962 395" stroke="#6b98ff" stroke-width="3"/>
-    <text x="968" y="154" fill="#d9f272" font-size="25" font-weight="760">Normal force</text>
-    <text x="968" y="404" fill="#6b98ff" font-size="25" font-weight="760">Position</text>
+    <path class="flow" d="M926 395 L962 395" stroke="#86adff" stroke-width="3"/>
+    <text x="968" y="154" fill="#d9f272" font-size="29" font-weight="760">Normal force</text>
+    <text x="968" y="404" fill="#86adff" font-size="29" font-weight="760">Position</text>
   </svg>
   <aside class="notes">With the skin at its zero state, we can now sense touch. We feed the images before and after touch into a ResNet-50 with two readout heads. It estimates normal force and position in two stages: coarse first, then refined.</aside>
 </section>
 
 <section class="slide" id="results" data-shots="results" data-title="Millinewton precision" data-duration="20">
-  <p class="block eyebrow r" style="left:120px; top:110px">Sensing</p>
-  <h2 class="block h1 r" style="left:120px; top:152px; width:1300px">Millinewton precision.</h2>
+  <p class="block eyebrow r" style="left:120px; top:98px">Sensing</p>
+  <h2 class="block h1 r" style="left:120px; top:152px; width:1300px"><span class="grad">Millinewton</span> precision.</h2>
   <div class="block r" style="left:120px; top:330px; width:780px">
     <p class="micro">Tiny force · 0–0.4 N · zero state</p>
-    <div style="display:grid; grid-template-columns:1.3fr 1fr; gap:30px; margin-top:18px">
+    <div style="display:grid; grid-template-columns:1.4fr 1fr; gap:30px; margin-top:18px">
       <div class="stat fluo"><span class="value"><span class="count" data-to="3.78" data-decimals="2">0</span><small>mN</small></span><span class="label">normal force</span>
         <!-- Everyday things for scale, as on the related-works chart. -->
-        <span class="like"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V8Z"/><path d="M15 3v4a2 2 0 0 0 2 2h4"/></svg>≈ a sticky note’s weight</span></div>
+        <span class="like cap" data-step="1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V8Z"/><path d="M15 3v4a2 2 0 0 0 2 2h4"/></svg>≈ a sticky note’s weight</span></div>
       <div class="stat fluo"><span class="value"><span class="count" data-to="0.094" data-decimals="3">0</span><small>mm</small></span><span class="label">position</span>
-        <span class="like"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2.5c4.6 3.1-3.6 6.4 1 9.5s-3.6 6.4 1 9.5"/><path d="M14.5 2.5c4.6 3.1-3.6 6.4 1 9.5" opacity="0.45"/></svg>≈ a hair’s width</span></div>
+        <span class="like cap" data-step="1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2.5c4.6 3.1-3.6 6.4 1 9.5s-3.6 6.4 1 9.5"/><path d="M14.5 2.5c4.6 3.1-3.6 6.4 1 9.5" opacity="0.45"/></svg>≈ a hair’s width</span></div>
     </div>
   </div>
   <div class="block r" style="left:120px; top:640px; width:780px">
     <p class="micro">General · 0–4 N · random inflation</p>
-    <div style="display:grid; grid-template-columns:1.3fr 1fr; gap:30px; margin-top:18px">
-      <div class="stat"><span class="value">94.9<small>%</small></span><span class="label">normal force error &lt; 0.1 N</span></div>
-      <div class="stat"><span class="value">0.10<small>mm</small></span><span class="label">position · 5-fold CV</span></div>
+    <div style="display:grid; grid-template-columns:1.4fr 1fr; gap:30px; margin-top:18px">
+      <div class="stat"><span class="value">94.9<small>%</small></span><span class="label">normal force<br>error &lt; 0.1 N</span></div>
+      <div class="stat"><span class="value">0.10<small>mm</small></span><span class="label">position<br>5-fold CV</span></div>
     </div>
   </div>
   <svg class="block r" data-widget="forceBars" style="left:960px; top:400px" width="840" height="500" viewBox="0 0 840 500" aria-label="Force error of MoiréSkin and prior visuo-tactile sensors"></svg>
@@ -424,23 +425,21 @@
 </section>
 
 <section class="slide" id="softness" data-shots="softness" data-title="Case study: softness classification" data-duration="40">
-  <p class="block eyebrow r" style="left:120px; top:110px">Sense + actuate</p>
+  <p class="block eyebrow r" style="left:120px; top:98px">Sense + actuate</p>
   <h2 class="block h1 r" style="left:120px; top:152px; width:1700px">Case study: softness classification.</h2>
   <div class="block r" style="left:120px; top:320px; width:520px; display:grid; gap:34px">
     <div class="stat fluo"><span class="value"><span class="count" data-to="99.7" data-decimals="1">0</span><small>%</small></span><span class="label">10-shot · 7 materials</span></div>
     <div class="stat"><span class="value">92.7<small>%</small></span><span class="label">5-shot</span></div>
     <div class="stat"><span class="value">8.7–21.7<small>kPa</small></span><span class="label">Young’s modulus</span>
-      <!-- Everyday things for scale: the range's two ends (the paper's wording), and one that is firmer than all seven. -->
-      <ol class="soft-scale">
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.6 20.4 7.8 12 12 3.6 7.8Z"/><path d="M3.6 7.8v8.2L12 20.2l8.4-4.2V7.8"/><path d="M12 12v8.2"/></svg><span>≈ tofu</span></li>
-        <li class="bar" aria-hidden="true"></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8.4 21.5V8.1a3.6 3.6 0 0 1 7.2 0v13.4"/><path d="M10.2 8.3a1.8 1.8 0 0 1 3.6 0v2.9h-3.6Z"/><path d="M10.2 15.6h3.6"/></svg><span>≈ skin</span></li>
-        <li class="lt" aria-hidden="true">&lt;</li>
-        <li class="beyond"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="5.5" y="11.6" width="6" height="7.8" rx="2.2" transform="rotate(-45 8.5 15.5)"/><rect x="12" y="5.1" width="6" height="7.8" rx="2.2" transform="rotate(-45 15 9)"/><path d="M2.6 21.4 6.4 17.6M10.6 13.4l2.3-2.3M17.1 6.9 21 3"/></svg><span>softer than a marshmallow</span></li>
-      </ol>
+      <!-- Everyday things for scale: the range's two ends, and one that is firmer than all seven. Arrives on a click. -->
+      <p class="soft-scale" data-step="1">
+        <span class="cap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.6 20.4 7.8 12 12 3.6 7.8Z"/><path d="M3.6 7.8v8.2L12 20.2l8.4-4.2V7.8"/><path d="M12 12v8.2"/></svg>≈ soft tofu<i class="to" aria-hidden="true"></i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M8.4 21.5V8.1a3.6 3.6 0 0 1 7.2 0v13.4"/><path d="M10.2 8.3a1.8 1.8 0 0 1 3.6 0v2.9h-3.6Z"/><path d="M10.2 15.6h3.6"/></svg>≈ skin</span>
+        <span class="lt" aria-hidden="true">&lt;</span>
+        <span class="beyond"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="5.5" y="11.6" width="6" height="7.8" rx="2.2" transform="rotate(-45 8.5 15.5)"/><rect x="12" y="5.1" width="6" height="7.8" rx="2.2" transform="rotate(-45 15 9)"/><path d="M2.6 21.4 6.4 17.6M10.6 13.4l2.3-2.3M17.1 6.9 21 3"/></svg><span>softer than<br>a marshmallow</span></span>
+      </p>
     </div>
   </div>
-  <figure class="block real round r" style="left:1575px; top:585px; width:230px; height:230px">
+  <figure class="block real round lens-match r" style="left:1575px; top:585px; width:230px; height:230px">
     <video muted playsinline loop data-autoplay data-fringe="18.2" poster="assets/media/real-soft.webp" src="assets/media/real-soft.mp4"></video>
     <figcaption>Real sensor</figcaption>
   </figure>
@@ -448,14 +447,14 @@
 </section>
 
 <section class="slide" id="shear" data-shots="shear" data-title="Case study: shear force sensing" data-duration="20">
-  <p class="block eyebrow r" style="left:120px; top:110px">Sense + actuate</p>
+  <p class="block eyebrow r" style="left:120px; top:98px">Sense + actuate</p>
   <h2 class="block h1 r" style="left:120px; top:152px; width:1700px">Case study: shear force sensing.</h2>
   <div class="block r" style="left:120px; top:320px; width:560px; display:grid; gap:34px">
     <div class="stat fluo"><span class="value"><span class="count" data-to="4.15" data-decimals="2">0</span><small>g</small></span><span class="label">mean error · unseen session</span></div>
     <div class="stat"><span class="value">4.75<small>g</small></span><span class="label">RMSE</span></div>
     <div class="stat"><span class="value">0–300<small>mL</small></span><span class="label">water poured in</span></div>
   </div>
-  <figure class="block real round photo-round r" style="left:1575px; top:585px; width:230px; height:230px">
+  <figure class="block real round photo-round lens-match r" style="left:1575px; top:585px; width:230px; height:230px">
     <img src="assets/img/cup-setup.webp" alt="Cup held against MoiréSkin in a bench vise">
     <figcaption>Real setup</figcaption>
   </figure>
@@ -463,9 +462,9 @@
 </section>
 
 <section class="slide" id="backbone" data-shots="inference backboneSoft backboneShear" data-title="One pre-trained backbone" data-duration="20">
-  <p class="block eyebrow r" style="left:120px; top:110px">Sense + actuate</p>
-  <h2 class="block h1 r" style="left:120px; top:152px; width:1600px">One pre-trained backbone, two new skills.</h2>
-  <svg class="block r" data-dim-from="1" style="left:740px; top:315px" width="1060" height="544" viewBox="0 0 1170 600" aria-label="The same pre-trained pipeline, with softness and shear force branching off the normal force readout">
+  <p class="block eyebrow r" style="left:120px; top:98px">Sense + actuate</p>
+  <h2 class="block h1 r" style="left:120px; top:152px; width:1600px">One pre-trained backbone, <span class="grad">two new skills</span>.</h2>
+  <svg class="block r" data-dim-from="1" style="left:600px; top:292px" width="1200" height="615" viewBox="0 0 1170 600" aria-label="The same pre-trained pipeline, with softness and shear force branching off the normal force readout">
     <defs>
       <clipPath id="clip-pre-b"><circle cx="85" cy="125" r="85"/></clipPath>
       <clipPath id="clip-post-b"><circle cx="85" cy="385" r="85"/></clipPath>
@@ -475,11 +474,11 @@
     <circle cx="85" cy="125" r="85" fill="none" stroke="rgb(238 243 251 / 40%)" stroke-width="2"/>
     <image data-fringe="post" x="0" y="300" width="170" height="170" clip-path="url(#clip-post-b)"/>
     <circle cx="85" cy="385" r="85" fill="none" stroke="#d9f272" stroke-width="2.5"/>
-    <g font-size="23" font-weight="680" text-anchor="middle">
-      <text x="85" y="250" fill="#c9d2df">Pre-contact</text>
+    <g font-size="26" font-weight="700" text-anchor="middle">
+      <text x="85" y="250" fill="#dce4ee">Pre-contact</text>
       <text x="85" y="510" fill="#d9f272">Post-contact</text>
     </g>
-    <g fill="none" stroke="#c9d2df" stroke-width="2.5">
+    <g fill="none" stroke="#dce4ee" stroke-width="2.5">
       <path class="flow" d="M178 125 C215 125 215 250 248 262"/>
       <path class="flow" d="M178 385 C215 385 215 290 248 278"/>
     </g>
@@ -488,49 +487,49 @@
       <rect x="262" y="190" width="96" height="164" rx="10" fill="rgb(38 52 78 / 90%)"/>
       <rect x="252" y="202" width="96" height="144" rx="10" fill="rgb(48 64 94 / 92%)"/>
     </g>
-    <text x="305" y="402" fill="#eef3fb" font-size="24" font-weight="740" text-anchor="middle">ResNet-50</text>
-    <path class="flow" d="M372 270 L404 270" stroke="#c9d2df" stroke-width="2.5"/>
+    <text x="305" y="402" fill="#eef3fb" font-size="27" font-weight="740" text-anchor="middle">ResNet-50</text>
+    <path class="flow" d="M372 270 L404 270" stroke="#dce4ee" stroke-width="2.5"/>
     <rect x="408" y="100" width="54" height="340" rx="12" fill="rgb(9 16 29 / 90%)" stroke="rgb(238 243 251 / 50%)" stroke-width="1.5"/>
-    <text x="435" y="270" fill="#eef3fb" font-size="22" font-weight="700" text-anchor="middle" transform="rotate(-90 435 270)" dominant-baseline="middle">Attention module</text>
-    <text x="580" y="78" fill="#c9d2df" font-size="21" font-weight="700" text-anchor="middle" letter-spacing="1.5">STAGE 1 · COARSE</text>
-    <text x="850" y="78" fill="#c9d2df" font-size="21" font-weight="700" text-anchor="middle" letter-spacing="1.5">STAGE 2 · REFINED</text>
+    <text x="435" y="270" fill="#eef3fb" font-size="24" font-weight="700" text-anchor="middle" transform="rotate(-90 435 270)" dominant-baseline="middle">Attention module</text>
+    <text x="580" y="78" fill="#dce4ee" font-size="24" font-weight="700" text-anchor="middle" letter-spacing="1.5">STAGE 1 · COARSE</text>
+    <text x="850" y="78" fill="#dce4ee" font-size="24" font-weight="700" text-anchor="middle" letter-spacing="1.5">STAGE 2 · REFINED</text>
     <path class="flow" d="M462 145 L500 145" stroke="#d9f272" stroke-width="2.5"/>
-    <path class="flow" d="M462 395 L500 395" stroke="#6b98ff" stroke-width="2.5"/>
+    <path class="flow" d="M462 395 L500 395" stroke="#86adff" stroke-width="2.5"/>
     <g font-size="23" font-weight="720" text-anchor="middle">
       <rect x="504" y="105" width="152" height="80" rx="14" fill="rgb(217 242 114 / 10%)" stroke="#d9f272" stroke-width="2"/>
-      <text x="580" y="141" fill="#eef3fb" font-size="20">Normal force<tspan x="580" dy="25">head</tspan></text>
-      <rect x="504" y="355" width="152" height="80" rx="14" fill="rgb(107 152 255 / 12%)" stroke="#6b98ff" stroke-width="2"/>
-      <text x="580" y="391" fill="#eef3fb" font-size="20">Position<tspan x="580" dy="25">head</tspan></text>
+      <text x="580" y="141" fill="#eef3fb" font-size="21">Normal force<tspan x="580" dy="25">head</tspan></text>
+      <rect x="504" y="355" width="152" height="80" rx="14" fill="rgb(107 152 255 / 12%)" stroke="#86adff" stroke-width="2"/>
+      <text x="580" y="391" fill="#eef3fb" font-size="21">Position<tspan x="580" dy="25">head</tspan></text>
       <rect x="774" y="105" width="152" height="80" rx="14" fill="rgb(217 242 114 / 16%)" stroke="#d9f272" stroke-width="2.5"/>
-      <text x="850" y="141" fill="#eef3fb" font-size="20">Normal force<tspan x="850" dy="25">head</tspan></text>
-      <rect x="774" y="355" width="152" height="80" rx="14" fill="rgb(107 152 255 / 18%)" stroke="#6b98ff" stroke-width="2.5"/>
-      <text x="850" y="391" fill="#eef3fb" font-size="20">Position<tspan x="850" dy="25">head</tspan></text>
+      <text x="850" y="141" fill="#eef3fb" font-size="21">Normal force<tspan x="850" dy="25">head</tspan></text>
+      <rect x="774" y="355" width="152" height="80" rx="14" fill="rgb(107 152 255 / 18%)" stroke="#86adff" stroke-width="2.5"/>
+      <text x="850" y="391" fill="#eef3fb" font-size="21">Position<tspan x="850" dy="25">head</tspan></text>
     </g>
     <path class="flow" d="M656 145 C715 145 715 395 770 395" fill="none" stroke="#d9f272" stroke-width="3"/>
-    <path class="flow" d="M656 395 C715 395 715 145 770 145" fill="none" stroke="#6b98ff" stroke-width="3"/>
+    <path class="flow" d="M656 395 C715 395 715 145 770 145" fill="none" stroke="#86adff" stroke-width="3"/>
     <path class="flow" d="M462 270 L850 270 M850 270 L850 190 M850 270 L850 350" fill="none" stroke="#eef3fb" stroke-width="2.5"/>
-    <text x="478" y="300" fill="#c9d2df" font-size="20" font-weight="600">shared features</text>
+    <text x="478" y="300" fill="#dce4ee" font-size="24" font-weight="650">shared features</text>
     <path class="flow" d="M926 145 L962 145" stroke="#d9f272" stroke-width="3"/>
-    <path class="flow" d="M926 395 L962 395" stroke="#6b98ff" stroke-width="3"/>
-    <text x="968" y="154" fill="#eef3fb" font-size="25" font-weight="760">Normal force</text>
-    <text x="968" y="404" fill="#6b98ff" font-size="25" font-weight="760">Position</text>
+    <path class="flow" d="M926 395 L962 395" stroke="#86adff" stroke-width="3"/>
+    <text x="968" y="154" fill="#eef3fb" font-size="29" font-weight="760">Normal force</text>
+    <text x="968" y="404" fill="#86adff" font-size="29" font-weight="760">Position</text>
     </g>
   </svg>
-  <svg class="block" data-step="1" style="left:740px; top:315px" width="1060" height="544" viewBox="0 0 1170 600" aria-label="Softness branches off the normal force readout, with no fine-tuning">
+  <svg class="block" data-step="1" style="left:600px; top:292px" width="1200" height="615" viewBox="0 0 1170 600" aria-label="Softness branches off the normal force readout, with no fine-tuning">
     <path class="flow" d="M944 145 L944 214 L962 214" fill="none" stroke="#d9f272" stroke-width="2.5"/>
-    <text x="968" y="222" fill="#d9f272" font-size="25" font-weight="760">Softness</text>
-    <text x="968" y="249" fill="#c9d2df" font-size="20" font-weight="600">no fine-tuning</text>
+    <text x="968" y="222" fill="#d9f272" font-size="29" font-weight="760">Softness</text>
+    <text x="968" y="249" fill="#dce4ee" font-size="24" font-weight="650">no fine-tuning</text>
   </svg>
-  <svg class="block" data-step="2" style="left:740px; top:315px" width="1060" height="544" viewBox="0 0 1170 600" aria-label="Shear force branches off too, fine-tuned with a new head">
+  <svg class="block" data-step="2" style="left:600px; top:292px" width="1200" height="615" viewBox="0 0 1170 600" aria-label="Shear force branches off too, fine-tuned with a new head">
     <path class="flow" d="M944 214 L944 290 L962 290" fill="none" stroke="#d9f272" stroke-width="2.5"/>
-    <text x="968" y="298" fill="#d9f272" font-size="25" font-weight="760">Shear force</text>
-    <text x="968" y="325" fill="#c9d2df" font-size="20" font-weight="600">fine-tuned + new head</text>
+    <text x="968" y="298" fill="#d9f272" font-size="29" font-weight="760">Shear force</text>
+    <text x="968" y="325" fill="#dce4ee" font-size="24" font-weight="650">fine-tuned + new head</text>
   </svg>
   <aside class="notes">Both case studies reuse the same pre-trained backbone. Softness uses its features directly, with no fine-tuning, and shear force only fine-tunes it and adds a new head.</aside>
 </section>
 <section class="slide" id="lego" data-shots="icon" data-title="Application: toy LEGO arm" data-duration="30">
-  <p class="block eyebrow r" style="left:120px; top:110px">Application</p>
-  <h2 class="block h1 r" style="left:120px; top:152px; width:1600px">Dexterity for even a toy arm.</h2>
+  <p class="block eyebrow r" style="left:120px; top:98px">Application</p>
+  <h2 class="block h1 r" style="left:120px; top:152px; width:1600px"><span class="grad">Dexterity</span> for even a toy arm.</h2>
   <figure class="block r" style="left:120px; top:300px; width:900px; margin:0">
     <div class="photo" style="height:586px; background:#000"><video id="lego-video" muted playsinline loop data-autoplay poster="assets/media/lego-arm.webp" src="assets/media/lego-arm.mp4" style="object-fit:contain"></video></div>
   </figure>
@@ -545,11 +544,11 @@
 </section>
 
 <section class="slide" id="umi" data-shots="icon" data-title="Data collection kit" data-duration="25">
-  <p class="block eyebrow r" style="left:120px; top:110px">Data collection kit</p>
+  <p class="block eyebrow r" style="left:120px; top:98px">Data collection kit</p>
   <h2 class="block h1 r" style="left:120px; top:152px; width:1600px">Humans teach, robots learn.</h2>
   <figure class="block r" style="left:120px; top:300px; width:1000px; margin:0">
     <div class="photo" style="height:533px; background:#000"><video muted playsinline loop data-autoplay poster="assets/media/umi-gripper.webp" src="assets/media/umi-gripper.mp4" style="object-fit:contain"></video></div>
-    <figcaption class="caption" style="font-size:18px; margin-top:10px">Gripper after UMI · Chi et al., RSS 2024 (Stanford, Columbia, Toyota Research Institute) · umi-gripper.github.io</figcaption>
+    <figcaption class="caption" style="font-size:20px; margin-top:10px">Gripper after UMI · Chi et al., RSS 2024 · umi-gripper.github.io</figcaption>
   </figure>
   <p class="block chip r" style="left:1200px; top:310px">UMI-style handheld gripper</p>
   <p class="block credit-logos r" style="left:1200px; top:404px"><span>UMI by</span><img src="assets/img/credits/stanford_logo.png" alt="Stanford University"><img src="assets/img/credits/columbia_engineering_logo.svg" alt="Columbia Engineering"><img src="assets/img/credits/tri_logo_landscape.svg" alt="Toyota Research Institute"></p>
@@ -562,10 +561,10 @@
 
 <section class="slide" id="closing" data-shots="closing" data-chrome="off" data-title="Takeaways" data-duration="20">
   <ol class="block steps-list big r" style="left:120px; top:130px; width:860px; gap:22px">
-    <li data-n="01"><span><b>Ultra-sensitive</b> · 3.78 mN</span></li>
-    <li data-n="02"><span><b>Compliant</b> · grips fragile things gently</span></li>
-    <li data-n="03"><span><b>Actuating</b> · feels its own pressure</span></li>
-    <li data-n="04"><span><b>See-through</b> · sees before touch</span></li>
+    <li data-n="01"><span><b class="grad">Ultra-sensitive</b> · 3.78 mN</span></li>
+    <li data-n="02"><span><b class="grad">Compliant</b> · grips fragile things gently</span></li>
+    <li data-n="03"><span><b class="grad">Actuating</b> · feels its own pressure</span></li>
+    <li data-n="04"><span><b class="grad">See-through</b> · sees before touch</span></li>
   </ol>
   <p class="block lead r" style="left:120px; top:470px; width:760px; color:var(--ink-2); font-size:32px; line-height:1.3">Sensing + actuation in one skin,<br>for dexterous manipulation.</p>
   <p class="block display r" style="left:112px; top:600px; font-size:136px">Thank you.</p>
@@ -581,7 +580,7 @@
   </div>
   <div class="block r" style="left:1600px; top:110px; width:200px; text-align:center">
     <img src="assets/img/qr-project.svg" alt="QR code for the MoiréSkin project page" style="width:180px; height:180px; display:block; margin:0 auto">
-    <p class="small" style="margin-top:12px; font-size:20px">Project page</p>
+    <p class="small" style="margin-top:12px; font-size:24px">Project page</p>
   </div>
   <aside class="notes">To summarize. MoiréSkin is ultra-sensitive: 3.78 millinewtons. It is compliant, it actuates, and it stays see-through. We achieve sensing and actuation in one ultra-sensitive skin, for dexterous manipulation. Thank you.</aside>
 </section>
@@ -589,8 +588,8 @@
 <!-- Left up during questions: the thank-you page again, with the paper title
      and the authors where the takeaways were. Only that block changes. -->
 <section class="slide" id="end" data-shots="closing" data-chrome="off" data-title="Questions" data-duration="0">
-  <p class="block eyebrow r" style="left:120px; top:98px">ACM MobiCom 2026 · Austin, TX</p>
-  <h1 class="block display r" style="left:112px; top:150px; font-size:128px">MoiréSkin</h1>
+  <p class="block eyebrow r" style="left:120px; top:86px">ACM MobiCom 2026 · Austin, TX</p>
+  <h1 class="block display r" style="left:112px; top:150px; font-size:128px"><span class="grad">MoiréSkin</span></h1>
   <p class="block lead r" style="left:120px; top:292px; width:820px; color:var(--ink); font-size:32px; line-height:1.3">Ultra-Sensitive Sensor–Actuator<br>Visuo-Tactile Skin using Moiré Patterns</p>
   <ul class="block authors small r" style="left:120px; top:408px">
     <li><img src="assets/img/authors/linzhen.webp" alt=""><span>Linzhen Zhu</span></li>
@@ -611,17 +610,17 @@
   </div>
   <div class="block" style="left:1600px; top:110px; width:200px; text-align:center">
     <img src="assets/img/qr-project.svg" alt="QR code for the MoiréSkin project page" style="width:180px; height:180px; display:block; margin:0 auto">
-    <p class="small" style="margin-top:12px; font-size:20px">Project page</p>
+    <p class="small" style="margin-top:12px; font-size:24px">Project page</p>
   </div>
-  <aside class="notes"></aside>
+  <aside class="notes">(Stay on this page for questions.)</aside>
 </section>
 
 </main>
 
 <footer class="chrome" id="chrome">
   <div class="logos">
-    <span class="lockup cse-logo" style="height:34px; font-size:18px"><img src="assets/logos/umich-cse.png" alt=""><span class="wordmark"><b>University of Michigan</b></span></span>
-    <span class="lockup" style="height:34px; font-size:18px"><img src="assets/logos/ami-lab.svg" alt=""><span class="wordmark"><b>AMI Lab</b></span></span>
+    <span class="lockup cse-logo" style="height:34px; font-size:20px"><img src="assets/logos/umich-cse.png" alt=""><span class="wordmark"><b>University of Michigan</b></span></span>
+    <span class="lockup" style="height:34px; font-size:20px"><img src="assets/logos/ami-lab.svg" alt=""><span class="wordmark"><b>AMI Lab</b></span></span>
   </div>
   <span>MoiréSkin · MobiCom ’26</span>
   <span class="num" id="counter">01 / 15</span>
