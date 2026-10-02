@@ -1369,17 +1369,11 @@ html.export .video-captions li {
   box-shadow: -12px 0 28px rgb(217 242 114 / 24%), 12px 0 28px rgb(134 173 255 / 30%);
 }
 
-/* Its second line: what the name stands for here. Two lines need a softer corner. */
-.video-captions li.ours:has(small) {
-  border-radius: 26px;
-  line-height: 34px;
-}
-
-.video-captions li.ours small {
-  display: block;
+/* A caption over one half of a side-by-side clip: the half is narrow, so it is set at the
+   label size, and both halves match. */
+.video-captions li.side {
   font-size: 24px;
-  font-weight: 650;
-  line-height: 30px;
+  white-space: nowrap;
 }
 
 /* Points at what goes wrong in a clip: a word and an arrow, in amber (a limitation). */
