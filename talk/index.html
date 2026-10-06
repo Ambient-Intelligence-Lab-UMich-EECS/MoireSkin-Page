@@ -39,6 +39,22 @@
   <aside class="notes">Hi everyone, I'm Linzhen Zhu, a second-year PhD student in the Ambient Intelligence Lab at the University of Michigan. Today I'll introduce MoiréSkin, one of the most sensitive visuo-tactile sensors in the world.</aside>
 </section>
 
+<!-- The problem first: a hand that cannot feel crushes what it holds. Only the
+     "without tactile feedback" half of the clip is shown. -->
+<section class="slide" id="crush" data-shots="icon" data-title="Robots need both" data-duration="16">
+  <p class="block eyebrow r" style="left:120px; top:98px">Why it matters</p>
+  <h2 class="block h1 r" style="left:120px; top:152px; width:1400px">Robots need <span class="grad">both</span>.</h2>
+  <p class="block tag r" style="left:120px; top:350px; margin:0; width:900px"><span class="value fluo" style="font-size:104px">Sensitivity</span><span class="name" style="font-size:28px">to handle fragile things</span></p>
+  <p class="block lens-op r" style="left:124px; top:538px">+</p>
+  <p class="block tag r" style="left:120px; top:640px; margin:0; width:900px"><span class="value" style="font-size:104px; color:#9dbaff">Compliance</span><span class="name" style="font-size:28px">to grip them gently</span></p>
+  <figure class="block r" style="left:1204px; top:292px; width:596px; margin:0">
+    <div class="photo" style="height:596px; background:#000"><video id="crush-video" muted playsinline loop data-autoplay poster="assets/media/crush-robotis.webp" src="assets/media/crush-robotis.mp4"></video></div>
+    <p class="flag warn" style="margin-top:16px">Failure case</p>
+    <figcaption class="caption" style="font-size:20px; margin-top:8px">Video: ROBOTIS · youtube.com/watch?v=1-ymnFMMVgk</figcaption>
+  </figure>
+  <aside class="notes">Dexterous robot manipulation requires two things: sensitivity, to handle fragile things, and compliance, to grip them gently. Without them, a fragile object ends up crushed, like this.</aside>
+</section>
+
 <section class="slide" id="vts" data-shots="icon" data-title="Visuo-tactile sensor" data-duration="15">
   <p class="block eyebrow r" style="left:120px; top:98px">Visuo-tactile sensor</p>
   <h2 class="block h1 r" style="left:120px; top:152px; width:1600px">Tactile → visual: a camera reads touch.</h2>
@@ -50,7 +66,7 @@
     </ol>
     <figcaption class="caption" style="font-size:20px; margin-top:10px">Video: GelSight · youtube.com/watch?v=wCZZnyo7k44</figcaption>
   </figure>
-  <aside class="notes">So what is a visuo-tactile sensor? Just like the sensor on the gripper. Tactile sensing tells a robot how an object deforms and how much force is applied.</aside>
+  <aside class="notes">So robots need a sense of touch. One way is a visuo-tactile sensor, just like the sensor on the gripper. Tactile sensing tells a robot how an object deforms and how much force is applied.</aside>
 </section>
 
 <!-- The second scene of the same clip. Same header, shown at once (no .r),
@@ -70,9 +86,14 @@
 </section>
 
 
-<section class="slide" id="related" data-shots="icon" data-title="Related works: sensitive, or compliant?" data-duration="35">
-  <p class="block eyebrow r" style="left:120px; top:98px">Visuo-tactile sensors today</p>
-  <h2 class="block h1 r" style="left:120px; top:152px; width:1500px">Related works: <span class="grad">sensitive, or compliant?</span></h2>
+<!-- One chart for related work and our place in it: the axes, then one column per click,
+     left to right, then the empty corner, then MoiréSkin flies into it and the headline
+     turns from the question to the answer. -->
+<section class="slide" id="related" data-shots="icon icon icon icon icon icon paradox" data-title="Related works: sensitive, or compliant? → MoiréSkin fills the gap" data-step-durations="5 7 5 6 6 6 13">
+  <p class="block eyebrow r" data-until="5" style="left:120px; top:98px">Visuo-tactile sensors today</p>
+  <h2 class="block h1 r" data-until="5" style="left:120px; top:152px; width:1500px">Related works: <span class="grad">sensitive, or compliant?</span></h2>
+  <p class="block eyebrow" data-step="6" style="left:120px; top:98px">Our goal</p>
+  <h2 class="block h1" data-step="6" style="left:120px; top:152px; width:1500px"><span class="grad">MoiréSkin</span> fills the gap.</h2>
   <svg class="block r" style="left:160px; top:270px" width="1600" height="720" viewBox="0 0 1600 720" aria-label="Force error of visuo-tactile sensors by compliance, from Table 1 of the paper">
     <g stroke="rgb(238 243 251 / 18%)" stroke-width="1.5">
       <line x1="120" y1="40" x2="120" y2="600"/><line x1="120" y1="600" x2="1500" y2="600"/>
@@ -110,85 +131,32 @@
     <g fill="#8f99ab" font-size="26" font-weight="650"><circle cx="1350" cy="497" r="13"/><text x="1374" y="505" fill="#dce4ee">Soft-Bubble</text></g>
     <path d="M1255 660C1255 668 1255 668 1271 668L1334 668C1350 668 1350 668 1350 676C1350 668 1350 668 1366 668L1429 668C1445 668 1445 668 1445 660" fill="none" stroke="#7da6ff" stroke-width="2.5" stroke-linecap="round"/><text x="1350" y="710" fill="#7da6ff" font-size="28" font-weight="760" text-anchor="middle">Compliant</text>
   </svg>
-  <div class="block gap-mark" data-step="5" style="left:1466px; top:305px" aria-label="Nothing yet is both compliant and sensitive">?</div>
-  <aside class="notes">Today's visuo-tactile sensors face a paradox: none is both sensitive and compliant. Rigid ones, like those built on a rigid base or a stiff dome, are sensitive but not compliant, and compliant ones, like Soft-Bubble, are soft but far less sensitive. So this corner is still empty.</aside>
-</section>
-
-<!-- Why the gap matters: a hand that cannot feel crushes what it holds. Only
-     the "without tactile feedback" half of the clip is shown. -->
-<section class="slide" id="crush" data-shots="icon" data-title="Robots need both" data-duration="16">
-  <p class="block eyebrow r" style="left:120px; top:98px">Why it matters</p>
-  <h2 class="block h1 r" style="left:120px; top:152px; width:1400px">Robots need <span class="grad">both</span>.</h2>
-  <p class="block tag r" style="left:120px; top:350px; margin:0; width:900px"><span class="value fluo" style="font-size:104px">Sensitivity</span><span class="name" style="font-size:28px">to handle fragile things</span></p>
-  <p class="block lens-op r" style="left:124px; top:538px">+</p>
-  <p class="block tag r" style="left:120px; top:640px; margin:0; width:900px"><span class="value" style="font-size:104px; color:#9dbaff">Compliance</span><span class="name" style="font-size:28px">to grip them gently</span></p>
-  <figure class="block r" style="left:1204px; top:292px; width:596px; margin:0">
-    <div class="photo" style="height:596px; background:#000"><video id="crush-video" muted playsinline loop data-autoplay poster="assets/media/crush-robotis.webp" src="assets/media/crush-robotis.mp4"></video></div>
-    <p class="flag warn" style="margin-top:16px">Failure case</p>
-    <figcaption class="caption" style="font-size:20px; margin-top:8px">Video: ROBOTIS · youtube.com/watch?v=1-ymnFMMVgk</figcaption>
-  </figure>
-  <aside class="notes">But a robot needs both: sensitivity, to handle fragile things, and compliance, to grip them gently. Otherwise, a fragile object ends up crushed, like this.</aside>
-</section>
-
-<section class="slide" id="paradox" data-shots="paradox" data-title="MoiréSkin fills the gap" data-duration="13">
-  <p class="block eyebrow r" style="left:120px; top:98px">Our goal</p>
-  <h2 class="block h1 r" style="left:120px; top:152px; width:1500px"><span class="grad">MoiréSkin</span> fills the gap.</h2>
-  <svg class="block r" style="left:160px; top:270px" width="1600" height="720" viewBox="0 0 1600 720" aria-label="The same chart with MoiréSkin in the empty corner: compliant and sensitive">
-    <g stroke="rgb(238 243 251 / 18%)" stroke-width="1.5">
-      <line x1="120" y1="40" x2="120" y2="600"/><line x1="120" y1="600" x2="1500" y2="600"/>
-      <line x1="120" y1="514" x2="1500" y2="514" stroke-dasharray="4 9"/>
-      <line x1="120" y1="334" x2="1500" y2="334" stroke-dasharray="4 9"/>
-      <line x1="120" y1="154" x2="1500" y2="154" stroke-dasharray="4 9"/>
-    </g>
-    <g fill="#ffffff" font-size="26" font-weight="760" text-anchor="end">
-      <text data-pill="axis" x="96" y="522">1 N</text><text data-pill="axis" x="96" y="342">0.1 N</text><text data-pill="axis" x="96" y="162">0.01 N</text>
-    </g>
-    <!-- An everyday object that weighs about as much as each force. -->
-    <g transform="translate(136 462) scale(1.9)" fill="none" stroke="#ffffff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 7.4C9.4 5.4 4.8 6.4 4.8 11.4c0 4.6 3 9.1 5.6 9.1.8 0 1.1-.5 1.6-.5s.8.5 1.6.5c2.6 0 5.6-4.5 5.6-9.1 0-5-4.6-6-7.2-4Z"/><path d="M12 7.4c0-2 .8-3.3 2.2-4.2"/><path d="M14.6 4.4c1.2-.9 2.6-.9 3.6-.4-.4 1.2-1.6 2-3 2"/></g><g transform="translate(136 282) scale(1.9)" fill="none" stroke="#ffffff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21.5C6.5 18 3.8 13.2 4.6 9.6 5.4 6.4 9 5.6 12 7.2c3-1.6 6.6-.8 7.4 2.4.8 3.6-1.9 8.4-7.4 11.9Z"/><path d="M8.6 4.6 12 7.2l3.4-2.6M12 7.2V3"/><path d="M9 11.2h.01M12 13.6h.01M15 11.2h.01M10.4 16h.01M13.6 16h.01" stroke-width="2.2"/></g><g transform="translate(136 102) scale(1.9)" fill="none" stroke="#ffffff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21.4 11.1l-9.2 9.2a6 6 0 0 1-8.5-8.5l9.2-9.2a4 4 0 0 1 5.7 5.7l-9.2 9.2a2 2 0 0 1-2.8-2.8l8.5-8.5"/></g>
-    <g fill="#ffffff" font-size="24" font-weight="700">
-      <text x="190" y="498">≈ an apple</text><text x="190" y="318">≈ a strawberry</text><text x="190" y="138">≈ a paperclip</text>
-    </g>
-    <text x="120" y="22" fill="#ffffff" font-size="25" font-weight="760" letter-spacing="2">MORE SENSITIVE ↑ · FORCE ERROR, LOG</text>
-    <g fill="#ffffff" font-size="25" font-weight="760" text-anchor="middle">
-      <text data-pill="rigid" x="300" y="638">Rigid base</text>
-      <text data-pill="rigid" x="650" y="638">Elastomer on rigid base</text>
-      <text data-pill="rigid" x="1000" y="638">Shaped / dome</text>
-      <text data-pill="soft" x="1350" y="638">Air-inflated</text>
-    </g>
-    <path d="M215 660C215 668 215 668 231 668L644 668C660 668 660 668 660 676C660 668 660 668 676 668L1089 668C1105 668 1105 668 1105 660" fill="none" stroke="#ffbe7d" stroke-width="2.5" stroke-linecap="round"/><text x="660" y="710" fill="#ffbe7d" font-size="28" font-weight="760" text-anchor="middle">Rigid</text>
-    <path d="M1255 660C1255 668 1255 668 1271 668L1334 668C1350 668 1350 668 1350 676C1350 668 1350 668 1366 668L1429 668C1445 668 1445 668 1445 660" fill="none" stroke="#7da6ff" stroke-width="2.5" stroke-linecap="round"/><text x="1350" y="710" fill="#7da6ff" font-size="28" font-weight="760" text-anchor="middle">Compliant</text>
-    <g fill="#8f99ab" font-size="26" font-weight="650">
-      <g><circle cx="300" cy="262" r="13"/><text x="324" y="270" fill="#dce4ee">GelSlim 4.0</text></g>
-      <g><circle cx="300" cy="406" r="13"/><text x="324" y="414" fill="#dce4ee">MoiréTac</text></g>
-      <g><circle cx="650" cy="564" r="13"/><text x="674" y="572" fill="#dce4ee">GelSight</text></g>
-      <g><circle cx="632" cy="444" r="13"/><text x="608" y="456" fill="#dce4ee" text-anchor="end">DenseTact 2.0</text></g>
-      <g><circle cx="668" cy="422" r="13"/><text x="692" y="426" fill="#dce4ee">9DTact</text></g>
-      <g><circle cx="1000" cy="240" r="13"/><text x="1024" y="248" fill="#dce4ee">Insight</text></g>
-      <g><circle cx="1000" cy="154" r="13"/><text x="1024" y="162" fill="#dce4ee">ViTacTip</text></g>
-      <g><circle cx="1350" cy="497" r="13"/><text x="1374" y="505" fill="#dce4ee">Soft-Bubble</text></g>
-    </g>
+  <div class="block gap-mark" data-step="5" data-until="5" style="left:1466px; top:305px" aria-label="Nothing yet is both compliant and sensitive">?</div>
+  <svg class="block" data-step="6" style="left:160px; top:270px" width="1600" height="720" viewBox="0 0 1600 720" aria-label="MoiréSkin in the empty corner: compliant and sensitive">
     <text x="1270" y="72" fill="url(#grad-ink)" font-size="30" font-weight="760" text-anchor="end">MoiréSkin</text>
     <text x="1270" y="106" fill="#dce4ee" font-size="26" font-weight="650" text-anchor="end">senses + actuates · sees through</text>
   </svg>
-  <aside class="notes">MoiréSkin fills this gap: it is compliant, and more sensitive than any of them. So how can one skin be both?</aside>
+  <aside class="notes">[Step 1] Today's visuo-tactile sensors face a paradox: none is both sensitive and compliant. [Step 2] Rigid ones, like those built on a rigid base, [Step 3] or on an elastomer over a rigid base, [Step 4] or on a stiff dome, are sensitive but not compliant. [Step 5] Compliant ones, like Soft-Bubble, are soft but far less sensitive. [Step 6] So this corner is still empty. [Step 7] MoiréSkin fills this gap: it is compliant, and more sensitive than any of them. So how can one skin be both?</aside>
 </section>
 
-<!-- What moiré is in general, then what is different about ours. -->
-<section class="slide" id="moire" data-shots="icon moireFilm" data-title="What is a moiré pattern?" data-duration="38">
+
+
+<!-- What a moiré pattern is, shown with our own gratings (the way the teaser shows it): two
+     fine gratings, too fine for the camera; overlapped at a small angle they make broad
+     fringes; ours are both on one soft film. -->
+<section class="slide" id="moire" data-shots="pApart pOverlap moireFilm" data-title="What is a moiré pattern?" data-step-durations="12 8 8">
   <p class="block eyebrow r" style="left:120px; top:98px">Background</p>
-  <h2 class="block h1 r" style="left:120px; top:152px; width:1500px">What is a moiré pattern?</h2>
-  <figure class="block r" style="left:120px; top:300px; width:1000px; margin:0">
-    <div class="photo" style="height:563px; background:#000"><video id="moire-video" muted playsinline loop data-autoplay poster="assets/media/moire-phone-screen.webp" src="assets/media/moire-phone-screen.mp4"></video></div>
-    <ol class="video-captions" data-video-steps="#moire-video">
-      <li data-from="0" data-to="5.45" style="left:28px; top:28px">A phone filming a screen</li>
-      <li data-from="5.45" data-to="99" style="left:28px; top:28px">Moiré in the viewfinder</li>
-      <li data-from="0" data-to="99" style="right:28px; bottom:calc(100% - 535px)">Mediastorm</li>
-    </ol>
-    <figcaption class="caption" style="font-size:20px; margin-top:10px">Video: Mediastorm 影视飓风 · youtube.com/watch?v=I48vtTxdaeQ</figcaption>
-  </figure>
-  <p class="block tag r" style="left:1200px; top:310px; margin:0; width:600px"><span class="value" style="font-size:52px">Everyday moiré</span><span class="name">two separate objects</span></p>
-  <p class="block tag" data-step="1" style="left:1200px; top:470px; margin:0; width:600px"><span class="value" style="font-size:52px">Ours: a <span class="grad">metasurface</span></span><span class="name">generate moiré<br>on one single object</span></p>
-  <aside class="notes">The answer is moiré. You may have seen it when filming a screen with a phone: broad stripes appear in the viewfinder. Two fine patterns overlap, and a tiny shift between them moves the stripes a lot. But that takes two separate objects. We put both gratings on one film, a metasurface, so one object generates moiré by itself.</aside>
+  <h2 class="block h1" data-step="0" data-until="0" style="left:120px; top:152px; width:1000px">Two fine gratings.</h2>
+  <h2 class="block h1" data-step="1" data-until="1" style="left:120px; top:152px; width:1000px">Overlap: moiré fringes.</h2>
+  <h2 class="block h1" data-step="2" style="left:120px; top:152px; width:1000px">Both on one soft film.</h2>
+  <svg class="block r" data-widget="section" style="left:100px; top:320px" width="820" height="330" viewBox="0 0 820 330" aria-label="Cross-section of the sensing film: two gratings on the two faces of a soft film"></svg>
+  <p class="block tag" data-step="0" data-until="0" style="left:120px; top:700px; margin:0"><span class="value">330 μm</span><span class="name">too fine for the camera</span></p>
+  <p class="block micro fluo" data-step="0" data-until="0" style="left:936px; top:830px; width:440px; text-align:center">Lower · fluorescent</p>
+  <p class="block micro" data-step="0" data-until="0" style="left:1384px; top:830px; width:440px; text-align:center; color:#9dbaff">Upper · clear</p>
+  <p class="block tag" data-step="1" data-until="1" style="left:120px; top:700px; margin:0"><span class="value">0.33 <span class="fluo">→ 3 mm</span></span><span class="name">lines → fringes</span></p>
+  <p class="block tag" data-step="2" style="left:120px; top:700px; margin:0"><span class="value">a <span class="grad">metasurface</span></span><span class="name">generates moiré by itself</span></p>
+  <p class="block chip" data-step="0" data-until="1" style="left:120px; top:900px">Scroll ↕ to bring them together</p>
+  <aside class="notes">[Step 1] The answer is moiré. Take two fine gratings, 330 micrometres in pitch, too fine for a camera to see. (Scroll to bring them together.) [Step 2] Overlap them at a small angle, and broad moiré fringes appear; a tiny shift between them moves the fringes a lot. [Step 3] We put both gratings on one soft film, a metasurface, so one film generates moiré by itself.</aside>
 </section>
 
 <section class="slide" id="insight" data-shots="insight insightReal" data-title="Our insight: moiré" data-duration="30">
@@ -275,75 +243,66 @@
   <aside class="notes">Two more designs make this work. First, the grating is fluorescent: blue LEDs excite it, so the fringes stay high-contrast in any light, even in darkness. Second, the skin is see-through, so the robot sees an object before touching it. It can line up before contact, for example by telling which side of a USB plug is up. And each cell costs under two dollars. (Hover a tile to show it on the sensor.)</aside>
 </section>
 
-<section class="slide" id="principle" data-shots="pApart pOverlap pAmplify pAmplifyReal pPressure pPressureReal pWeather pLight pZero pZeroReal" data-title="How it works" data-duration="229" data-step-durations="15 10 60 8 55 8 20 20 25 8">
+<section class="slide" id="principle" data-shots="pAmplify pAmplifyReal pPressure pPressureReal pWeather pLight pZero pZeroReal" data-title="How it works" data-step-durations="60 8 55 8 20 20 25 8">
   <p class="block eyebrow r" style="left:120px; top:80px">How it works</p>
   <div class="block tabs r" style="left:120px; top:140px; width:1680px">
-    <span data-tab="0">Apart</span><span data-tab="1">Overlap</span><span data-tab="2-3">Amplify</span><span data-tab="4-5">Pressure</span><span data-tab="6-7">Drift</span><span data-tab="8-9">Zero</span>
+    <span data-tab="0-1">Amplify</span><span data-tab="2-3">Pressure</span><span data-tab="4-5">Drift</span><span data-tab="6-7">Zero</span>
   </div>
   <svg class="block r" data-widget="section" style="left:100px; top:372px" width="820" height="330" viewBox="0 0 820 330" aria-label="Cross-section of the sensing film: two gratings on the two faces of a soft film"></svg>
 
-  <h2 class="block h1" data-step="0" data-until="0" style="left:120px; top:240px; width:780px; font-size:72px">Two fine gratings.</h2>
-  <p class="block tag" data-step="0" data-until="0" style="left:120px; top:730px; margin:0"><span class="value">330 μm</span><span class="name">too fine for the camera</span></p>
-  <p class="block micro fluo" data-step="0" data-until="0" style="left:936px; top:830px; width:440px; text-align:center">Lower · fluorescent</p>
-  <p class="block micro" data-step="0" data-until="0" style="left:1384px; top:830px; width:440px; text-align:center; color:#9dbaff">Upper · clear</p>
+  <h2 class="block h1" data-step="0" data-until="1" style="left:120px; top:240px; width:780px; font-size:72px">The angle is a <span class="grad">trade-off</span>.</h2>
+  <p class="block flag warn" data-step="0" data-until="1" style="left:120px; top:326px">Challenge · sensitivity vs resolution</p>
+  <svg class="block" data-step="0" data-until="1" data-widget="alphaChart" style="left:100px; top:694px" width="640" height="296" viewBox="0 0 800 370" aria-label="Spatial resolution and sensitivity versus grating angle"></svg>
+  <p class="block chip" data-step="0" data-until="0" style="left:780px; top:898px">Scroll ↕ to change the angle · hover to press</p>
 
-  <h2 class="block h1" data-step="1" data-until="1" style="left:120px; top:240px; width:780px; font-size:72px">Overlap: moiré fringes.</h2>
-  <p class="block tag" data-step="1" data-until="1" style="left:120px; top:730px; margin:0"><span class="value">0.33 <span class="fluo">→ 3 mm</span></span><span class="name">lines → fringes</span></p>
-  <p class="block chip" data-step="0" data-until="1" style="left:120px; top:900px">Scroll ↕ to bring them together</p>
-
-  <h2 class="block h1" data-step="2" data-until="3" style="left:120px; top:240px; width:780px; font-size:72px">The angle is a <span class="grad">trade-off</span>.</h2>
-  <p class="block flag warn" data-step="2" data-until="3" style="left:120px; top:326px">Challenge · sensitivity vs resolution</p>
-  <svg class="block" data-step="2" data-until="3" data-widget="alphaChart" style="left:100px; top:694px" width="640" height="296" viewBox="0 0 800 370" aria-label="Spatial resolution and sensitivity versus grating angle"></svg>
-  <p class="block chip" data-step="2" data-until="2" style="left:780px; top:898px">Scroll ↕ to change the angle · hover to press</p>
-
-  <h2 class="block h1" data-step="4" data-until="5" style="left:120px; top:240px; width:780px; font-size:72px">Sensing inner pressure.</h2>
-  <p class="block flag" data-step="4" data-until="5" style="left:120px; top:326px">For actuator control</p>
-  <dl class="block readouts" data-step="4" data-until="4" style="left:120px; top:720px; width:600px; grid-template-columns:1.2fr 1fr">
+  <h2 class="block h1" data-step="2" data-until="3" style="left:120px; top:240px; width:780px; font-size:72px">Sensing inner pressure.</h2>
+  <p class="block flag" data-step="2" data-until="3" style="left:120px; top:326px">For actuator control</p>
+  <dl class="block readouts" data-step="2" data-until="2" style="left:120px; top:720px; width:600px; grid-template-columns:1.2fr 1fr">
     <div><dt>Chamber</dt><dd data-readout="pressure" class="air">0.0 hPa</dd></div>
     <div><dt>Fringe turn</dt><dd data-readout="dthetaInflate">0.0°</dd></div>
   </dl>
-  <p class="block chip air" data-step="4" data-until="4" style="left:120px; top:900px">Scroll ↕ to pump air</p>
+  <p class="block chip air" data-step="2" data-until="2" style="left:120px; top:900px">Scroll ↕ to pump air</p>
 
-  <h2 class="block h1" data-step="6" data-until="6" style="left:120px; top:240px; width:940px; font-size:72px">Air pressure turns them.</h2>
-  <p class="block flag warn" data-step="6" data-until="7" style="left:120px; top:326px">Challenge · drift without any force</p>
-  <dl class="block readouts" data-step="6" data-until="6" style="left:120px; top:720px; width:600px; grid-template-columns:1.2fr 1fr">
+  <h2 class="block h1" data-step="4" data-until="4" style="left:120px; top:240px; width:940px; font-size:72px">Air pressure turns them.</h2>
+  <p class="block flag warn" data-step="4" data-until="5" style="left:120px; top:326px">Challenge · drift without any force</p>
+  <dl class="block readouts" data-step="4" data-until="4" style="left:120px; top:720px; width:600px; grid-template-columns:1.2fr 1fr">
     <div><dt>Outside air</dt><dd data-readout="ambient" class="air">1013.2 hPa</dd></div>
     <div><dt>Fringe turn</dt><dd data-readout="dthetaInflate">0.0°</dd></div>
   </dl>
 
-  <h2 class="block h1" data-step="7" data-until="7" style="left:120px; top:240px; width:780px; font-size:72px">So does light.</h2>
-  <p class="block tag" data-step="7" data-until="7" style="left:120px; top:720px; margin:0"><span class="value" data-readout="lightShift">+0.0°</span><span class="name">apparent turn · lamp outside the skin</span></p>
-  <p class="block chip" data-step="7" data-until="7" style="left:120px; top:900px">Move the mouse · it steers the lamp</p>
+  <h2 class="block h1" data-step="5" data-until="5" style="left:120px; top:240px; width:780px; font-size:72px">So does light.</h2>
+  <p class="block tag" data-step="5" data-until="5" style="left:120px; top:720px; margin:0"><span class="value" data-readout="lightShift">+0.0°</span><span class="name">apparent turn · lamp outside the skin</span></p>
+  <p class="block chip" data-step="5" data-until="5" style="left:120px; top:900px">Move the mouse · it steers the lamp</p>
 
-  <h2 class="block h1" data-step="8" style="left:120px; top:240px; width:780px; font-size:72px">Zero-state calibration.</h2>
-  <dl class="block readouts" data-step="8" data-until="8" style="left:120px; top:720px; width:620px; grid-template-columns:1.2fr 1fr">
+  <h2 class="block h1" data-step="6" style="left:120px; top:240px; width:780px; font-size:72px">Zero-state calibration.</h2>
+  <dl class="block readouts" data-step="6" data-until="6" style="left:120px; top:720px; width:620px; grid-template-columns:1.2fr 1fr">
     <div><dt>Centre vs rim</dt><dd data-readout="calib">0.00°</dd></div>
     <div><dt>Pump</dt><dd data-readout="calibStatus">Zero ✓</dd></div>
   </dl>
 
-  <figure class="block real round" data-step="2" data-until="2" style="left:1698px; top:770px; width:168px; height:168px">
+  <figure class="block real round" data-step="0" data-until="0" style="left:1698px; top:770px; width:168px; height:168px">
     <video muted playsinline loop data-autoplay data-fringe="20.7" poster="assets/media/real-touch.webp" src="assets/media/real-touch.mp4"></video>
     <figcaption>Real sensor</figcaption>
   </figure>
-  <figure class="block real-cover" data-step="3" data-until="3">
+  <figure class="block real-cover" data-step="1" data-until="1">
     <video muted playsinline loop data-autoplay data-track="touch" data-fringe="20.7" poster="assets/media/real-touch.webp" src="assets/media/real-touch.mp4"></video>
     <figcaption>Real sensor · touch</figcaption>
   </figure>
-  <figure class="block real round" data-step="4" data-until="4" style="left:1698px; top:770px; width:168px; height:168px">
+  <figure class="block real round" data-step="2" data-until="2" style="left:1698px; top:770px; width:168px; height:168px">
     <video muted playsinline loop data-autoplay data-fringe="19.8" poster="assets/media/real-inflate.webp" src="assets/media/real-inflate.mp4"></video>
     <figcaption>Real sensor</figcaption>
   </figure>
-  <figure class="block real-cover" data-step="5" data-until="5" style="--gap:70px">
+  <figure class="block real-cover" data-step="3" data-until="3" style="--gap:70px">
     <video muted playsinline loop data-autoplay data-track="inflate" data-fringe="19.8" poster="assets/media/real-inflate.webp" src="assets/media/real-inflate.mp4"></video>
     <figcaption>Real sensor · inflation</figcaption>
   </figure>
-  <figure class="block real-cover" data-step="9" data-video-steps="#zero-video" style="--gap:70px">
+  <figure class="block real-cover" data-step="7" data-video-steps="#zero-video" style="--gap:70px">
     <video id="zero-video" muted playsinline loop data-autoplay data-track="zero" data-fringe="19.8" poster="assets/media/real-zero.webp" src="assets/media/real-zero.mp4"></video>
     <figcaption data-from="0" data-to="2.53">Real sensor · pumping</figcaption>
     <figcaption class="fluo" data-from="2.53" data-to="99">Real sensor · zeroed ✓</figcaption>
   </figure>
 
-  <aside class="notes">[Step 1] So how does it work? Our skin has two fine gratings, 330 micrometres in pitch. (Scroll to bring them together.) [Step 2] Overlapped at a small angle, they produce broad moiré fringes. [Step 3] If one grating stretches or shrinks against the other, as when a touch dents the film, the fringes rotate one way or the other. The angle between them is our first design challenge: a trade-off. A smaller angle gives more gain, so we detect smaller forces, but wider fringes and lower spatial resolution; a larger angle does the opposite. So we choose a balanced angle of about 6 degrees, which puts the fringes 3 millimetres apart and amplifies the deformation about 9 times. (Scroll to change the angle; hover to press.) [Step 4] (The real sensor takes the simulation's place: a finger presses it.) [Step 5] Besides external forces, the skin also senses its own internal pressure, which we need for actuator control: it tells the pump how the skin has inflated. On the left, as the skin inflates or deflates, the centre and the rim stretch differently: when it inflates, the centre is stretched while the rim is compressed. On the right, the fringes turn further the more the film stretches, so their angle tells us the pressure; and the centre and rim turn in opposite directions. (Scroll to pump.) [Step 6] (The real sensor takes the simulation's place: it inflates and deflates.) [Step 7] Sensing pressure also brings our second challenge: zero drifts. The chamber is sealed, so as outside air pressure drifts by 10 to 20 hectopascals a day, the fringes turn without any force. [Step 8] Light does the same. Through the transparent film, any outside light shifts the apparent angle by a few degrees. (Move the mouse: it steers the lamp.) So where is zero? [Step 9] Recall that whenever the film bulges or sags, the centre and rim fringes turn in opposite directions. So we pump until they line up: the film is flat, and that is zero, found without any extra sensor. [Step 10] (The real sensor takes the simulation's place: the pump straightens the fringes, and that is zero.)</aside>
+  <aside class="notes">[Step 1] Recall the two overlapped gratings. If one grating stretches or shrinks against the other, as when a touch dents the film, the fringes rotate one way or the other. The angle between them is our first design challenge: a trade-off. A smaller angle gives more gain, so we detect smaller forces, but wider fringes and lower spatial resolution; a larger angle does the opposite. So we choose a balanced angle of about 6 degrees, which puts the fringes 3 millimetres apart and amplifies the deformation about 9 times. (Scroll to change the angle; hover to press.) [Step 2] (The real sensor takes the simulation's place: a finger presses it.) [Step 3] Besides external forces, the skin also senses its own internal pressure, which we need for actuator control: it tells the pump how the skin has inflated. On the left, as the skin inflates or deflates, the centre and the rim stretch differently: when it inflates, the centre is stretched while the rim is compressed. On the right, the fringes turn further the more the film stretches, so their angle tells us the pressure; and the centre and rim turn in opposite directions. (Scroll to pump.) [Step 4] (The real sensor takes the simulation's place: it inflates and deflates.) [Step 5] Sensing pressure also brings our second challenge: zero drifts. The chamber is sealed, so as outside air pressure drifts by 10 to 20 hectopascals a day, the fringes turn without any force. [Step 6] Light does the same. Through the transparent film, any outside light shifts the apparent angle by a few degrees. (Move the mouse: it steers the lamp.) So where is zero? [Step 7] Recall that whenever the film bulges or sags, the centre and rim fringes turn in opposite directions. So we pump until they line up: the film is flat, and that is zero, found without any extra sensor. [Step 8] (The real sensor takes the simulation's place: the pump straightens the fringes, and that is zero.)</aside>
 </section>
 
 <section class="slide" id="inference" data-shots="inference" data-title="How we detect force and position" data-duration="25">
