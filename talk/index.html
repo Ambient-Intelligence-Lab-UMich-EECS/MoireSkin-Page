@@ -141,41 +141,51 @@
 
 
 
-<!-- What a moiré pattern is, shown with our own gratings (the way the teaser shows it): two
-     fine gratings, too fine for the camera; overlapped at a small angle they make broad
-     fringes; ours are both on one soft film. -->
-<section class="slide" id="moire" data-shots="pApart pOverlap moireFilm" data-title="What is a moiré pattern?" data-step-durations="13 10 28">
+<!-- What a moiré pattern is and why it turns, shown with our own gratings (the way the teaser
+     shows it): two fine gratings, too fine for the camera; overlapped at a small angle they
+     make broad fringes, each a row of the points where their lines cross; stretch one grating
+     a little and the row turns a lot. The next slide puts both on one soft film. -->
+<section class="slide" id="moire" data-shots="pApart pOverlap pStretch" data-title="What is a moiré pattern?" data-step-durations="13 15 32">
   <p class="block eyebrow r" style="left:120px; top:98px">Background</p>
   <h2 class="block h1" data-step="0" data-until="0" style="left:120px; top:152px; width:1000px">Two fine gratings.</h2>
   <h2 class="block h1" data-step="1" data-until="1" style="left:120px; top:152px; width:1000px">Overlap: moiré fringes.</h2>
-  <h2 class="block h1" data-step="2" style="left:120px; top:152px; width:1000px">Both on one soft film.</h2>
+  <h2 class="block h1" data-step="2" style="left:120px; top:152px; width:1300px">A tiny stretch turns the fringes.</h2>
   <svg class="block r" data-widget="section" style="left:100px; top:320px" width="820" height="330" viewBox="0 0 820 330" aria-label="Cross-section of the sensing film: two gratings on the two faces of a soft film"></svg>
+  <svg class="block" data-step="1" data-widget="crossings" style="left:616px; top:296px" width="370" height="370" viewBox="0 0 400 400" aria-label="Magnified view of the two gratings: a fringe is a row of the points where their lines cross, and it turns when one grating stretches"></svg>
+  <p class="block lens-note" data-step="1" style="left:601px; top:686px; width:400px">Lens · 3 mm</p>
   <p class="block tag" data-step="0" data-until="0" style="left:120px; top:700px; margin:0"><span class="value">330 μm</span><span class="name">too fine for the camera</span></p>
   <p class="block micro fluo" data-step="0" data-until="0" style="left:936px; top:830px; width:440px; text-align:center">Lower · fluorescent</p>
   <p class="block micro" data-step="0" data-until="0" style="left:1384px; top:830px; width:440px; text-align:center; color:#9dbaff">Upper · clear</p>
   <p class="block tag" data-step="1" data-until="1" style="left:120px; top:700px; margin:0"><span class="value">0.33 <span class="fluo">→ 3 mm</span></span><span class="name">lines → fringes</span></p>
-  <p class="block tag" data-step="2" style="left:120px; top:700px; margin:0"><span class="value">a <span class="grad">metasurface</span></span><span class="name">generates moiré by itself</span></p>
+  <p class="block tag" data-step="2" style="left:120px; top:700px; margin:0"><span class="value"><span data-readout="stretchPct">1.0 %</span> <span class="fluo">→ <span data-readout="dtheta">5.2°</span></span></span><span class="name">stretch → fringe turn</span></p>
   <p class="block chip" data-step="0" data-until="1" style="left:120px; top:900px">Scroll ↕ to bring them together</p>
+  <p class="block chip" data-step="2" style="left:120px; top:900px">Scroll ↕ to stretch the upper grating</p>
   <p class="block sim-tag r" style="left:1160px; top:906px; width:440px"><span>Simulation</span></p>
-  <aside class="notes">[Step 1] The answer is to leverage a visual interference phenomenon, called the moiré pattern. (Scroll to bring the two gratings together.) [Step 2] When two fine gratings overlap, they create large fringes that are easy to see. [Step 3] When we attach the two gratings to the two faces of a soft film, a tiny difference in their deformation turns into a much larger movement of the fringes. This creates a metasurface: it generates moiré by itself, and is super sensitive to any tiny deformation.</aside>
+  <aside class="notes">[Step 1] The answer is to leverage a visual interference phenomenon, called the moiré pattern. (Scroll to bring the two gratings together.) [Step 2] When two fine gratings overlap, they create large fringes that are easy to see. Each fringe is a row of points where their lines cross. [Step 3] The lines are almost parallel, like nearly closed scissors. So when one grating stretches by just one percent, the crossing points slide a long way, and the whole fringe turns by about five degrees. Stretch it more, and it turns more. (Scroll to stretch the upper grating.)</aside>
 </section>
 
-<section class="slide" id="insight" data-shots="insight insightReal" data-title="Our insight: moiré" data-step-durations="27 14">
+<!-- Both gratings on the two faces of one soft film: a touch dents it by micrometres, the two
+     faces deform differently, and the fringes turn at that spot (the simulation, then the
+     real sensor in its place). -->
+<section class="slide" id="insight" data-shots="insight insightReal" data-title="Our insight: moiré" data-step-durations="48 14">
   <p class="block eyebrow r" style="left:120px; top:98px">Our insight</p>
   <h2 class="block h1 r" style="left:120px; top:152px; width:900px">A moiré metasurface<br><span class="grad">amplifies touch</span>.</h2>
-  <svg class="block r" data-widget="dentView" style="left:100px; top:360px" width="520" height="190" viewBox="0 0 520 190" aria-label="Side view of the film: a press makes only a tiny dent"></svg>
-  <p class="block tag r" style="left:120px; top:585px; margin:0; width:460px"><span class="value">μm</span><span class="name">the film barely bends</span></p>
+  <svg class="block r" data-widget="section" style="left:100px; top:300px" width="820" height="330" viewBox="0 0 820 330" aria-label="Cross-section of the sensing film under a touch: the upper face is compressed and the lower face stretched"></svg>
+  <p class="block tag r" style="left:120px; top:600px; margin:0; width:460px"><span class="value">μm</span><span class="name">the film barely bends</span></p>
   <p class="block tag r" style="left:120px; top:745px; margin:0; width:460px"><span class="value fluo">mm</span><span class="name">the fringes move a lot</span></p>
+  <svg class="block r" data-until="0" data-widget="crossings" style="left:640px; top:566px" width="300" height="300" viewBox="0 0 400 400" aria-label="Magnified view of the touched spot: the row of crossing points, and with it the fringe, turns"></svg>
+  <p class="block lens-note r" data-until="0" style="left:590px; top:884px; width:400px">Lens · 3 mm</p>
+  <p class="block chip r" data-until="0" style="left:120px; top:900px">Hover the film to press it</p>
   <figure class="block real round r" data-until="0" style="left:1698px; top:770px; width:168px; height:168px">
     <video muted playsinline loop data-autoplay data-fringe="19.0" poster="assets/media/real-light-contact.webp" src="assets/media/real-light-contact.mp4"></video>
     <figcaption>Real sensor</figcaption>
   </figure>
-  <p class="block sim-tag r" data-until="0" style="left:1126px; top:236px; width:440px"><span>Simulation</span></p>
+  <p class="block sim-tag r" data-until="0" style="left:1180px; top:906px; width:440px"><span>Simulation</span></p>
   <figure class="block real-cover" data-step="1">
     <video muted playsinline loop data-autoplay data-track="light" data-fringe="19.0" poster="assets/media/real-light-contact.webp" src="assets/media/real-light-contact.mp4"></video>
     <figcaption>Real sensor · light touch</figcaption>
   </figure>
-  <aside class="notes">[Step 1] Here is an interactive simulation of MoiréSkin. On the left, a touch dents the film by only micrometres, too little for a camera to see. But on the right, the moiré fringes change significantly. (Hover over the membrane to press it.) [Step 2] And here is our real sensor. A tiny yellow bean, lighter than one gram, is enough to deform these super-sensitive fringes.</aside>
+  <aside class="notes">[Step 1] We attach the two gratings to the two faces of a soft film. This creates a metasurface: it generates moiré by itself, and is super sensitive to any tiny deformation. Here is an interactive simulation. On the left, a touch dents the film by only micrometres, too little for a camera to see. But the dent squeezes one face and stretches the other, so on the right the moiré fringes change significantly. (Hover over the film to press it.) [Step 2] And here is our real sensor. A tiny yellow bean, lighter than one gram, is enough to deform these super-sensitive fringes.</aside>
 </section>
 
 <section class="slide" id="stack" data-shots="stack" data-title="Inside MoiréSkin" data-duration="48">
@@ -218,7 +228,7 @@
   <aside class="notes">We make the film with a technique borrowed from microfabrication. Please see the details in our paper.</aside>
 </section>
 
-<section class="slide" id="design" data-shots="design" data-title="Optical design" data-duration="39">
+<section class="slide" id="design" data-shots="design" data-title="Optical design" data-duration="50">
   <p class="block eyebrow r" style="left:120px; top:98px">Optical design</p>
   <h2 class="block h1 r" style="left:120px; top:152px; width:1100px">Clear skin, clear fringes.</h2>
   <div class="block tiles cycling r" style="left:120px; top:320px; width:1160px">
@@ -242,10 +252,10 @@
       <p>≈ $50 for the whole system</p>
     </div>
   </div>
-  <aside class="notes">Two more designs make this work. First, the grating is fluorescent: blue LEDs excite it, so the fringes stay high-contrast in any light, even in darkness. Second, the camera can see through the skin, so the robot sees an object before touching it. And each cell costs under two dollars, with no cleanroom needed. (Hover a tile to show it on the sensor.)</aside>
+  <aside class="notes">Two more designs make this work. First, the grating is fluorescent: blue LEDs excite it, so the fringes stay high-contrast in any light, even in darkness. Second, the camera can see through the skin, so the robot sees an object before touching it. It can line up before contact, for example by telling which side of a USB plug is up. And each cell costs under two dollars, with no cleanroom needed. (Hover a tile to show it on the sensor.)</aside>
 </section>
 
-<section class="slide" id="principle" data-shots="pAmplify pAmplifyReal pPressure pPressureReal pWeather pLight pZero pZeroReal" data-title="How it works" data-step-durations="42 9 38 8 24 26 24 8">
+<section class="slide" id="principle" data-shots="pAmplify pAmplifyReal pPressure pPressureReal pWeather pLight pZero pZeroReal" data-title="How it works" data-step-durations="42 9 56 8 24 26 24 8">
   <p class="block eyebrow r" style="left:120px; top:80px">How it works</p>
   <div class="block tabs r" style="left:120px; top:140px; width:1680px">
     <span data-tab="0-1">Amplify</span><span data-tab="2-3">Pressure</span><span data-tab="4-5">Drift</span><span data-tab="6-7">Zero</span>
@@ -259,17 +269,19 @@
 
   <h2 class="block h1" data-step="2" data-until="3" style="left:120px; top:240px; width:780px; font-size:72px">Sensing inner pressure.</h2>
   <p class="block flag" data-step="2" data-until="3" style="left:120px; top:326px">For actuator control</p>
-  <dl class="block readouts" data-step="2" data-until="2" style="left:120px; top:720px; width:600px; grid-template-columns:1.2fr 1fr">
+  <dl class="block readouts" data-step="2" data-until="2" style="left:120px; top:720px; width:850px; grid-template-columns:1.15fr 1fr 0.9fr">
     <div><dt>Chamber</dt><dd data-readout="pressure" class="air">0.0 hPa</dd></div>
-    <div><dt>Fringe turn</dt><dd data-readout="dthetaInflate">0.0°</dd></div>
+    <div><dt>Centre turns</dt><dd data-readout="dthetaInflate" class="fluo">0.0°</dd></div>
+    <div><dt>Rim turns</dt><dd data-readout="dthetaRim">0.0°</dd></div>
   </dl>
   <p class="block chip air" data-step="2" data-until="2" style="left:120px; top:900px">Scroll ↕ to pump air</p>
 
   <h2 class="block h1" data-step="4" data-until="4" style="left:120px; top:240px; width:940px; font-size:72px">Air pressure turns them.</h2>
   <p class="block flag warn" data-step="4" data-until="5" style="left:120px; top:326px">Challenge · drift without any force</p>
-  <dl class="block readouts" data-step="4" data-until="4" style="left:120px; top:720px; width:600px; grid-template-columns:1.2fr 1fr">
+  <dl class="block readouts" data-step="4" data-until="4" style="left:120px; top:720px; width:850px; grid-template-columns:1.15fr 1fr 0.9fr">
     <div><dt>Outside air</dt><dd data-readout="ambient" class="air">1013.2 hPa</dd></div>
-    <div><dt>Fringe turn</dt><dd data-readout="dthetaInflate">0.0°</dd></div>
+    <div><dt>Centre turns</dt><dd data-readout="dthetaInflate" class="fluo">0.0°</dd></div>
+    <div><dt>Rim turns</dt><dd data-readout="dthetaRim">0.0°</dd></div>
   </dl>
 
   <h2 class="block h1" data-step="5" data-until="5" style="left:120px; top:240px; width:780px; font-size:72px">So does light.</h2>
@@ -307,7 +319,7 @@
     <figcaption class="fluo" data-from="2.53" data-to="99">Real sensor · zeroed ✓</figcaption>
   </figure>
 
-  <aside class="notes">[Step 1] Our first challenge is how to balance force sensitivity and spatial resolution. A smaller angle between the two gratings gives more gain, so we can detect smaller forces, but it creates wider fringes with lower spatial resolution. So we choose a balanced angle during fabrication, for both high force sensitivity and high spatial resolution. (Scroll to change the angle; hover to press.) [Step 2] (The real sensor takes the simulation's place.) Here is the real sensor at this angle, as a finger presses it. [Step 3] Besides external forces, the skin also senses its own internal pressure, which is required for actuator control: it tells the pump how the skin has inflated. As the skin inflates, the fringes turn further the more the film stretches, so their angle tells us the pressure; and the centre and the rim turn in opposite directions. (Scroll to pump.) [Step 4] (The real sensor takes the simulation's place.) Here is the real sensor as its internal pressure changes. [Step 5] Our second challenge is drift, caused by changes in the pressure difference between inside and outside. The chamber is sealed, so as the outside air pressure drifts by 10 to 20 hectopascals a day, the fringes turn without any force. [Step 6] Ambient light does the same. Through the transparent film, any outside light shifts the apparent angle by a few degrees. (Move the mouse: it steers the lamp.) So how do we find the zero state automatically, where the inner and outer pressures are equal? [Step 7] Recall that whenever the film bulges or sags, the centre and rim fringes turn in opposite directions. So we pump until they line up: the film is flat, and that is zero, found without any extra sensor. [Step 8] (The real sensor takes the simulation's place: the pump straightens the fringes.) Here is the real sensor during zero-state calibration.</aside>
+  <aside class="notes">[Step 1] Our first challenge is how to balance force sensitivity and spatial resolution. A smaller angle between the two gratings gives more gain, so we can detect smaller forces, but it creates wider fringes with lower spatial resolution. So we choose a balanced angle during fabrication, for both high force sensitivity and high spatial resolution. (Scroll to change the angle; hover to press.) [Step 2] (The real sensor takes the simulation's place.) Here is the real sensor at this angle, as a finger presses it. [Step 3] Besides external forces, the skin also senses its own internal pressure, which is required for actuator control: it tells the pump how the skin has inflated. On the left, as the skin inflates or deflates, the centre and the rim stretch differently: when it inflates, the centre is stretched while the rim is compressed. On the right, the fringes turn further the more the film stretches, so their angle tells us the pressure; and the centre and rim turn in opposite directions. (Scroll to pump.) [Step 4] (The real sensor takes the simulation's place.) Here is the real sensor as its internal pressure changes. [Step 5] Our second challenge is drift, caused by changes in the pressure difference between inside and outside. The chamber is sealed, so as the outside air pressure drifts by 10 to 20 hectopascals a day, the fringes turn without any force. [Step 6] Ambient light does the same. Through the transparent film, any outside light shifts the apparent angle by a few degrees. (Move the mouse: it steers the lamp.) So how do we find the zero state automatically, where the inner and outer pressures are equal? [Step 7] Recall that whenever the film bulges or sags, the centre and rim fringes turn in opposite directions. So we pump until they line up: the film is flat, and that is zero, found without any extra sensor. [Step 8] (The real sensor takes the simulation's place: the pump straightens the fringes.) Here is the real sensor during zero-state calibration.</aside>
 </section>
 
 <section class="slide" id="inference" data-shots="inference" data-title="How we detect force and position" data-duration="25">
@@ -426,7 +438,7 @@
   <aside class="notes">MoiréSkin can also sense shear force. Holding a cup from the side, it weighs the water in real time as it is poured in. The error is 4.15 grams.</aside>
 </section>
 
-<section class="slide" id="backbone" data-shots="inference backboneSoft backboneShear" data-title="One pre-trained backbone" data-duration="14">
+<section class="slide" id="backbone" data-shots="inference backboneSoft backboneShear" data-title="One pre-trained backbone" data-duration="20">
   <p class="block eyebrow r" style="left:120px; top:98px">Sense + actuate</p>
   <h2 class="block h1 r" style="left:120px; top:152px; width:1600px">One pre-trained backbone, <span class="grad">two new skills</span>.</h2>
   <svg class="block r" data-dim-from="1" style="left:600px; top:292px" width="1200" height="615" viewBox="0 0 1170 600" aria-label="The same pre-trained pipeline, with softness and shear force branching off the normal force readout">
@@ -490,7 +502,7 @@
     <text x="968" y="298" fill="#d9f272" font-size="29" font-weight="760">Shear force</text>
     <text x="968" y="325" fill="#dce4ee" font-size="24" font-weight="650">fine-tuned + new head</text>
   </svg>
-  <aside class="notes">Both case studies reuse the same pre-trained backbone model. (Click: softness, with no fine-tuning. Click: shear force, fine-tuned with a new head.)</aside>
+  <aside class="notes">Both case studies reuse the same pre-trained backbone model. Softness uses its features directly, with no fine-tuning, and shear force only fine-tunes it and adds a new head.</aside>
 </section>
 <section class="slide" id="lego" data-shots="icon" data-title="Application: toy LEGO arm" data-duration="38">
   <p class="block eyebrow r" style="left:120px; top:98px">Application</p>

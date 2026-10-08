@@ -918,6 +918,23 @@ html.export .tabs span {
   letter-spacing: 0.14em;
 }
 
+/* The magnifier that marks the crossing points: ringed as the lens is. */
+svg[data-widget="crossings"] {
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px rgb(238 243 251 / 75%), 0 0 40px rgb(107 152 255 / 35%), 0 24px 60px rgb(0 0 0 / 55%);
+}
+
+/* Its caption, set as the lens label is. */
+.lens-note {
+  margin: 0;
+  color: var(--ink-2);
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
 /* Diagrams may draw labels past their box; never clip them. */
 svg.block {
   overflow: visible;
