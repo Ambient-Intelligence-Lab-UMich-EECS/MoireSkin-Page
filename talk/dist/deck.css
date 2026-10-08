@@ -882,6 +882,42 @@ html.export .tabs span {
   transform: translateX(-50%);
 }
 
+/* A simulated view says so, in a plain outline capsule: where the real clip's
+   gradient caption stands on the next click (.sim-cover), under a set of
+   gratings (.sim-tag), or under a lens that shows the simulated sensor view. */
+.sim-tag {
+  margin: 0;
+  text-align: center;
+}
+
+.sim-tag span,
+.real-cover.sim-cover figcaption,
+.lens-label.sim {
+  padding: 6px 16px;
+  border: 2px solid rgb(238 243 251 / 50%);
+  border-radius: 999px;
+  background: rgb(9 15 28 / 72%);
+  box-shadow: none;
+  color: var(--ink-2);
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.sim-tag span {
+  display: inline-block;
+}
+
+/* Beside a round real clip, set like that clip's caption. */
+.lens-label.sim {
+  top: calc(100% + 12px);
+  padding: 3px 14px;
+  font-size: 22px;
+  letter-spacing: 0.14em;
+}
+
 /* Diagrams may draw labels past their box; never clip them. */
 svg.block {
   overflow: visible;
