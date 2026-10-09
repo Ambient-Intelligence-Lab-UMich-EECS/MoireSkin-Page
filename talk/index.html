@@ -55,9 +55,9 @@
   <aside class="notes">Dexterous robot manipulation requires two things: sensitivity, to handle fragile things, and compliance, to grip them gently. Without them, a fragile object ends up crushed, like this cake.</aside>
 </section>
 
-<section class="slide" id="vts" data-shots="icon" data-title="Visuo-tactile sensor" data-duration="19">
-  <p class="block eyebrow r" style="left:120px; top:98px">Visuo-tactile sensor</p>
-  <h2 class="block h1 r" style="left:120px; top:152px; width:1600px">Tactile → visual: a camera reads touch.</h2>
+<section class="slide" id="vts" data-shots="icon" data-title="Existing solution: visuo-tactile sensors" data-duration="19">
+  <p class="block eyebrow r" style="left:120px; top:98px">Existing solution</p>
+  <h2 class="block h1 r" style="left:120px; top:152px; width:1400px">Visuo-tactile sensors.</h2>
   <figure class="block r" style="left:120px; top:292px; width:1680px; margin:0">
     <div class="photo" style="height:640px; background:#000"><video id="gel-video" muted playsinline loop data-autoplay poster="assets/media/gelsight-gripper.webp" src="assets/media/gelsight-gripper.mp4"></video></div>
     <ol class="video-captions" data-video-steps="#gel-video">
@@ -145,14 +145,15 @@
      shows it): two fine gratings, too fine for the camera; overlapped at a small angle they
      make broad fringes, each a row of the points where their lines cross; stretch one grating
      a little and the row turns a lot. The next slide puts both on one soft film. -->
-<section class="slide" id="moire" data-shots="pApart pOverlap pStretch" data-title="What is a moiré pattern?" data-step-durations="13 22 32">
+<section class="slide" id="moire" data-shots="pApart pOverlap pStretch" data-title="What is a moiré pattern?" data-step-durations="20 22 32">
   <p class="block eyebrow r" style="left:120px; top:98px">Background</p>
-  <h2 class="block h1" data-step="0" data-until="0" style="left:120px; top:152px; width:1000px">Two fine gratings.</h2>
-  <h2 class="block h1" data-step="1" data-until="1" style="left:120px; top:152px; width:1000px">Overlap: moiré fringes.</h2>
+  <h2 class="block h1" data-step="0" data-until="0" style="left:120px; top:152px; width:1200px">The answer: a moiré pattern.</h2>
+  <h2 class="block h1" data-step="1" data-until="1" style="left:120px; top:152px; width:1300px">On one soft film: moiré fringes.</h2>
   <h2 class="block h1" data-step="2" style="left:120px; top:152px; width:1300px">A tiny stretch turns the fringes.</h2>
   <svg class="block r" data-widget="section" style="left:100px; top:320px" width="820" height="330" viewBox="0 0 820 330" aria-label="Cross-section of the sensing film: two gratings on the two faces of a soft film"></svg>
   <svg class="block" data-step="1" data-widget="crossings" style="left:616px; top:296px" width="370" height="370" viewBox="0 0 400 400" aria-label="Magnified view of the two gratings: a fringe is a row of the points where their lines cross, and it turns when one grating stretches"></svg>
   <p class="block lens-note" data-step="1" style="left:601px; top:686px; width:400px">Lens · 3 mm</p>
+  <svg class="block" data-step="2" data-widget="scissors" style="left:570px; top:738px" width="720" height="185" viewBox="0 0 720 185" aria-label="Nearly closed scissors: when the blades close a little, the point where they cross slides a long way"></svg>
   <p class="block tag" data-step="0" data-until="0" style="left:120px; top:700px; margin:0"><span class="value">330 μm</span><span class="name">too fine for the camera</span></p>
   <p class="block micro fluo" data-step="0" data-until="0" style="left:936px; top:830px; width:440px; text-align:center">Lower · fluorescent</p>
   <p class="block micro" data-step="0" data-until="0" style="left:1384px; top:830px; width:440px; text-align:center; color:#9dbaff">Upper · clear</p>
@@ -161,7 +162,7 @@
   <p class="block chip" data-step="0" data-until="1" style="left:120px; top:900px">Scroll ↕ to bring them together</p>
   <p class="block chip" data-step="2" style="left:120px; top:900px">Scroll ↕ to stretch the upper grating</p>
   <p class="block sim-tag r" style="left:1160px; top:906px; width:440px"><span>Simulation</span></p>
-  <aside class="notes">[Step 1] The answer is to leverage a visual interference phenomenon, called the moiré pattern. (Scroll to bring the two gratings together.) [Step 2] We attach the two gratings to the two faces of a soft film. When they overlap, they create large fringes that are easy to see. Each fringe is a row of points where their lines cross. [Step 3] The lines are almost parallel, like nearly closed scissors. So when one grating stretches by just one percent, the crossing points slide a long way, and the whole fringe turns by about five degrees. Stretch it more, and it turns more. (Scroll to stretch the upper grating.)</aside>
+  <aside class="notes">[Step 1] The answer is to leverage a visual interference phenomenon, called the moiré pattern. We start with two gratings, too fine for a camera to see. (Scroll to bring the two gratings together.) [Step 2] We attach the two gratings to the two faces of a soft film. When they overlap, they create large fringes that are easy to see. Each fringe is a row of points where their lines cross. [Step 3] The lines are almost parallel, like nearly closed scissors. So when one grating stretches by just one percent, the crossing points slide a long way, and the whole fringe turns by about five degrees. Stretch it more, and it turns more. (Scroll to stretch the upper grating.)</aside>
 </section>
 
 <!-- Both gratings on the two faces of one soft film: a touch dents it by micrometres, the two
@@ -190,7 +191,7 @@
 
 <section class="slide" id="stack" data-shots="stack" data-title="Inside MoiréSkin" data-duration="48">
   <p class="block eyebrow r" style="left:120px; top:98px">Hardware</p>
-  <h2 class="block h1 r" style="left:120px; top:152px; width:900px">One skin, <span class="grad">two jobs</span>.</h2>
+  <h2 class="block h1 r" style="left:120px; top:152px; width:1000px">Three modules in one cell.</h2>
   <figure class="block micro-fig r" style="left:120px; top:300px; width:760px; margin:0">
     <div class="micro-frame">
       <img src="assets/img/grating-micrograph.webp" alt="Our grating film under a microscope: fine parallel lines">
@@ -228,9 +229,9 @@
   <aside class="notes">We make the film with a technique borrowed from microfabrication. Please see the details in our paper.</aside>
 </section>
 
-<section class="slide" id="design" data-shots="design" data-title="Optical design" data-duration="50">
-  <p class="block eyebrow r" style="left:120px; top:98px">Optical design</p>
-  <h2 class="block h1 r" style="left:120px; top:152px; width:1100px">Clear skin, clear fringes.</h2>
+<section class="slide" id="design" data-shots="design" data-title="Design" data-duration="50">
+  <p class="block eyebrow r" style="left:120px; top:98px">Design</p>
+  <h2 class="block h1 r" style="left:120px; top:152px; width:1300px">Clear fringes, clear skin, low cost.</h2>
   <div class="block tiles cycling r" style="left:120px; top:320px; width:1160px">
     <div class="tile" data-feature="glow">
       <div class="tile-visual"><img src="assets/media/real-light-contact.webp" alt="Glowing fluorescent fringes seen by the internal camera"></div>
@@ -267,7 +268,7 @@
   <svg class="block" data-step="0" data-until="1" data-widget="alphaChart" style="left:100px; top:430px" width="780" height="361" viewBox="0 0 800 370" aria-label="Spatial resolution and sensitivity versus grating angle"></svg>
   <p class="block chip" data-step="0" data-until="0" style="left:120px; top:900px">Scroll ↕ to change the angle · hover to press</p>
 
-  <h2 class="block h1" data-step="2" data-until="3" style="left:120px; top:240px; width:780px; font-size:72px">Sensing inner pressure.</h2>
+  <h2 class="block h1" data-step="2" data-until="3" style="left:120px; top:240px; width:960px; font-size:72px">Sensing internal pressure.</h2>
   <p class="block flag" data-step="2" data-until="3" style="left:120px; top:326px">For actuator control</p>
   <dl class="block readouts" data-step="2" data-until="2" style="left:120px; top:720px; width:850px; grid-template-columns:1.15fr 1fr 0.9fr">
     <div><dt>Chamber</dt><dd data-readout="pressure" class="air">0.0 hPa</dd></div>
@@ -276,7 +277,7 @@
   </dl>
   <p class="block chip air" data-step="2" data-until="2" style="left:120px; top:900px">Scroll ↕ to pump air</p>
 
-  <h2 class="block h1" data-step="4" data-until="4" style="left:120px; top:240px; width:940px; font-size:72px">Air pressure turns them.</h2>
+  <h2 class="block h1" data-step="4" data-until="4" style="left:120px; top:240px; width:1060px; font-size:72px">Outside air turns the fringes.</h2>
   <p class="block flag warn" data-step="4" data-until="5" style="left:120px; top:326px">Challenge · drift without any force</p>
   <dl class="block readouts" data-step="4" data-until="4" style="left:120px; top:720px; width:850px; grid-template-columns:1.15fr 1fr 0.9fr">
     <div><dt>Outside air</dt><dd data-readout="ambient" class="air">1013.2 hPa</dd></div>
