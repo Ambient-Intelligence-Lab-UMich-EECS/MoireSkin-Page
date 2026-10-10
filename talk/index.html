@@ -190,10 +190,11 @@
   <aside class="notes">[Step 1] So this film is a metasurface: it generates moiré by itself, and is super sensitive to any tiny deformation. Here is an interactive simulation. On the left, a touch dents the film by only micrometres, too little for a camera to see. But the dent squeezes one face and stretches the other, so on the right the moiré fringes change significantly. (Hover over the film to press it.) [Step 2] And here is our real sensor. A tiny yellow bean, lighter than one gram, is enough to deform these super-sensitive fringes.</aside>
 </section>
 
-<section class="slide" id="stack" data-shots="stack" data-title="Inside MoiréSkin" data-duration="48">
+<section class="slide" id="stack" data-shots="stack stack stack stackAside" data-title="Inside MoiréSkin" data-step-durations="17 12 20 19">
   <p class="block eyebrow r" style="left:120px; top:98px">Hardware</p>
-  <h2 class="block h1 r" style="left:120px; top:152px; width:1000px">Three modules in one cell.</h2>
-  <figure class="block micro-fig r" style="left:120px; top:300px; width:760px; margin:0">
+  <h2 class="block h1" data-step="0" data-until="2" style="left:120px; top:152px; width:1000px">Three modules in one cell.</h2>
+  <h2 class="block h1" data-step="3" style="left:120px; top:152px; width:1300px">Mount the cell on a robot arm.</h2>
+  <figure class="block micro-fig r" data-until="2" style="left:120px; top:300px; width:760px; margin:0">
     <div class="micro-frame">
       <img src="assets/img/grating-micrograph.webp" alt="Our grating film under a microscope: fine parallel lines">
       <span class="micro-spot" style="left:321px; top:203px; width:73px; height:73px"></span>
@@ -203,16 +204,34 @@
     </div>
     <figcaption class="caption">Our film under a microscope</figcaption>
   </figure>
-  <div class="callout r" data-anchor="cover" data-x="1420" data-group="Sensing" data-group-color="#d9f272"><b>Cover</b><span>clear TPU</span></div>
-  <div class="callout r" data-anchor="upper" data-x="1420" data-group="Sensing" data-group-color="#d9f272"><b>Upper grating</b><span>330 μm</span></div>
-  <div class="callout r" data-anchor="substrate" data-x="1420" data-group="Sensing" data-group-color="#d9f272"><b>Substrate</b><span>soft silicone</span></div>
-  <div class="callout r" data-anchor="lower" data-x="1420" data-group="Sensing" data-group-color="#d9f272"><b class="fluo">Lower grating</b><span>fluorescent</span></div>
-  <div class="callout r" data-step="1" data-anchor="chamber" data-x="1420" data-group="Actuation" data-group-color="#7da6ff"><b class="air">Air chamber</b></div>
-  <div class="callout r" data-step="1" data-anchor="pump" data-x="1420" data-group="Actuation" data-group-color="#7da6ff"><b class="air">Pump</b><span>one controller</span></div>
-  <div class="callout r" data-step="2" data-anchor="camera" data-x="1420" data-group="Imaging" data-group-color="#ffffff"><b>Camera</b><span>1080p · 160°</span></div>
-  <div class="callout r" data-step="2" data-anchor="led" data-x="1420" data-group="Imaging" data-group-color="#ffffff"><b>LED ring</b><span>faces down · blue</span></div>
-  <div class="callout r" data-step="2" data-anchor="reflector" data-x="1420" data-group="Imaging" data-group-color="#ffffff"><b>Diffuse reflector</b></div>
-  <aside class="notes">Here is the MoiréSkin hardware, in three modules. On top, the sensing module: the two fine gratings, with protective layers. The left shows our film under a microscope. In the middle, the actuation module: an air chamber and a pump make it compliant and let it actuate. At the bottom, the imaging module: an LED ring lights the gratings and a camera captures the fringes. This makes MoiréSkin not just a sensor, but also an actuator, in one cell.</aside>
+  <div class="callout r" data-until="2" data-anchor="cover" data-x="1420" data-group="Sensing" data-group-color="#d9f272"><b>Cover</b><span>clear TPU</span></div>
+  <div class="callout r" data-until="2" data-anchor="upper" data-x="1420" data-group="Sensing" data-group-color="#d9f272"><b>Upper grating</b><span>330 μm</span></div>
+  <div class="callout r" data-until="2" data-anchor="substrate" data-x="1420" data-group="Sensing" data-group-color="#d9f272"><b>Substrate</b><span>soft silicone</span></div>
+  <div class="callout r" data-until="2" data-anchor="lower" data-x="1420" data-group="Sensing" data-group-color="#d9f272"><b class="fluo">Lower grating</b><span>fluorescent</span></div>
+  <div class="callout r" data-until="2" data-step="1" data-anchor="chamber" data-x="1420" data-group="Actuation" data-group-color="#7da6ff"><b class="air">Air chamber</b></div>
+  <div class="callout r" data-until="2" data-step="1" data-anchor="pump" data-x="1420" data-group="Actuation" data-group-color="#7da6ff"><b class="air">Pump</b><span>one controller</span></div>
+  <div class="callout r" data-until="2" data-step="2" data-anchor="camera" data-x="1420" data-group="Imaging" data-group-color="#ffffff"><b>Camera</b><span>1080p · 160°</span></div>
+  <div class="callout r" data-until="2" data-step="2" data-anchor="led" data-x="1420" data-group="Imaging" data-group-color="#ffffff"><b>LED ring</b><span>faces down · blue</span></div>
+  <div class="callout r" data-until="2" data-step="2" data-anchor="reflector" data-x="1420" data-group="Imaging" data-group-color="#ffffff"><b>Diffuse reflector</b></div>
+  <!-- Step 4: where a cell sits on a robot, and what its camera sees. Two views cut from the
+       recorded toy-arm demo by tools/lego-cell-clips.sh, frame for frame the same: the arm
+       (without the demo's own captions) and the view of the camera inside the cell. They show
+       power-on, approach, grasp and lift, and stop before the water is poured: the demo itself
+       is told later (#lego). The clip waits 2 s on the frame where the skin has just lit up
+       (0.88-2.88 s) while the label points at it and a line leads to the camera's view; the
+       line comes back at the end, with the cup held. -->
+  <div class="block" data-step="3" style="left:120px; top:300px; width:1210px; height:660px">
+    <div class="photo" style="position:absolute; left:0; top:0; width:641px; height:660px"><video id="cell-arm-video" muted playsinline loop data-autoplay poster="assets/media/lego-cell-arm.webp" src="assets/media/lego-cell-arm.mp4"></video></div>
+    <div class="photo" style="position:absolute; left:810px; top:100px; width:400px; height:412px"><video muted playsinline loop data-autoplay data-follow="#cell-arm-video" poster="assets/media/lego-cell-view.webp" src="assets/media/lego-cell-view.mp4"></video></div>
+    <ol class="video-captions" data-video-steps="#cell-arm-video">
+      <li class="side" data-from="0" data-to="99" style="left:18px; top:18px">12× speed</li>
+      <li class="link" data-from="0.95" data-to="2.85"><svg viewBox="0 0 1210 660" aria-hidden="true"><circle cx="322" cy="254" r="30"/><path d="M351 258L808 304"/></svg></li>
+      <li class="link" data-from="8.3" data-to="99"><svg viewBox="0 0 1210 660" aria-hidden="true"><circle cx="298" cy="276" r="30"/><path d="M328 279L808 306"/></svg></li>
+      <li class="pointer" data-from="0.95" data-to="2.85" style="left:322px; top:218px"><span>MoiréSkin</span><svg width="24" height="58" viewBox="0 0 24 58" aria-hidden="true"><path d="M12 2V50M3 40l9 12 9-12" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg></li>
+      <li class="ours side" data-from="0" data-to="99" style="left:810px; top:532px">Real sensor · camera view</li>
+    </ol>
+  </div>
+  <aside class="notes">[Step 1] Here is the MoiréSkin hardware, in three modules. On top, the sensing module: the two fine gratings, with protective layers. The left shows our film under a microscope. [Step 2] In the middle, the actuation module: an air chamber and a pump make it compliant and let it actuate. [Step 3] At the bottom, the imaging module: an LED ring lights the gratings and a camera captures the fringes. This makes MoiréSkin not just a sensor, but also an actuator, in one cell. [Step 4] Now we mount one cell on a robot arm, on its gripper. (The label points at the cell as it lights up; the line leads to what its camera sees.) When the gripper holds an object, the camera inside sees the fringes change: this is how it senses force.</aside>
 </section>
 
 <section class="slide" id="fabrication" data-shots="icon" data-title="Fabrication" data-duration="11">
@@ -257,10 +276,10 @@
   <aside class="notes">Two more designs make this work. First, the grating is fluorescent: blue LEDs excite it, so the fringes stay high-contrast in any light, even in darkness. Second, the camera can see through the skin, so the robot sees an object before touching it. It can line up before contact, for example by telling which side of a USB plug is up. And each cell costs under two dollars, with no cleanroom needed. (Hover a tile to show it on the sensor.)</aside>
 </section>
 
-<section class="slide" id="principle" data-shots="pAmplify pAmplifyReal pPressure pPressureReal pWeather pLight pZero pZeroReal" data-title="How it works" data-step-durations="42 9 56 8 24 26 24 8">
+<section class="slide" id="principle" data-shots="pAmplify pAmplifyReal pPressure pPressureReal pWeather pZero pZeroReal" data-title="How it works" data-step-durations="42 9 30 8 28 24 8">
   <p class="block eyebrow r" style="left:120px; top:80px">How it works</p>
   <div class="block tabs r" style="left:120px; top:140px; width:1680px">
-    <span data-tab="0-1">Amplify</span><span data-tab="2-3">Pressure</span><span data-tab="4-5">Drift</span><span data-tab="6-7">Zero</span>
+    <span data-tab="0-1">Amplify</span><span data-tab="2-3">Pressure</span><span data-tab="4-4">Drift</span><span data-tab="5-6">Zero</span>
   </div>
   <svg class="block" data-step="2" data-widget="section" style="left:100px; top:372px" width="820" height="330" viewBox="0 0 820 330" aria-label="Cross-section of the sensing film: two gratings on the two faces of a soft film"></svg>
 
@@ -279,26 +298,22 @@
   <p class="block chip air" data-step="2" data-until="2" style="left:120px; top:900px">Scroll ↕ to pump air</p>
 
   <h2 class="block h1" data-step="4" data-until="4" style="left:120px; top:240px; width:1060px; font-size:72px">Outside air turns the fringes.</h2>
-  <p class="block flag warn" data-step="4" data-until="5" style="left:120px; top:326px">Challenge · drift without any force</p>
+  <p class="block flag warn" data-step="4" data-until="4" style="left:120px; top:326px">Challenge · drift without any force</p>
   <dl class="block readouts" data-step="4" data-until="4" style="left:120px; top:720px; width:850px; grid-template-columns:1.15fr 1fr 0.9fr">
     <div><dt>Outside air</dt><dd data-readout="ambient" class="air">1013.2 hPa</dd></div>
     <div><dt>Centre turns</dt><dd data-readout="dthetaInflate" class="fluo">0.0°</dd></div>
     <div><dt>Rim turns</dt><dd data-readout="dthetaRim">0.0°</dd></div>
   </dl>
 
-  <h2 class="block h1" data-step="5" data-until="5" style="left:120px; top:240px; width:780px; font-size:72px">So does light.</h2>
-  <p class="block tag" data-step="5" data-until="5" style="left:120px; top:720px; margin:0"><span class="value" data-readout="lightShift">+0.0°</span><span class="name">apparent turn · lamp outside the skin</span></p>
-  <p class="block chip" data-step="5" data-until="5" style="left:120px; top:900px">Move the mouse · it steers the lamp</p>
-
-  <h2 class="block h1" data-step="6" style="left:120px; top:240px; width:780px; font-size:72px">Zero-state calibration.</h2>
-  <dl class="block readouts" data-step="6" data-until="6" style="left:120px; top:720px; width:620px; grid-template-columns:1.2fr 1fr">
+  <h2 class="block h1" data-step="5" style="left:120px; top:240px; width:780px; font-size:72px">Zero-state calibration.</h2>
+  <dl class="block readouts" data-step="5" data-until="5" style="left:120px; top:720px; width:620px; grid-template-columns:1.2fr 1fr">
     <div><dt>Centre vs rim</dt><dd data-readout="calib">0.00°</dd></div>
     <div><dt>Pump</dt><dd data-readout="calibStatus">Zero ✓</dd></div>
   </dl>
 
   <figure class="block real-cover sim-cover" data-step="0" data-until="0"><figcaption>Simulation</figcaption></figure>
   <figure class="block real-cover sim-cover" data-step="2" data-until="2" style="--gap:70px"><figcaption>Simulation</figcaption></figure>
-  <figure class="block real-cover sim-cover" data-step="4" data-until="6" style="--gap:70px"><figcaption>Simulation</figcaption></figure>
+  <figure class="block real-cover sim-cover" data-step="4" data-until="5" style="--gap:70px"><figcaption>Simulation</figcaption></figure>
   <figure class="block real round" data-step="0" data-until="0" style="left:1698px; top:770px; width:168px; height:168px">
     <video muted playsinline loop data-autoplay data-fringe="20.7" poster="assets/media/real-touch.webp" src="assets/media/real-touch.mp4"></video>
     <figcaption>Real sensor</figcaption>
@@ -315,13 +330,13 @@
     <video muted playsinline loop data-autoplay data-track="inflate" data-fringe="19.8" poster="assets/media/real-inflate.webp" src="assets/media/real-inflate.mp4"></video>
     <figcaption>Real sensor · inflation</figcaption>
   </figure>
-  <figure class="block real-cover" data-step="7" data-video-steps="#zero-video" style="--gap:70px">
+  <figure class="block real-cover" data-step="6" data-video-steps="#zero-video" style="--gap:70px">
     <video id="zero-video" muted playsinline loop data-autoplay data-track="zero" data-fringe="19.8" poster="assets/media/real-zero.webp" src="assets/media/real-zero.mp4"></video>
     <figcaption data-from="0" data-to="2.53">Real sensor · pumping</figcaption>
     <figcaption class="fluo" data-from="2.53" data-to="99">Real sensor · zeroed ✓</figcaption>
   </figure>
 
-  <aside class="notes">[Step 1] Our first challenge is how to balance force sensitivity and spatial resolution. A smaller angle between the two gratings gives more gain, so we can detect smaller forces, but it creates wider fringes with lower spatial resolution. So we choose a balanced angle during fabrication, for both high force sensitivity and high spatial resolution. (Scroll to change the angle; hover to press.) [Step 2] (The real sensor takes the simulation's place.) Here is the real sensor at this angle, as a finger presses it. [Step 3] Besides external forces, the skin also senses its own internal pressure, which is required for actuator control: it tells the pump how the skin has inflated. On the left, as the skin inflates or deflates, the centre and the rim stretch differently: when it inflates, the centre is stretched while the rim is compressed. On the right, the fringes turn further the more the film stretches, so their angle tells us the pressure; and the centre and rim turn in opposite directions. (Scroll to pump.) [Step 4] (The real sensor takes the simulation's place.) Here is the real sensor as its internal pressure changes. [Step 5] Our second challenge is drift, caused by changes in the pressure difference between inside and outside. The chamber is sealed, so as the outside air pressure drifts by 10 to 20 hectopascals a day, the fringes turn without any force. [Step 6] Ambient light does the same. Through the transparent film, any outside light shifts the apparent angle by a few degrees. (Move the mouse: it steers the lamp.) So how do we find the zero state automatically, where the inner and outer pressures are equal? [Step 7] Recall that whenever the film bulges or sags, the centre and rim fringes turn in opposite directions. So we pump until they line up: the film is flat, and that is zero, found without any extra sensor. [Step 8] (The real sensor takes the simulation's place: the pump straightens the fringes.) Here is the real sensor during zero-state calibration.</aside>
+  <aside class="notes">[Step 1] Our first challenge is how to balance force sensitivity and spatial resolution. A smaller angle between the two gratings gives more gain, so we can detect smaller forces, but it creates wider fringes with lower spatial resolution. So we choose a balanced angle during fabrication, for both high force sensitivity and high spatial resolution. (Scroll to change the angle; hover to press.) [Step 2] (The real sensor takes the simulation's place.) Here is the real sensor at this angle, as a finger presses it. [Step 3] The skin also senses its own internal pressure, which the pump needs to control actuation. When the skin inflates, the centre is stretched while the rim is compressed, so their fringes turn in opposite directions, and the angle tells us the pressure. (Scroll to pump.) [Step 4] (The real sensor takes the simulation's place.) Here is the real sensor as its internal pressure changes. [Step 5] Our second challenge is drift. The chamber is sealed, so as the outside air pressure changes by 10 to 20 hectopascals a day, the fringes turn without any force. So how do we find the zero state automatically, where the inner and outer pressures are equal? [Step 6] Recall that whenever the film bulges or sags, the centre and rim fringes turn in opposite directions. So we pump until they line up: the film is flat, and that is zero, found without any extra sensor. [Step 7] (The real sensor takes the simulation's place: the pump straightens the fringes.) Here is the real sensor during zero-state calibration.</aside>
 </section>
 
 <section class="slide" id="inference" data-shots="inference" data-title="How we detect force and position" data-duration="25">

@@ -1450,6 +1450,25 @@ html.export .video-captions li {
   box-shadow: 0 0 0 1.5px rgb(217 242 114 / 55%), 0 0 22px rgb(217 242 114 / 30%);
 }
 
+/* Ties a spot in a clip to the view beside it: a ring on the spot and a line, no capsule. */
+.video-captions li.link {
+  inset: 0;
+  padding: 0;
+  border-radius: 0;
+  background: none;
+}
+
+.video-captions li.link svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  fill: none;
+  stroke: rgb(238 243 251 / 85%);
+  stroke-width: 2.5;
+}
+
 /* The + and = between the insight lenses. */
 .lens-op {
   margin: 0;
