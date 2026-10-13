@@ -16,7 +16,7 @@
 <main id="slides">
 
 
-<section class="slide" id="title" data-shots="hero" data-chrome="off" data-title="MoiréSkin" data-duration="32">
+<section class="slide" id="title" data-shots="heroGrip heroDesign hero" data-chrome="off" data-title="MoiréSkin" data-step-durations="12 8 12">
   <p class="block eyebrow r" style="left:120px; top:228px">ACM MobiCom 2026 · Austin, TX</p>
   <h1 class="block display r" style="left:110px; top:292px"><span class="grad">MoiréSkin</span></h1>
   <p class="block lead r" style="left:120px; top:470px; width:820px; color:var(--ink); font-size:38px">Ultra-Sensitive Sensor–Actuator<br>Visuo-Tactile Skin using Moiré Patterns</p>
@@ -36,29 +36,28 @@
       <div class="wordmark"><b>Ambient Intelligence Lab</b><span>AMI Lab</span></div>
     </div>
   </div>
-  <aside class="notes">Hi everyone, I'm Linzhen Zhu, a second-year PhD student in the Ambient Intelligence Lab at the University of Michigan. This is joint work with Liuxi Xing, Runqiu Wang, and my advisor, Ke Sun. Today I'll introduce MoiréSkin: one of the most sensitive visuo-tactile sensors in the world, and it is also an actuator.</aside>
+  <!-- What the scene on the right shows, step by step: the skin on a gripper, the cell from all sides, the cell. -->
+  <p class="block sim-tag r" data-until="0" style="left:1180px; top:800px; width:600px"><span>MoiréSkin on robot gripper</span></p>
+  <p class="block sim-tag" data-step="1" data-until="1" style="left:1180px; top:800px; width:600px"><span>MoiréSkin sensor design</span></p>
+  <p class="block sim-tag" data-step="2" style="left:1180px; top:800px; width:600px"><span>MoiréSkin</span></p>
+  <aside class="notes">[Step 1] Hi everyone, I'm Linzhen Zhu, a second-year PhD student in the Ambient Intelligence Lab at the University of Michigan. [Step 2] This is joint work with Liuxi Xing, Runqiu Wang, and my advisor, Ke Sun. [Step 3] Today I'll introduce MoiréSkin: one of the most sensitive visuo-tactile sensors in the world, and it is also an actuator.</aside>
 </section>
-<section class="slide" id="crush" data-shots="icon icon" data-title="Robots need both" data-step-durations="19 17">
+<section class="slide" id="crush" data-shots="icon icon" data-title="Robots need both" data-step-durations="13 17">
   <p class="block eyebrow r" style="left:120px; top:98px">Why it matters</p>
-  <h2 class="block h1 r" data-until="0" style="left:120px; top:152px; width:1560px; font-size:72px">Would you be afraid to interact with a robot?</h2>
-  <figure class="block r" data-until="0" style="left:120px; top:296px; width:1680px; margin:0">
-    <div class="photo" style="height:560px; background:#000"><video id="touch-video" muted playsinline loop data-autoplay poster="assets/media/robot-touch.webp" src="assets/media/robot-touch.mp4"></video></div>
-    <figcaption class="caption" style="font-size:20px; margin-top:10px">Video: Pavel Danilyuk · pexels.com/video/8328049</figcaption>
-  </figure>
-  <h2 class="block h1" data-step="1" style="left:120px; top:152px; width:1400px">Robots need <span class="grad">both</span>.</h2>
-  <p class="block tag" data-step="1" style="left:120px; top:350px; margin:0; width:900px"><span class="value fluo" style="font-size:104px">Sensitivity</span><span class="name" style="font-size:28px">to handle fragile things</span></p>
-  <p class="block lens-op" data-step="1" style="left:124px; top:538px">+</p>
-  <p class="block tag" data-step="1" style="left:120px; top:640px; margin:0; width:900px"><span class="value" style="font-size:104px; color:#9dbaff">Compliance</span><span class="name" style="font-size:28px">to grip them gently</span></p>
-  <figure class="block" data-step="1" style="left:1204px; top:292px; width:596px; margin:0">
+  <h2 class="block h1 r" style="left:120px; top:152px; width:940px">Are you afraid of interacting with a <span class="grad">humanoid robot</span>?</h2>
+  <p class="block tag" data-step="1" style="left:120px; top:470px; margin:0; width:900px"><span class="value fluo" style="font-size:92px">Sensitivity</span><span class="name" style="font-size:28px">to handle fragile things</span></p>
+  <p class="block lens-op" data-step="1" style="left:124px; top:632px">+</p>
+  <p class="block tag" data-step="1" style="left:120px; top:712px; margin:0; width:900px"><span class="value" style="font-size:92px; color:#9dbaff">Compliance</span><span class="name" style="font-size:28px">to grip them gently</span></p>
+  <figure class="block r" style="left:1204px; top:292px; width:596px; margin:0">
     <div class="photo" style="height:596px; background:#000"><video id="crush-video" muted playsinline loop data-autoplay poster="assets/media/crush-robotis.webp" src="assets/media/crush-robotis.mp4"></video></div>
     <p class="flag warn" style="margin-top:16px">Failure case</p>
     <figcaption class="caption" style="font-size:20px; margin-top:8px">Video: ROBOTIS · youtube.com/watch?v=1-ymnFMMVgk</figcaption>
   </figure>
-  <aside class="notes">[Step 1] Let me start with a question. Would you be afraid to interact with a robot, like this one? You would want it to feel exactly how hard it is pressing. [Step 2] Dexterous robot manipulation requires two things: sensitivity, to handle fragile things, and compliance, to grip them gently. Without them, a fragile object ends up crushed, like this cake.</aside>
+  <aside class="notes">[Step 1] Let me start with a question. Are you afraid of interacting with a humanoid robot? Look at what this robot hand does to a cake. [Step 2] Dexterous robot manipulation requires two things: sensitivity, to handle fragile things, and compliance, to grip them gently. Without them, a fragile object ends up crushed, like this cake.</aside>
 </section>
-<section class="slide" id="vts" data-shots="icon" data-title="Existing solution: visuo-tactile sensors" data-duration="19">
+<section class="slide" id="vts" data-shots="icon" data-title="SoTA: structured-light visuo-tactile sensors" data-duration="19">
   <p class="block eyebrow r" style="left:120px; top:98px">Existing solution</p>
-  <h2 class="block h1 r" style="left:120px; top:152px; width:1400px">Visuo-tactile sensors.</h2>
+  <h2 class="block h1 r" style="left:120px; top:152px; width:1520px; font-size:68px">SoTA: structured-light visuo-tactile sensors.</h2>
   <figure class="block r" style="left:120px; top:292px; width:1680px; margin:0">
     <div class="photo" style="height:640px; background:#000"><video id="gel-video" muted playsinline loop data-autoplay poster="assets/media/gelsight-gripper.webp" src="assets/media/gelsight-gripper.mp4"></video></div>
     <ol class="video-captions" data-video-steps="#gel-video">
@@ -67,7 +66,7 @@
     </ol>
     <figcaption class="caption" style="font-size:20px; margin-top:10px">Video: GelSight · youtube.com/watch?v=wCZZnyo7k44</figcaption>
   </figure>
-  <aside class="notes">The existing solution is a visuo-tactile sensor, like the ones on this gripper. It gives a robot tactile information: how an object deforms and how much force is applied.</aside>
+  <aside class="notes">The state of the art is the structured-light visuo-tactile sensor, like the ones on this gripper. It gives a robot tactile information: how an object deforms and how much force is applied.</aside>
 </section>
 <section class="slide" id="vts-press" data-shots="icon" data-title="Visuo-tactile sensor: camera view" data-duration="22">
   <p class="block eyebrow" style="left:120px; top:98px">Visuo-tactile sensor</p>
@@ -81,6 +80,36 @@
     <figcaption class="caption" style="font-size:20px; margin-top:10px">Video: GelSight · youtube.com/watch?v=wCZZnyo7k44</figcaption>
   </figure>
   <aside class="notes">It turns touch into an image: under structured light, a camera watches a soft gel deform as it is pressed, here by a screw. The colour changes reflect the applied force and the object's texture.</aside>
+</section>
+<section class="slide" id="structured" data-shots="gelDemo gelLight" data-title="How they work: structured light on a rigid base" data-step-durations="24 13">
+  <p class="block eyebrow r" data-until="0" style="left:120px; top:98px">How they work</p>
+  <h2 class="block h1 r" data-until="0" style="left:120px; top:152px; width:1500px">Structured light on a <span style="color:#ffbe7d">rigid base</span>.</h2>
+  <p class="block eyebrow" data-step="1" style="left:120px; top:98px">The problem</p>
+  <h2 class="block h1" data-step="1" style="left:120px; top:152px; width:1560px; font-size:68px">A rigid base limits <span style="color:#9dbaff">compliance</span> and <span style="color:var(--fluo)">sensitivity</span>.</h2>
+  <!-- The Digit 360 picture and its three labels exactly as on the other version of this slide; beside it the principle in section, moving. -->
+  <p class="block micro r" data-until="0" style="left:180px; top:282px">Meta · Digit 360</p>
+  <figure class="block r" data-until="0" style="left:200px; top:330px; width:194px; margin:0">
+    <img src="assets/img/related/digit360-exploded.webp" alt="Exploded render of the Digit 360 fingertip sensor: a dome, a ring of lights, a lens and stacked boards in a housing" style="display:block; width:194px; height:580px">
+  </figure>
+  <p class="block caption r" data-until="0" style="left:180px; top:922px; font-size:20px; white-space:nowrap">Image: Meta AI · Digit 360</p>
+  <svg class="block r" data-until="0" style="left:200px; top:330px" width="560" height="580" viewBox="0 0 560 580" aria-hidden="true">
+    <g fill="none" stroke="rgb(238 243 251 / 55%)" stroke-width="2"><path d="M166 66H238"/><path d="M172 153H238"/><path d="M120 235H218V290H176"/><path d="M218 262H238"/></g>
+    <g fill="#d9f272"><circle cx="166" cy="66" r="5"/><circle cx="172" cy="153" r="5"/><circle cx="120" cy="235" r="5"/><circle cx="176" cy="290" r="5"/></g>
+    <g font-size="32" font-weight="750"><text x="256" y="77" fill="#ffbe7d">Rigid surface</text><text x="256" y="164" fill="#ffffff">Structured light</text><text x="256" y="273" fill="#ffffff">Camera</text></g>
+  </svg>
+  <svg class="block r" data-widget="gelsight" style="left:750px; top:340px" width="1084" height="516" viewBox="0 0 1260 600" aria-label="Cross-section of a structured-light tactile sensor: a soft gel on a clear rigid base, lit from fixed places at its sides and read by a camera below; an object presses the gel and the camera sees the dent in the lights' two colours"></svg>
+  <!-- What has to be rigid, and why. -->
+  <svg class="block r" style="left:750px; top:340px" width="1084" height="516" viewBox="0 0 1260 600" aria-hidden="true">
+    <defs><pattern id="hatch-base" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="14" stroke="#ffbe7d" stroke-width="3.5" opacity="0.55"/></pattern></defs>
+    <rect x="80" y="194" width="620" height="106" fill="url(#hatch-base)" stroke="#ffbe7d" stroke-width="4" style="filter:drop-shadow(0 0 10px rgb(255 190 125 / 55%))"/>
+    <rect x="286" y="222" width="208" height="50" rx="25" fill="rgb(9 15 28 / 88%)" stroke="#ffbe7d" stroke-width="2"/>
+    <text x="390" y="258" fill="#ffbe7d" font-size="32" font-weight="760" text-anchor="middle">Rigid base</text>
+    <text x="390" y="588" fill="#ffbe7d" font-size="28" font-weight="700" text-anchor="middle">rigid, to hold the lights and the camera in place</text>
+  </svg>
+  <!-- Second click: what that rigid base costs, in the words and colours of slide 2. Compliance follows from "rigid" itself; for sensitivity the section shows a light touch. -->
+  <p class="block tag" data-step="1" style="left:120px; top:390px; margin:0; width:640px"><span class="value" style="font-size:88px; color:#9dbaff">Compliance</span><span class="name" style="font-size:28px">a rigid surface cannot grip gently</span></p>
+  <p class="block tag" data-step="1" style="left:120px; top:620px; margin:0; width:640px"><span class="value fluo" style="font-size:88px">Sensitivity</span><span class="name" style="font-size:28px">a light touch barely dents it</span></p>
+  <aside class="notes">[Step 1] How do they work? Take Meta's Digit 360: a rigid surface over structured light and a camera. In section, lights shine on a gel from fixed places, and when something presses it, a camera below reads the dent from how the lights shade it. This only works while the lights, the gel and the camera keep their geometry. So the base has to be rigid. [Step 2] But that rigid base costs both things a robot needs. Compliance: a rigid surface cannot grip gently. And sensitivity: a light touch barely dents a stiff gel.</aside>
 </section>
 <section class="slide" id="related" data-shots="icon icon icon paradox" data-title="Related works" data-step-durations="9 16 15 14">
   <p class="block eyebrow r" data-until="2" style="left:120px; top:98px">Visuo-tactile sensors today</p>
@@ -151,11 +180,8 @@
   <svg class="block" data-step="1" data-until="2" data-widget="crossings" style="left:616px; top:296px" width="370" height="370" viewBox="0 0 400 400" aria-label="Magnified view of the two gratings: a fringe is a row of the points where their lines cross, and it turns when a touch squeezes one grating and stretches the other"></svg>
   <p class="block lens-note" data-step="1" data-until="2" style="left:601px; top:686px; width:400px">Lens · 3 mm</p>
   <svg class="block" data-step="2" data-until="2" data-widget="scissors" style="left:612px; top:738px" width="720" height="185" viewBox="0 0 720 185" aria-label="Nearly closed scissors: when both blades close a little, the point where they cross slides a long way"></svg>
-  <p class="block tag" data-step="0" data-until="0" style="left:120px; top:700px; margin:0"><span class="value">330 μm</span><span class="name">line pitch</span></p>
   <p class="block micro fluo" data-step="0" data-until="0" style="left:936px; top:830px; width:440px; text-align:center">Lower · fluorescent</p>
   <p class="block micro" data-step="0" data-until="0" style="left:1384px; top:830px; width:440px; text-align:center; color:#9dbaff">Upper · clear</p>
-  <p class="block tag" data-step="1" data-until="1" style="left:120px; top:700px; margin:0"><span class="value">0.33 <span class="fluo">→ 3 mm</span></span><span class="name">lines → fringes</span></p>
-  <p class="block tag" data-step="2" data-until="2" style="left:120px; top:700px; margin:0"><span class="value"><span data-readout="dentPct">1.0 %</span> <span class="fluo">→ <span data-readout="dthetaDent">5.2°</span></span></span><span class="name">deformation → fringe turn</span></p>
   <p class="block tag" data-step="3" style="left:120px; top:600px; margin:0; width:460px"><span class="value">μm</span><span class="name">the film barely bends</span></p>
   <p class="block tag" data-step="3" style="left:120px; top:745px; margin:0; width:460px"><span class="value fluo">mm</span><span class="name">the fringes move a lot</span></p>
   <p class="block chip" data-step="1" data-until="1" style="left:120px; top:900px">Scroll ↕ to bring them together</p>
@@ -254,18 +280,23 @@
   </div>
   <aside class="notes">Two more designs make this work. First, the grating is fluorescent: blue LEDs excite it, so the fringes stay high-contrast in any light, even in darkness. Second, the camera can see through the skin, so the robot sees an object before touching it. It can line up before contact, for example by telling which side of a USB plug is up. And each cell costs under two dollars, with no cleanroom needed. (Hover a tile to show it on the sensor.)</aside>
 </section>
-<section class="slide" id="challenge1" data-shots="icon pAmplify pAmplifyReal" data-title="Challenge 1: sensitivity vs resolution" data-step-durations="27 40 9">
+<section class="slide" id="challenge1" data-shots="icon pAmplify pAmplifyReal" data-title="Challenge 1: sensitivity vs resolution" data-step-durations="27 30 19">
   <p class="block eyebrow r" style="left:120px; top:98px">How it works</p>
   <h2 class="block h1 r" style="left:120px; top:152px; width:1600px; font-size:72px"><span class="flag warn">Challenge 1</span>Sensitivity vs spatial resolution.</h2>
+  <!-- Under the headline, each step's own statement, with a capsule: amber for the problem, blue for our solution. -->
+  <p class="block h2" data-step="0" data-until="0" style="left:120px; top:262px">A fingertip has <span class="grad">both, at once</span>.</p>
+  <p class="block h2" data-step="1" data-until="1" style="left:120px; top:262px">One angle sets both.</p>
+  <p class="block flag warn" data-step="1" data-until="1" style="left:120px; top:340px">Smaller angle · more gain · wider fringes</p>
+  <p class="block h2" data-step="2" style="left:120px; top:262px">A balanced angle: 6.31°.</p>
+  <p class="block flag" data-step="2" style="left:120px; top:340px">Our solution</p>
   <!-- Why both: what a fingertip does. No figures; colours as on the chart that follows. -->
-  <div class="block human-touch" data-step="0" data-until="0" style="left:120px; top:318px; width:1680px">
+  <div class="block human-touch" data-step="0" data-until="0" style="left:120px; top:384px; width:1680px">
     <figure class="real round"><video muted playsinline loop data-autoplay poster="assets/media/human-light-touch.webp" src="assets/media/human-light-touch.mp4"></video></figure>
     <div class="stat"><span class="value" style="color:var(--air)">Force<br>sensitivity</span><span class="label">the lightest touch<br>a fingertip feels</span></div>
     <figure class="real round"><video muted playsinline loop data-autoplay poster="assets/media/human-braille.webp" src="assets/media/human-braille.mp4"></video></figure>
     <div class="stat fluo"><span class="value">Spatial<br>resolution</span><span class="label">how finely it tells<br>where the touch is</span></div>
   </div>
-  <p class="block lead" data-step="0" data-until="0" style="left:120px; top:716px; width:1500px; color:var(--ink); font-size:44px; font-weight:700">A fingertip has <span class="grad">both, at once</span>.</p>
-  <p class="block caption" data-step="0" data-until="0" style="left:120px; top:806px; width:1680px; font-size:20px">Videos: Nui Malama, cottonbro studio · Pexels</p>
+  <p class="block caption" data-step="0" data-until="0" style="left:120px; top:724px; width:1680px; font-size:20px">Videos: Nui Malama, cottonbro studio · Pexels</p>
   <svg class="block" data-step="1" data-until="2" data-widget="alphaChart" style="left:100px; top:430px" width="780" height="361" viewBox="0 0 800 370" aria-label="Spatial resolution and sensitivity versus grating angle"></svg>
   <p class="block chip" data-step="1" data-until="1" style="left:120px; top:900px">Scroll ↕ to change the angle · hover to press</p>
   <figure class="block real-cover sim-cover" data-step="1" data-until="1"><figcaption>Simulation</figcaption></figure>
@@ -277,7 +308,7 @@
     <video muted playsinline loop data-autoplay data-track="touch" data-fringe="20.7" poster="assets/media/real-touch.webp" src="assets/media/real-touch.mp4"></video>
     <figcaption>Real sensor · touch</figcaption>
   </figure>
-  <aside class="notes">[Step 1] Our first challenge: a skin needs both force sensitivity and spatial resolution, as our own fingertips show. A fingertip feels the lightest touch, and tells exactly where that touch is. Dexterous manipulation relies on both at once. [Step 2] The challenge is how to balance the two. A smaller angle between the two gratings gives more gain, so we can detect smaller forces, but it creates wider fringes with lower spatial resolution. So we choose a balanced angle during fabrication, for both high force sensitivity and high spatial resolution. (Scroll to change the angle; hover to press.) [Step 3] (The real sensor takes the simulation's place.) Here is the real sensor at this angle, as a finger presses it.</aside>
+  <aside class="notes">[Step 1] Our first challenge: a skin needs both force sensitivity and spatial resolution, as our own fingertips show. A fingertip feels the lightest touch, and tells exactly where that touch is. Dexterous manipulation relies on both at once. [Step 2] The challenge is how to balance the two. A smaller angle between the two gratings gives more gain, so we can detect smaller forces, but it creates wider fringes with lower spatial resolution. (Scroll to change the angle; hover to press.) [Step 3] (The real sensor takes the simulation's place.) So we choose a balanced angle during fabrication, for both high force sensitivity and high spatial resolution. Here is the real sensor at this angle, as a finger presses it.</aside>
 </section>
 <section class="slide" id="inference" data-shots="inference" data-title="How we detect force and position" data-duration="25">
   <p class="block eyebrow r" style="left:120px; top:98px">Sensing</p>
@@ -336,29 +367,27 @@
 <section class="slide" id="results" data-shots="results" data-title="Millinewton precision" data-duration="26">
   <p class="block eyebrow r" style="left:120px; top:98px">Sensing</p>
   <h2 class="block h1 r" style="left:120px; top:152px; width:1300px"><span class="grad">Millinewton</span> precision.</h2>
-  <div class="block r" style="left:120px; top:330px; width:780px">
+  <div class="block r" style="left:120px; top:330px; width:900px">
     <p class="micro">Tiny force · 0–0.4 N · zero state</p>
-    <div style="display:grid; grid-template-columns:1.4fr 1fr; gap:30px; margin-top:18px">
-      <div class="stat fluo"><span class="value"><span class="count" data-to="3.78" data-decimals="2">0</span><small>mN</small></span><span class="label">normal force</span>
-        <!-- Everyday things for scale, as on the related-works chart. -->
-        <span class="like cap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V8Z"/><path d="M15 3v4a2 2 0 0 0 2 2h4"/></svg>≈ a sticky note’s weight</span></div>
-      <div class="stat fluo"><span class="value"><span class="count" data-to="0.094" data-decimals="3">0</span><small>mm</small></span><span class="label">position</span>
-        <span class="like cap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2.5c4.6 3.1-3.6 6.4 1 9.5s-3.6 6.4 1 9.5"/><path d="M14.5 2.5c4.6 3.1-3.6 6.4 1 9.5" opacity="0.45"/></svg>≈ a hair’s width</span></div>
+    <!-- Two rows: a figure, and the everyday thing that gives it a feel. -->
+    <div class="result-rows">
+      <div class="result-row">
+        <div class="stat fluo"><span class="value"><span class="count" data-to="3.78" data-decimals="2">0</span><small>mN</small></span><span class="label">normal force</span></div>
+        <span class="like cap big"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V8Z"/><path d="M15 3v4a2 2 0 0 0 2 2h4"/></svg>≈ a <b>sticky note’s</b> weight</span>
+      </div>
+      <div class="result-row">
+        <div class="stat fluo"><span class="value"><span class="count" data-to="0.094" data-decimals="3">0</span><small>mm</small></span><span class="label">position</span></div>
+        <span class="like cap big"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2.5c4.6 3.1-3.6 6.4 1 9.5s-3.6 6.4 1 9.5"/><path d="M14.5 2.5c4.6 3.1-3.6 6.4 1 9.5" opacity="0.45"/></svg>≈ a <b>hair’s</b> width</span>
+      </div>
     </div>
   </div>
-  <div class="block r" style="left:120px; top:640px; width:780px">
-    <p class="micro">General · 0–4 N · random inflation</p>
-    <div style="display:grid; grid-template-columns:1.4fr 1fr; gap:30px; margin-top:18px">
-      <div class="stat"><span class="value">94.9<small>%</small></span><span class="label">normal force<br>error &lt; 0.1 N</span></div>
-      <div class="stat"><span class="value">0.10<small>mm</small></span><span class="label">position<br>5-fold CV</span></div>
-    </div>
-  </div>
-  <svg class="block r" data-widget="forceBars" style="left:960px; top:400px" width="840" height="500" viewBox="0 0 840 500" aria-label="Force error of MoiréSkin and prior visuo-tactile sensors"></svg>
+  <svg class="block r" data-widget="forceBars" style="left:1080px; top:380px" width="720" height="429" viewBox="0 0 840 500" aria-label="Force error of MoiréSkin and prior visuo-tactile sensors"></svg>
   <aside class="notes">MoiréSkin reaches a normal force error of 3.78 millinewtons and a position error of 0.094 millimetres. That makes it the most sensitive visuo-tactile sensor reported to date: it senses the weight of a sticky note, and locates a touch to within a hair's width.</aside>
 </section>
-<section class="slide" id="lego" data-shots="icon" data-title="Actuation: toy LEGO arm" data-duration="47">
+<section class="slide" id="lego" data-shots="icon" data-title="Actuation: toy LEGO arm" data-duration="50">
   <p class="block eyebrow r" style="left:120px; top:98px">Actuation</p>
-  <h2 class="block h1 r" style="left:120px; top:152px; width:1600px"><span class="grad">Dexterity</span> for even a toy arm.</h2>
+  <h2 class="block h1 r" style="left:120px; top:152px; width:1600px">Why do we need actuation?</h2>
+  <p class="block h2 r" style="left:120px; top:256px; width:1600px">Actuation enables <span class="grad">dexterity</span> for even a toy arm.</p>
   <!-- The clip is the recorded demo with two changes. It waits 2 s on the frame where the skin
        has just lit up (0.79-2.79 s), while a label points at it. And it has one insert (step 4):
        the same pour side by side, dissolving in at 15.58-15.83 s and out at 21.00-21.25 s. Left:
@@ -367,65 +396,68 @@
        footage as recorded. The steps' times leave the two dissolves out, so a step that loops
        under the pointer shows only its own picture. Made by
        teaser_video/experiments/slip/lego_with_comparison.py from lego-arm.mp4. -->
-  <figure class="block r" style="left:120px; top:300px; width:900px; margin:0">
-    <div class="photo" style="height:586px; background:#000"><video id="lego-video" muted playsinline loop data-autoplay poster="assets/media/lego-arm.webp" src="assets/media/lego-arm-compare.mp4" style="object-fit:contain"></video></div>
+  <figure class="block r" style="left:120px; top:356px; width:820px; margin:0">
+    <div class="photo" style="height:534px; background:#000"><video id="lego-video" muted playsinline loop data-autoplay poster="assets/media/lego-arm.webp" src="assets/media/lego-arm-compare.mp4" style="object-fit:contain"></video></div>
     <ol class="video-captions" data-video-steps="#lego-video">
-      <li class="pointer" data-from="0.7" data-to="2.75" style="left:265px; top:250px"><span>MoiréSkin</span><svg width="24" height="58" viewBox="0 0 24 58" aria-hidden="true"><path d="M12 2V50M3 40l9 12 9-12" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg></li>
+      <li class="pointer" data-from="0.7" data-to="2.75" style="left:241px; top:228px"><span>MoiréSkin</span><svg width="24" height="58" viewBox="0 0 24 58" aria-hidden="true"><path d="M12 2V50M3 40l9 12 9-12" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg></li>
       <li class="side" data-from="15.71" data-to="21.12" style="left:16px; top:16px">Failure case · illustration</li>
-      <li class="side ours" data-from="15.71" data-to="21.12" style="left:466px; top:16px">MoiréSkin · sensing + actuation</li>
+      <li class="side ours" data-from="15.71" data-to="21.12" style="left:424px; top:16px">MoiréSkin · sensing + actuation</li>
     </ol>
   </figure>
-  <p class="block chip r" style="left:1100px; top:310px">Toy-grade, low-precision arm</p>
-  <ol class="block video-steps r" data-video-steps="#lego-video" data-hover-loop style="left:1100px; top:410px; width:700px">
+  <p class="block chip r" style="left:1040px; top:366px">Toy-grade, low-precision arm</p>
+  <ol class="block video-steps r" data-video-steps="#lego-video" data-hover-loop style="left:1040px; top:456px; width:760px">
     <li data-from="0" data-to="9"><b>1</b>Grasp the cup</li>
     <li data-from="9" data-to="10.93"><b>2</b>Water pours in</li>
     <li data-from="10.93" data-to="15.58"><b>3</b>Feels the weight, inflates</li>
     <li data-from="15.88" data-to="20.99"><b>4</b>Without feedback, it would fall</li>
     <li data-from="21.25" data-to="29"><b>5</b>Holds steady, sets it down</li>
   </ol>
-  <aside class="notes">MoiréSkin is not only a sensor: it also actuates. Here it is on a 50-dollar, low-precision LEGO toy arm. (The label points at the skin on its gripper.) The arm grasps a cup. When water is poured in, the skin feels the weight and inflates to firm its grip. (Side by side, the same pour: on the left, an illustration of the cup falling out of the grip without tactile feedback; on the right, the real run with feedback.) Without this feedback, it would fall, as illustrated on the left. It holds the cup steady and sets it down gently. To control this inflation, the skin has to know its own internal pressure.</aside>
+  <aside class="notes">MoiréSkin is not only a sensor: it also actuates. Why do we need actuation? It brings dexterity even to a 50-dollar, low-precision LEGO toy arm. (The label points at the skin on its gripper.) The arm grasps a cup. When water is poured in, the skin feels the weight and inflates to firm its grip. (Side by side, the same pour: on the left, an illustration of the cup falling out of the grip without tactile feedback; on the right, the real run with feedback.) Without this feedback, it would fall, as illustrated on the left. It holds the cup steady and sets it down gently. To control this inflation, the skin has to know its own internal pressure.</aside>
 </section>
-<section class="slide" id="principle" data-shots="pPressure pPressureReal pWeather pZero pZeroReal" data-title="How it works" data-step-durations="30 8 28 24 8">
-  <p class="block eyebrow r" style="left:120px; top:80px">How it works</p>
-  <div class="block tabs r" style="left:120px; top:140px; width:1680px">
-    <span data-tab="0-1">Pressure</span><span data-tab="2-2">Drift</span><span data-tab="3-4">Zero</span>
-  </div>
-  <svg class="block" data-step="0" data-widget="section" style="left:100px; top:372px" width="820" height="330" viewBox="0 0 820 330" aria-label="Cross-section of the sensing film: two gratings on the two faces of a soft film"></svg>
-  <h2 class="block h1" data-step="0" data-until="1" style="left:120px; top:240px; width:960px; font-size:72px">Sensing internal pressure.</h2>
-  <p class="block flag" data-step="0" data-until="1" style="left:120px; top:326px">For actuator control</p>
-  <dl class="block readouts" data-step="0" data-until="0" style="left:120px; top:720px; width:850px; grid-template-columns:1.15fr 1fr 0.9fr">
+<section class="slide" id="principle" data-shots="pPressure pPressure pPressureReal pWeather pZero pZeroReal" data-title="Challenges 2 and 3: internal pressure, drift" data-step-durations="20 20 8 28 24 8">
+  <p class="block eyebrow r" style="left:120px; top:98px">How it works</p>
+  <h2 class="block h1 r" data-until="2" style="left:120px; top:152px; width:1680px; font-size:72px"><span class="flag warn">Challenge 2</span>How to read the internal pressure?</h2>
+  <h2 class="block h1" data-step="3" style="left:120px; top:152px; width:1680px; font-size:72px"><span class="flag warn">Challenge 3</span>Outside air pressure causes drift.</h2>
+  <!-- Under the headline, each step's own statement, with a capsule: amber for the problem, blue for our solution. -->
+  <p class="block h2 r" data-until="0" style="left:120px; top:262px">Actuating the skin turns the fringes.</p>
+  <p class="block h2" data-step="1" data-until="2" style="left:120px; top:262px">Fringe rotation angle → internal pressure.</p>
+  <p class="block flag" data-step="1" data-until="2" style="left:120px; top:340px">Our solution · for actuation control</p>
+  <p class="block h2" data-step="3" data-until="3" style="left:120px; top:262px">Outside air turns the fringes too.</p>
+  <p class="block flag warn" data-step="3" data-until="3" style="left:120px; top:340px">Drift · without any force</p>
+  <p class="block h2" data-step="4" style="left:120px; top:262px">Pump until centre and rim line up.</p>
+  <p class="block flag" data-step="4" style="left:120px; top:340px">Our solution · zero-state calibration</p>
+  <svg class="block" data-step="0" data-widget="section" style="left:100px; top:396px" width="820" height="330" viewBox="0 0 820 330" aria-label="Cross-section of the sensing film: two gratings on the two faces of a soft film"></svg>
+  <dl class="block readouts" data-step="1" data-until="1" style="left:120px; top:720px; width:850px; grid-template-columns:1.15fr 1fr 0.9fr">
     <div><dt>Chamber</dt><dd data-readout="pressure" class="air">0.0 hPa</dd></div>
     <div><dt>Centre turns</dt><dd data-readout="dthetaInflate" class="fluo">0.0°</dd></div>
     <div><dt>Rim turns</dt><dd data-readout="dthetaRim">0.0°</dd></div>
   </dl>
-  <p class="block chip air" data-step="0" data-until="0" style="left:120px; top:900px">Scroll ↕ to pump air</p>
-  <h2 class="block h1" data-step="2" data-until="2" style="left:120px; top:240px; width:1200px; font-size:72px"><span class="flag warn">Challenge 2</span>Drift without any force.</h2>
-  <dl class="block readouts" data-step="2" data-until="2" style="left:120px; top:720px; width:850px; grid-template-columns:1.15fr 1fr 0.9fr">
+  <p class="block chip air" data-step="0" data-until="1" style="left:120px; top:900px">Scroll ↕ to pump air</p>
+  <dl class="block readouts" data-step="3" data-until="3" style="left:120px; top:720px; width:850px; grid-template-columns:1.15fr 1fr 0.9fr">
     <div><dt>Outside air</dt><dd data-readout="ambient" class="air">1013.2 hPa</dd></div>
     <div><dt>Centre turns</dt><dd data-readout="dthetaInflate" class="fluo">0.0°</dd></div>
     <div><dt>Rim turns</dt><dd data-readout="dthetaRim">0.0°</dd></div>
   </dl>
-  <h2 class="block h1" data-step="3" style="left:120px; top:240px; width:780px; font-size:72px">Zero-state calibration.</h2>
-  <dl class="block readouts" data-step="3" data-until="3" style="left:120px; top:720px; width:620px; grid-template-columns:1.2fr 1fr">
+  <dl class="block readouts" data-step="4" data-until="4" style="left:120px; top:720px; width:620px; grid-template-columns:1.2fr 1fr">
     <div><dt>Centre vs rim</dt><dd data-readout="calib">0.00°</dd></div>
     <div><dt>Pump</dt><dd data-readout="calibStatus">Zero ✓</dd></div>
   </dl>
-  <figure class="block real-cover sim-cover" data-step="0" data-until="0" style="--gap:70px"><figcaption>Simulation</figcaption></figure>
-  <figure class="block real-cover sim-cover" data-step="2" data-until="3" style="--gap:70px"><figcaption>Simulation</figcaption></figure>
-  <figure class="block real round" data-step="0" data-until="0" style="left:1698px; top:770px; width:168px; height:168px">
+  <figure class="block real-cover sim-cover" data-step="0" data-until="1" style="--gap:70px"><figcaption>Simulation</figcaption></figure>
+  <figure class="block real-cover sim-cover" data-step="3" data-until="4" style="--gap:70px"><figcaption>Simulation</figcaption></figure>
+  <figure class="block real round" data-step="0" data-until="1" style="left:1698px; top:770px; width:168px; height:168px">
     <video muted playsinline loop data-autoplay data-fringe="19.8" poster="assets/media/real-inflate.webp" src="assets/media/real-inflate.mp4"></video>
     <figcaption>Real sensor</figcaption>
   </figure>
-  <figure class="block real-cover" data-step="1" data-until="1" style="--gap:70px">
+  <figure class="block real-cover" data-step="2" data-until="2" style="--gap:70px">
     <video muted playsinline loop data-autoplay data-track="inflate" data-fringe="19.8" poster="assets/media/real-inflate.webp" src="assets/media/real-inflate.mp4"></video>
     <figcaption>Real sensor · inflation</figcaption>
   </figure>
-  <figure class="block real-cover" data-step="4" data-video-steps="#zero-video" style="--gap:70px">
+  <figure class="block real-cover" data-step="5" data-video-steps="#zero-video" style="--gap:70px">
     <video id="zero-video" muted playsinline loop data-autoplay data-track="zero" data-fringe="19.8" poster="assets/media/real-zero.webp" src="assets/media/real-zero.mp4"></video>
     <figcaption data-from="0" data-to="2.53">Real sensor · pumping</figcaption>
     <figcaption class="fluo" data-from="2.53" data-to="99">Real sensor · zeroed ✓</figcaption>
   </figure>
-  <aside class="notes">[Step 1] So the skin senses its own internal pressure, from the same fringes. When the skin inflates, the centre is stretched while the rim is compressed, so their fringes turn in opposite directions, and the angle tells us the pressure. (Scroll to pump.) [Step 2] (The real sensor takes the simulation's place.) Here is the real sensor as its internal pressure changes. [Step 3] Our second challenge is drift. The chamber is sealed, so as the outside air pressure changes by 10 to 20 hectopascals a day, the fringes turn without any force. So how do we find the zero state automatically, where the inner and outer pressures are equal? [Step 4] Recall that whenever the film bulges or sags, the centre and rim fringes turn in opposite directions. So we pump until they line up: the film is flat, and that is zero, found without any extra sensor. [Step 5] (The real sensor takes the simulation's place: the pump straightens the fringes.) Here is the real sensor during zero-state calibration.</aside>
+  <aside class="notes">[Step 1] So our second challenge: how do we read the internal pressure? We read it from the fringes themselves, with no external pressure sensor: actuating the skin turns the fringes. (Scroll to pump.) [Step 2] When the skin inflates, the centre is stretched while the rim is compressed, so their fringes turn in opposite directions, and the rotation angle tells us the pressure. [Step 3] (The real sensor takes the simulation's place.) Here is the real sensor as its internal pressure changes. [Step 4] Our third challenge is drift. The chamber is sealed, so as the outside air pressure changes by 10 to 20 hectopascals a day, the fringes turn without any force. So how do we find the zero state automatically, where the inner and outer pressures are equal? [Step 5] Recall that whenever the film bulges or sags, the centre and rim fringes turn in opposite directions. So we pump until they line up: the film is flat, and that is zero, found without any extra sensor. [Step 6] (The real sensor takes the simulation's place: the pump straightens the fringes.) Here is the real sensor during zero-state calibration.</aside>
 </section>
 <section class="slide" id="softness" data-shots="softness" data-title="Case study: softness classification" data-duration="40">
   <p class="block eyebrow r" style="left:120px; top:98px">Sense + actuate</p>
@@ -544,16 +576,14 @@
   </div>
   <aside class="notes">We also built a data collection kit for MoiréSkin: a UMI-style handheld gripper, so people can teach robots by demonstration. Here it picks up a strawberry: it feels the contact through the fringes, and sees the berry through the skin.</aside>
 </section>
-<section class="slide" id="closing" data-shots="closing" data-chrome="off" data-title="Takeaways" data-duration="25">
-  <ol class="block steps-list big r" style="left:120px; top:92px; width:860px; gap:16px">
+<section class="slide" id="closing" data-shots="closing" data-chrome="off" data-title="Takeaways" data-duration="20">
+  <p class="block eyebrow r" style="left:120px; top:250px">Takeaways</p>
+  <ol class="block steps-list big r" style="left:120px; top:326px; width:900px; gap:30px">
     <li data-n="01"><span><b class="grad">Ultra-sensitive</b> · 3.78 mN</span></li>
     <li data-n="02"><span><b class="grad">Compliant</b> · grips fragile things gently</span></li>
     <li data-n="03"><span><b class="grad">Actuating</b> · feels its own pressure</span></li>
     <li data-n="04"><span><b class="grad">See-through</b> · sees before touch</span></li>
   </ol>
-  <p class="block eyebrow r" style="left:120px; top:424px">Our vision</p>
-  <h2 class="block h1 r" style="left:116px; top:474px; width:1000px; font-size:76px; line-height:1.06">A skin that feels and acts,<br>on <span class="grad">every future robot.</span></h2>
-  <p class="block display r" style="left:112px; top:690px; font-size:116px">Thank you.</p>
   <div class="block r" style="left:120px; top:860px; height:84px; display:flex; gap:64px; align-items:center">
     <div class="lockup cse-logo" style="height:84px; font-size:24px">
       <img src="assets/logos/umich-cse.png" alt="University of Michigan Computer Science and Engineering">
@@ -568,20 +598,22 @@
     <img src="assets/img/qr-project.svg" alt="QR code for the MoiréSkin project page" style="width:180px; height:180px; display:block; margin:0 auto">
     <p class="small" style="margin-top:12px; font-size:24px">Project page</p>
   </div>
-  <aside class="notes">To summarize. MoiréSkin is ultra-sensitive: 3.78 millinewtons. It is compliant, it actuates, and it stays see-through. We achieve sensing and actuation in one ultra-sensitive skin, for dexterous manipulation. We believe a skin like this belongs on every future robot. Thank you.</aside>
+  <aside class="notes">To summarize. MoiréSkin is ultra-sensitive: 3.78 millinewtons. It is compliant, it actuates, and it stays see-through. We achieve sensing and actuation in one ultra-sensitive skin, for dexterous manipulation.</aside>
 </section>
-<section class="slide" id="end" data-shots="closing" data-chrome="off" data-title="Questions" data-duration="0">
-  <p class="block eyebrow r" style="left:120px; top:86px">ACM MobiCom 2026 · Austin, TX</p>
-  <h1 class="block display r" style="left:112px; top:150px; font-size:128px"><span class="grad">MoiréSkin</span></h1>
-  <p class="block lead r" style="left:120px; top:292px; width:900px; color:var(--ink); font-size:32px; line-height:1.3">One of the world’s most sensitive tactile sensors,<br>and an actuator, in one skin.</p>
-  <ul class="block authors small r" style="left:120px; top:408px">
+<section class="slide" id="end" data-shots="closing" data-chrome="off" data-title="Vision · Thank you" data-duration="9">
+  <p class="block eyebrow r" style="left:120px; top:76px">ACM MobiCom 2026 · Austin, TX</p>
+  <h1 class="block display r" style="left:112px; top:128px; font-size:112px"><span class="grad">MoiréSkin</span></h1>
+  <p class="block lead r" style="left:120px; top:254px; width:1000px; color:var(--ink); font-size:32px; line-height:1.3">One of the world’s most sensitive tactile sensors and actuators.</p>
+  <ul class="block authors small r" style="left:120px; top:318px">
     <li><img src="assets/img/authors/linzhen.webp" alt=""><span>Linzhen Zhu</span></li>
     <li><img src="assets/img/authors/liuxi.webp" alt=""><span>Liuxi Xing</span></li>
     <li><img src="assets/img/authors/runqiu.webp" alt=""><span>Runqiu Wang</span></li>
     <li><img src="assets/img/authors/ke.webp" alt=""><span>Ke Sun</span></li>
   </ul>
-  <p class="block display" style="left:112px; top:690px; font-size:116px">Thank you.</p>
-  <div class="block" style="left:120px; top:860px; height:84px; display:flex; gap:64px; align-items:center">
+  <p class="block eyebrow r" style="left:120px; top:494px">Our vision</p>
+  <h2 class="block h1 r" style="left:116px; top:538px; width:1000px; font-size:62px; line-height:1.08">A skin that feels and acts,<br>on <span class="grad">every future robot.</span></h2>
+  <p class="block display r" style="left:112px; top:706px; font-size:100px">Thank you.</p>
+  <div class="block r" style="left:120px; top:860px; height:84px; display:flex; gap:64px; align-items:center">
     <div class="lockup cse-logo" style="height:84px; font-size:24px">
       <img src="assets/logos/umich-cse.png" alt="University of Michigan Computer Science and Engineering">
       <div class="wordmark"><b>Computer Science &amp; Engineering</b><span>University of Michigan</span></div>
@@ -591,11 +623,11 @@
       <div class="wordmark"><b>Ambient Intelligence Lab</b><span>AMI Lab</span></div>
     </div>
   </div>
-  <div class="block" style="left:1600px; top:110px; width:200px; text-align:center">
+  <div class="block r" style="left:1600px; top:110px; width:200px; text-align:center">
     <img src="assets/img/qr-project.svg" alt="QR code for the MoiréSkin project page" style="width:180px; height:180px; display:block; margin:0 auto">
     <p class="small" style="margin-top:12px; font-size:24px">Project page</p>
   </div>
-  <aside class="notes">(Stay on this page for questions.)</aside>
+  <aside class="notes">We believe a skin like this belongs on every future robot. Thank you. (Stay on this page for questions.)</aside>
 </section>
 
 </main>

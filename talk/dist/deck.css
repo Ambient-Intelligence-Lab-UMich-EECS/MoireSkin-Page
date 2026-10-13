@@ -375,6 +375,42 @@ body.blackout #blackout {
   box-shadow: 0 10px 26px rgb(0 0 0 / 40%);
 }
 
+/* Results: each figure in a row with the everyday thing that gives it a feel. */
+.result-rows {
+  display: grid;
+  gap: 46px;
+  margin-top: 30px;
+}
+
+.result-row {
+  display: grid;
+  grid-template-columns: 372px auto;
+  align-items: center;
+  justify-content: start;
+  column-gap: 26px;
+}
+
+.result-row .stat .value {
+  font-size: 98px;
+}
+
+.like.cap.big {
+  gap: 14px;
+  margin: 0;
+  padding: 13px 28px 13px 18px;
+  font-size: 31px;
+}
+
+.like.cap.big svg {
+  width: 46px;
+  height: 46px;
+}
+
+.like.cap.big b {
+  color: var(--fluo);
+  font-weight: 760;
+}
+
 /* What a fingertip does: a round clip and the ability it stands for, twice
    in a row. */
 .human-touch {
