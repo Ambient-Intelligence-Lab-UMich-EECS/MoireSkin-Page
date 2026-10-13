@@ -16,7 +16,7 @@
 <main id="slides">
 
 
-<section class="slide" id="title" data-shots="heroGrip heroDesign hero" data-chrome="off" data-title="MoiréSkin" data-step-durations="8 8 12">
+<section class="slide" id="title" data-shots="heroGrip heroDesign" data-chrome="off" data-title="MoiréSkin" data-step-durations="16 12">
   <p class="block eyebrow r" style="left:120px; top:228px">ACM MobiCom 2026 · Austin, TX</p>
   <h1 class="block display r" style="left:110px; top:292px"><span class="grad">MoiréSkin</span></h1>
   <p class="block lead r" style="left:120px; top:470px; width:820px; color:var(--ink); font-size:38px">Ultra-Sensitive Sensor–Actuator<br>Visuo-Tactile Skin using Moiré Patterns</p>
@@ -36,11 +36,10 @@
       <div class="wordmark"><b>Ambient Intelligence Lab</b><span>AMI Lab</span></div>
     </div>
   </div>
-  <!-- What the scene on the right shows, step by step: the skin on a gripper, the cell from all sides, the cell. -->
+  <!-- What the scene on the right shows, step by step: the skin on a gripper, then the cell taken apart into its modules. -->
   <p class="block sim-tag r" data-until="0" style="left:1180px; top:800px; width:600px"><span>MoiréSkin on robot gripper</span></p>
-  <p class="block sim-tag" data-step="1" data-until="1" style="left:1180px; top:800px; width:600px"><span>MoiréSkin sensor design</span></p>
-  <p class="block sim-tag" data-step="2" style="left:1180px; top:800px; width:600px"><span>MoiréSkin</span></p>
-  <aside class="notes">[Step 1] Hi everyone, I'm Linzhen Zhu, a PhD student at the University of Michigan. [Step 2] This is joint work with Liuxi Xing, Runqiu Wang, and my advisor, Ke Sun. [Step 3] Today I'll introduce MoiréSkin: one of the most sensitive visuo-tactile sensors in the world, and it is also an actuator.</aside>
+  <p class="block sim-tag" data-step="1" style="left:1180px; top:800px; width:600px"><span>MoiréSkin sensor design</span></p>
+  <aside class="notes">[Step 1] Hi everyone, I'm Linzhen Zhu, a PhD student at the University of Michigan. This is joint work with Liuxi Xing, Runqiu Wang, and my advisor, Ke Sun. [Step 2] Today I'll introduce MoiréSkin: one of the most sensitive visuo-tactile sensors in the world, and it is also an actuator.</aside>
 </section>
 <section class="slide" id="crush" data-shots="icon icon" data-title="Robots need both" data-step-durations="15 10">
   <p class="block eyebrow r" style="left:120px; top:98px">Why it matters</p>
@@ -156,7 +155,7 @@
   <img class="block rw-pic" data-step="1" src="assets/img/related/gelsight.webp" alt="GelSight" style="left:962px; top:776px; width:88px; height:88px">
   <img class="block rw-pic" data-step="1" src="assets/img/related/vitactip.webp" alt="ViTacTip" style="left:1056px; top:388px; width:84px; height:84px">
   <img class="block rw-pic" data-step="1" src="assets/img/related/insight.webp" alt="Insight" style="left:1056px; top:480px; width:84px; height:84px">
-  <img class="block rw-pic" data-step="2" src="assets/img/related/softbubble.webp" alt="Soft-Bubble" style="left:1404px; top:723px; width:88px; height:88px">
+  <img class="block rw-pic" data-step="2" src="assets/img/related/softbubble.webp" alt="Soft-Bubble: a bubble module with the dots printed inside its membrane for tracking" style="left:1404px; top:723px; width:88px; height:88px">
   <p class="block caption" data-step="1" style="left:880px; top:248px; width:920px; font-size:20px; text-align:right">Pictures: Sipos ’24 · Sou ’25 · Yuan ’17 · Do ’23 · Lin ’23 · Sun ’22 · Fan ’24 · Kuppuswamy ’20</p>
   <div class="block gap-mark" data-step="2" data-until="2" style="left:1466px; top:305px" aria-label="Nothing yet is both compliant and sensitive">?</div>
   <svg class="block" data-step="3" style="left:160px; top:270px" width="1600" height="720" viewBox="0 0 1600 720" aria-label="MoiréSkin in the empty corner: compliant and sensitive">
@@ -192,11 +191,10 @@
   </figure>
   <aside class="notes">[Step 1] The answer is to leverage a visual interference phenomenon, called the moiré pattern. It is generated when two gratings of fine parallel lines overlap at a small angle. [Step 2] We put them on the two faces of one soft film. Where they overlap, moiré fringes appear: each fringe is a row of points where the lines cross. (Scroll to bring the two gratings together.) [Step 3] Now touch the film. The dent squeezes the upper face and stretches the lower one: a tiny deformation, just one percent. Like nearly closed scissors, the two sets of lines barely move, but their crossing points slide a long way: the fringes there turn by about five degrees. So this film is a metasurface that amplifies touch. (Scroll to deform it more; hover to touch another place.) [Step 4] And here is our real sensor. A tiny yellow bean, lighter than one gram, is enough to deform these super-sensitive fringes.</aside>
 </section>
-<section class="slide" id="stack" data-shots="stack stack stack stackAside" data-title="Inside MoiréSkin" data-step-durations="17 12 12 19">
+<section class="slide" id="stack" data-shots="stack stack stack" data-title="Inside MoiréSkin" data-step-durations="17 12 12">
   <p class="block eyebrow r" style="left:120px; top:98px">Hardware</p>
-  <h2 class="block h1" data-step="0" data-until="2" style="left:120px; top:152px; width:1000px">Three modules in one cell.</h2>
-  <h2 class="block h1" data-step="3" style="left:120px; top:152px; width:1300px">Mount the cell on a robot arm.</h2>
-  <figure class="block micro-fig r" data-until="2" style="left:120px; top:300px; width:760px; margin:0">
+  <h2 class="block h1" data-step="0" style="left:120px; top:152px; width:1000px">Three modules in one cell.</h2>
+  <figure class="block micro-fig r" style="left:120px; top:300px; width:760px; margin:0">
     <div class="micro-frame">
       <img src="assets/img/grating-micrograph.webp" alt="Our grating film under a microscope: fine parallel lines">
       <span class="micro-spot" style="left:321px; top:203px; width:73px; height:73px"></span>
@@ -206,34 +204,16 @@
     </div>
     <figcaption class="caption">Our film under a microscope</figcaption>
   </figure>
-  <div class="callout r" data-until="2" data-anchor="cover" data-x="1420" data-group="Sensing" data-group-color="#d9f272"><b>Cover</b><span>clear TPU</span></div>
-  <div class="callout r" data-until="2" data-anchor="upper" data-x="1420" data-group="Sensing" data-group-color="#d9f272"><b>Upper grating</b><span>330 μm</span></div>
-  <div class="callout r" data-until="2" data-anchor="substrate" data-x="1420" data-group="Sensing" data-group-color="#d9f272"><b>Substrate</b><span>soft silicone</span></div>
-  <div class="callout r" data-until="2" data-anchor="lower" data-x="1420" data-group="Sensing" data-group-color="#d9f272"><b class="fluo">Lower grating</b><span>fluorescent</span></div>
-  <div class="callout r" data-until="2" data-step="1" data-anchor="chamber" data-x="1420" data-group="Actuation" data-group-color="#7da6ff"><b class="air">Air chamber</b></div>
-  <div class="callout r" data-until="2" data-step="1" data-anchor="pump" data-x="1420" data-group="Actuation" data-group-color="#7da6ff"><b class="air">Pump</b><span>one controller</span></div>
-  <div class="callout r" data-until="2" data-step="2" data-anchor="camera" data-x="1420" data-group="Imaging" data-group-color="#ffffff"><b>Camera</b><span>1080p · 160°</span></div>
-  <div class="callout r" data-until="2" data-step="2" data-anchor="led" data-x="1420" data-group="Imaging" data-group-color="#ffffff"><b>LED ring</b><span>faces down · blue</span></div>
-  <div class="callout r" data-until="2" data-step="2" data-anchor="reflector" data-x="1420" data-group="Imaging" data-group-color="#ffffff"><b>Diffuse reflector</b></div>
-  <!-- Step 4: where a cell sits on a robot, and what its camera sees. Two views cut from the
-       recorded toy-arm demo by tools/lego-cell-clips.sh, frame for frame the same: the arm
-       (without the demo's own captions) and the view of the camera inside the cell. They show
-       power-on, approach, grasp and lift, and stop before the water is poured: the demo itself
-       is told later (#lego). The clip waits 2 s on the frame where the skin has just lit up
-       (0.88-2.88 s) while the label points at it and a line leads to the camera's view; the
-       line comes back at the end, with the cup held. -->
-  <div class="block" data-step="3" style="left:120px; top:300px; width:1210px; height:660px">
-    <div class="photo" style="position:absolute; left:0; top:0; width:641px; height:660px"><video id="cell-arm-video" muted playsinline loop data-autoplay poster="assets/media/lego-cell-arm.webp" src="assets/media/lego-cell-arm.mp4"></video></div>
-    <div class="photo" style="position:absolute; left:810px; top:100px; width:400px; height:412px"><video muted playsinline loop data-autoplay data-follow="#cell-arm-video" poster="assets/media/lego-cell-view.webp" src="assets/media/lego-cell-view.mp4"></video></div>
-    <ol class="video-captions" data-video-steps="#cell-arm-video">
-      <li class="side" data-from="0" data-to="99" style="left:18px; top:18px">12× speed</li>
-      <li class="link" data-from="0.95" data-to="2.85"><svg viewBox="0 0 1210 660" aria-hidden="true"><circle cx="322" cy="254" r="30"/><path d="M351 258L808 304"/></svg></li>
-      <li class="link" data-from="8.3" data-to="99"><svg viewBox="0 0 1210 660" aria-hidden="true"><circle cx="298" cy="276" r="30"/><path d="M328 279L808 306"/></svg></li>
-      <li class="pointer" data-from="0.95" data-to="2.85" style="left:322px; top:218px"><span>MoiréSkin</span><svg width="24" height="58" viewBox="0 0 24 58" aria-hidden="true"><path d="M12 2V50M3 40l9 12 9-12" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg></li>
-      <li class="ours side" data-from="0" data-to="99" style="left:810px; top:532px">Real sensor · camera view</li>
-    </ol>
-  </div>
-  <aside class="notes">[Step 1] Here is the MoiréSkin hardware, in three modules. On top, the sensing module: the two fine gratings, with protective layers. The left shows our film under a microscope. [Step 2] In the middle, the actuation module: an air chamber and a pump make it compliant and let it actuate. [Step 3] At the bottom, the imaging module: an LED ring lights the gratings and a camera captures the fringes. [Step 4] Now we mount one cell on a robot arm, on its gripper. (The label points at the cell as it lights up; the line leads to what its camera sees.) When the gripper holds an object, the camera inside sees the fringes change: this is how it senses force.</aside>
+  <div class="callout r" data-anchor="cover" data-x="1420" data-group="Sensing" data-group-color="#d9f272"><b>Cover</b><span>clear TPU</span></div>
+  <div class="callout r" data-anchor="upper" data-x="1420" data-group="Sensing" data-group-color="#d9f272"><b>Upper grating</b><span>330 μm</span></div>
+  <div class="callout r" data-anchor="substrate" data-x="1420" data-group="Sensing" data-group-color="#d9f272"><b>Substrate</b><span>soft silicone</span></div>
+  <div class="callout r" data-anchor="lower" data-x="1420" data-group="Sensing" data-group-color="#d9f272"><b class="fluo">Lower grating</b><span>fluorescent</span></div>
+  <div class="callout r" data-step="1" data-anchor="chamber" data-x="1420" data-group="Actuation" data-group-color="#7da6ff"><b class="air">Air chamber</b></div>
+  <div class="callout r" data-step="1" data-anchor="pump" data-x="1420" data-group="Actuation" data-group-color="#7da6ff"><b class="air">Pump</b><span>one controller</span></div>
+  <div class="callout r" data-step="2" data-anchor="camera" data-x="1420" data-group="Imaging" data-group-color="#ffffff"><b>Camera</b><span>1080p · 160°</span></div>
+  <div class="callout r" data-step="2" data-anchor="led" data-x="1420" data-group="Imaging" data-group-color="#ffffff"><b>LED ring</b><span>faces down · blue</span></div>
+  <div class="callout r" data-step="2" data-anchor="reflector" data-x="1420" data-group="Imaging" data-group-color="#ffffff"><b>Diffuse reflector</b></div>
+  <aside class="notes">[Step 1] Here is the MoiréSkin hardware, in three modules. On top, the sensing module: the two fine gratings, with protective layers. The left shows our film under a microscope. [Step 2] In the middle, the actuation module: an air chamber and a pump make it compliant and let it actuate. [Step 3] At the bottom, the imaging module: an LED ring lights the gratings and a camera captures the fringes.</aside>
 </section>
 <section class="slide" id="fabrication" data-shots="icon" data-title="Fabrication" data-duration="20">
   <p class="block eyebrow r" style="left:120px; top:98px">Fabrication</p>
@@ -280,7 +260,7 @@
   <h2 class="block h1 r" style="left:120px; top:152px; width:1600px; font-size:72px"><span class="flag warn">Challenge 1</span>Sensitivity vs spatial resolution.</h2>
   <!-- Under the headline, each step's own statement, with a capsule: amber for the problem, blue for our solution. -->
   <p class="block h2" data-step="0" data-until="0" style="left:120px; top:262px">A fingertip has <span class="grad">both, at once</span>.</p>
-  <p class="block h2" data-step="1" data-until="1" style="left:120px; top:262px">One angle sets both.</p>
+  <p class="block h2" data-step="1" data-until="1" style="left:120px; top:262px">The grating angle is a trade-off.</p>
   <p class="block flag warn" data-step="1" data-until="1" style="left:120px; top:340px">Smaller angle · more gain · wider fringes</p>
   <p class="block h2" data-step="2" style="left:120px; top:262px">A balanced angle: 6.31°.</p>
   <p class="block flag" data-step="2" style="left:120px; top:340px">Our solution</p>
@@ -293,6 +273,9 @@
   </div>
   <p class="block caption" data-step="0" data-until="0" style="left:120px; top:724px; width:1680px; font-size:20px">Videos: Nui Malama, cottonbro studio · Pexels</p>
   <svg class="block" data-step="1" data-until="2" data-widget="alphaChart" style="left:100px; top:430px" width="780" height="361" viewBox="0 0 800 370" aria-label="Spatial resolution and sensitivity versus grating angle"></svg>
+  <!-- Which angle: the lines of the two gratings, magnified as on the moiré slide, tied to the spot on the sensor by a ring and a line. The wheel turns one set against the other. -->
+  <svg class="block" data-step="1" data-until="1" data-widget="crossings" style="left:825px; top:446px" width="230" height="230" viewBox="0 0 400 400" aria-label="Magnified view of the two gratings: their lines cross at the grating angle, and a fringe is a row of the crossing points"></svg>
+  <p class="block caption" data-step="1" data-until="1" style="left:790px; top:680px; width:300px; margin:0; color:#ffffff; font-size:24px; font-weight:700; line-height:1.25; text-align:center">the angle between<br>the two gratings</p>
   <p class="block chip" data-step="1" data-until="1" style="left:120px; top:900px">Scroll ↕ to change the angle · hover to press</p>
   <figure class="block real-cover sim-cover" data-step="1" data-until="1"><figcaption>Simulation</figcaption></figure>
   <figure class="block real round" data-step="1" data-until="1" style="left:1698px; top:770px; width:168px; height:168px">
@@ -359,11 +342,10 @@
   </svg>
   <aside class="notes">To read force and position, we feed the images before and after touch into a ResNet-50. It works in two stages: coarse first, then refined.</aside>
 </section>
-<section class="slide" id="results" data-shots="results" data-title="Millinewton precision" data-duration="26">
+<section class="slide" id="results" data-shots="results" data-title="Most sensitive reported to date" data-duration="26">
   <p class="block eyebrow r" style="left:120px; top:98px">Sensing</p>
-  <h2 class="block h1 r" style="left:120px; top:152px; width:1300px"><span class="grad">Millinewton</span> precision.</h2>
-  <div class="block r" style="left:120px; top:330px; width:900px">
-    <p class="micro">Tiny force · 0–0.4 N · zero state</p>
+  <h2 class="block h1 r" style="left:120px; top:152px; width:1500px"><span class="grad">Most sensitive</span> reported to date.</h2>
+  <div class="block r" style="left:120px; top:356px; width:900px">
     <!-- Two rows: a figure, and the everyday thing that gives it a feel. -->
     <div class="result-rows">
       <div class="result-row">
@@ -379,10 +361,17 @@
   <svg class="block r" data-widget="forceBars" style="left:1080px; top:380px" width="720" height="429" viewBox="0 0 840 500" aria-label="Force error of MoiréSkin and prior visuo-tactile sensors"></svg>
   <aside class="notes">MoiréSkin reaches a normal force error of 3.78 millinewtons and a position error of 0.094 millimetres. That makes it the most sensitive visuo-tactile sensor reported to date: it senses the weight of a sticky note, and locates a touch to within a hair's width.</aside>
 </section>
-<section class="slide" id="lego" data-shots="icon" data-title="Actuation: toy LEGO arm" data-duration="54">
+<section class="slide" id="lego" data-shots="whyActuate icon" data-title="Actuation: why, and a toy LEGO arm" data-step-durations="24 35">
   <p class="block eyebrow r" style="left:120px; top:98px">Actuation</p>
   <h2 class="block h1 r" style="left:120px; top:152px; width:1600px">Why do we need actuation?</h2>
-  <p class="block h2 r" style="left:120px; top:256px; width:1600px">Actuation enables <span class="grad">dexterity</span> for even a toy arm.</p>
+  <!-- First the reasons, beside the skin at work on a gripper; then the demo. -->
+  <p class="block h2 r" data-until="0" style="left:120px; top:256px; width:1600px">A gripper already moves. Why actuate the skin?</p>
+  <ol class="block steps-list big r" data-until="0" style="left:120px; top:420px; width:1100px; gap:36px">
+    <li data-n="01"><span><b>A compliant layer</b> · right at the contact</span></li>
+    <li data-n="02"><span><b>Regulates the contact force</b> · in a closed loop</span></li>
+    <li data-n="03"><span><b>Compensates for low precision</b> · even on a toy arm</span></li>
+  </ol>
+  <p class="block h2" data-step="1" style="left:120px; top:256px; width:1600px">Actuation enables <span class="grad">dexterity</span> for even a toy arm.</p>
   <!-- The clip is the recorded demo with two changes. It waits 2 s on the frame where the skin
        has just lit up (0.79-2.79 s), while a label points at it. And it has one insert (step 4):
        the same pour side by side, dissolving in at 15.58-15.83 s and out at 21.00-21.25 s. Left:
@@ -391,7 +380,7 @@
        footage as recorded. The steps' times leave the two dissolves out, so a step that loops
        under the pointer shows only its own picture. Made by
        teaser_video/experiments/slip/lego_with_comparison.py from lego-arm.mp4. -->
-  <figure class="block r" style="left:120px; top:356px; width:820px; margin:0">
+  <figure class="block" data-step="1" style="left:120px; top:356px; width:820px; margin:0">
     <div class="photo" style="height:534px; background:#000"><video id="lego-video" muted playsinline loop data-autoplay poster="assets/media/lego-arm.webp" src="assets/media/lego-arm-compare.mp4" style="object-fit:contain"></video></div>
     <ol class="video-captions" data-video-steps="#lego-video">
       <li class="pointer" data-from="0.7" data-to="2.75" style="left:241px; top:228px"><span>MoiréSkin</span><svg width="24" height="58" viewBox="0 0 24 58" aria-hidden="true"><path d="M12 2V50M3 40l9 12 9-12" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg></li>
@@ -399,20 +388,20 @@
       <li class="side ours" data-from="15.71" data-to="21.12" style="left:424px; top:16px">MoiréSkin · sensing + actuation</li>
     </ol>
   </figure>
-  <p class="block chip r" style="left:1040px; top:366px">Toy-grade, low-precision arm</p>
-  <ol class="block video-steps r" data-video-steps="#lego-video" data-hover-loop style="left:1040px; top:456px; width:760px">
+  <p class="block chip" data-step="1" style="left:1040px; top:366px">Toy-grade, low-precision arm</p>
+  <ol class="block video-steps" data-step="1" data-video-steps="#lego-video" data-hover-loop style="left:1040px; top:456px; width:760px">
     <li data-from="0" data-to="9"><b>1</b>Grasp the cup</li>
     <li data-from="9" data-to="10.93"><b>2</b>Water pours in</li>
     <li data-from="10.93" data-to="15.58"><b>3</b>Feels the weight, inflates</li>
     <li data-from="15.88" data-to="20.99"><b>4</b>Without feedback, it would fall</li>
     <li data-from="21.25" data-to="29"><b>5</b>Holds steady, sets it down</li>
   </ol>
-  <aside class="notes">MoiréSkin is not only a sensor: it also actuates. A gripper already moves, so why actuate the skin? It adds a compliant layer right at the contact, which regulates the contact force and compensates for a low-precision arm, like this 50-dollar LEGO toy arm. (The label points at the skin on its gripper.) The arm grasps a cup. When water is poured in, the skin feels the weight and inflates to firm its grip. (Side by side, the same pour: on the left, an illustration of the cup falling out of the grip without tactile feedback; on the right, the real run with feedback.) Without this feedback, it would fall, as illustrated on the left. To control this inflation, the skin has to know its own internal pressure.</aside>
+  <aside class="notes">[Step 1] MoiréSkin is not only a sensor: it also actuates. A gripper already moves, so why actuate the skin? It adds a compliant layer right at the contact, which regulates the contact force and compensates for a low-precision arm. [Step 2] Here it is on a 50-dollar, low-precision LEGO toy arm. (The label points at the skin on its gripper.) The arm grasps a cup. When water is poured in, the skin feels the weight and inflates to firm its grip. (Side by side, the same pour: on the left, an illustration of the cup falling out of the grip without tactile feedback; on the right, the real run with feedback.) Without this feedback, it would fall, as illustrated on the left. To control this inflation, the skin has to know its own internal pressure.</aside>
 </section>
 <section class="slide" id="principle" data-shots="pPressure pPressureReal pWeather pZero pZeroReal" data-title="Challenges 2 and 3: internal pressure, drift" data-step-durations="29 8 23 24 8">
   <p class="block eyebrow r" style="left:120px; top:98px">How it works</p>
-  <h2 class="block h1 r" data-until="1" style="left:120px; top:152px; width:1680px; font-size:72px"><span class="flag warn">Challenge 2</span>Read the internal pressure for actuation.</h2>
-  <h2 class="block h1" data-step="2" style="left:120px; top:152px; width:1680px; font-size:72px"><span class="flag warn">Challenge 3</span>Outside air pressure causes drift.</h2>
+  <h2 class="block h1 r" data-until="1" style="left:120px; top:152px; width:1680px; font-size:64px"><span class="flag warn">Challenge 2</span>Actuation needs to know the internal pressure.</h2>
+  <h2 class="block h1" data-step="2" style="left:120px; top:152px; width:1680px; font-size:64px"><span class="flag warn">Challenge 3</span>Outside air pressure causes drift.</h2>
   <!-- Under the headline, each step's own statement. -->
   <p class="block h2 r" data-until="1" style="left:120px; top:262px">Fringe rotation angle → internal pressure.</p>
   <p class="block h2" data-step="2" data-until="2" style="left:120px; top:262px">Fringes turn without any force.</p>
