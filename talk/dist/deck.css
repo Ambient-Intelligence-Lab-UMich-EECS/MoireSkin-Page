@@ -605,6 +605,15 @@ html.export .dims {
   text-align: right;
 }
 
+/* A module named on the title: in the colour its group has on the hardware slide. */
+.callout.left b.fluo {
+  color: var(--fluo);
+}
+
+.callout.left b.air {
+  color: var(--air);
+}
+
 .readouts {
   display: grid;
   grid-auto-flow: column;
