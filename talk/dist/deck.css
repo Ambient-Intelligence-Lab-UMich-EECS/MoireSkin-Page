@@ -356,6 +356,52 @@ body.blackout #blackout {
   height: 44px;
 }
 
+/* As the block's own statement: on one line, the numbers after it in the
+   label, small. */
+.soft-scale.lead {
+  margin: 0;
+}
+
+.stat .label .unit {
+  letter-spacing: 0.02em;
+  text-transform: none;
+}
+
+/* A related work's own picture, beside its point on the chart. */
+.rw-pic {
+  border: 1px solid rgb(238 243 251 / 30%);
+  border-radius: 16px;
+  object-fit: cover;
+  box-shadow: 0 10px 26px rgb(0 0 0 / 40%);
+}
+
+/* What a fingertip does: a round clip and the ability it stands for, twice
+   in a row. */
+.human-touch {
+  display: grid;
+  grid-template-columns: 300px 500px 300px 1fr;
+  column-gap: 44px;
+  align-items: center;
+}
+
+.human-touch .real.round {
+  position: relative;
+  width: 300px;
+  height: 300px;
+}
+
+.human-touch .stat .value {
+  font-size: 76px;
+  line-height: 1.04;
+}
+
+.human-touch .stat .label {
+  text-transform: none;
+  letter-spacing: 0.01em;
+  font-size: 30px;
+  color: var(--ink);
+}
+
 /* Logos of the groups behind borrowed work, on a light strip so their own
    colours read. */
 .credit-logos {
@@ -834,6 +880,17 @@ html.export .tabs span {
   background: rgb(255 190 125 / 14%);
   box-shadow: 0 0 0 1px rgb(255 190 125 / 42%), 0 0 26px rgb(255 190 125 / 28%);
   color: #ffd3a1;
+}
+
+/* A challenge named in the headline: its capsule leads the line. */
+.h1 .flag {
+  position: relative;
+  top: -0.14em;
+  margin-right: 26px;
+  padding: 9px 24px;
+  font-size: 0.5em;
+  letter-spacing: 0.06em;
+  vertical-align: middle;
 }
 
 /* Gradient text has one meaning in this deck: sensing (yellow-green) and
