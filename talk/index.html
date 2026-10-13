@@ -17,7 +17,7 @@
 
 
 <section class="slide" id="title" data-shots="heroGrip heroDesign" data-chrome="off" data-title="MoiréSkin" data-step-durations="16 12">
-  <p class="block eyebrow r" style="left:120px; top:228px">ACM MobiCom 2026 · Austin, TX</p>
+  <p class="block eyebrow r" style="left:120px; top:228px">HCC Internal Honors Competition</p>
   <h1 class="block display r" style="left:110px; top:292px"><span class="grad">MoiréSkin</span></h1>
   <p class="block lead r" style="left:120px; top:470px; width:820px; color:var(--ink); font-size:38px">Ultra-Sensitive Sensor–Actuator<br>Visuo-Tactile Skin using Moiré Patterns</p>
   <ul class="block authors r" style="left:120px; top:610px">
@@ -80,7 +80,7 @@
   </figure>
   <aside class="notes">It turns touch into an image: under structured light, a camera watches a soft gel deform as it is pressed, here by a screw. The colour changes reflect the applied force and the object's texture.</aside>
 </section>
-<section class="slide" id="structured" data-shots="gelDemo gelSoft gelLight" data-title="How they work: structured light on a rigid base" data-step-durations="30 13 24">
+<section class="slide" id="structured" data-shots="gelDemo gelSoft gelLight" data-title="How they work: structured light on a rigid base" data-step-durations="34 19 24">
   <p class="block eyebrow r" data-until="0" style="left:120px; top:98px">How they work</p>
   <p class="block eyebrow" data-step="1" data-until="1" style="left:120px; top:98px">Why a rigid base</p>
   <h2 class="block h1 r" data-until="1" style="left:120px; top:152px; width:1500px">Structured light on a <span style="color:#ffbe7d">rigid base</span>.</h2>
@@ -100,10 +100,10 @@
   <svg class="block r" data-widget="gelsight" style="left:750px; top:340px" width="1084" height="516" viewBox="0 0 1260 600" aria-label="Cross-section of a structured-light tactile sensor: a soft gel on a clear rigid base, lit from fixed places and read by a camera below; an object presses the gel and the camera sees the dent in the lights' two colours. With the rigid base taken away, the gel sags as a whole and the camera no longer sees the dent"></svg>
   <!-- Second click: the same press with the rigid base taken away. An illustration of why the base is rigid, not a measurement. -->
   <p class="block flag warn" data-step="1" data-until="1" style="left:auto; right:128px; top:398px; text-transform:none; letter-spacing:0">Failure case · illustration</p>
-  <!-- Third click: what that rigid base costs, in the words and colours of slide 2, each with what it means in practice. -->
-  <p class="block tag" data-step="2" style="left:120px; top:356px; margin:0; width:640px"><span class="value" style="font-size:88px; color:#9dbaff">Compliance</span><span class="name" style="font-size:28px">a rigid surface cannot grip gently</span><span class="eg">like gripping with a knuckle, not a fingertip</span></p>
-  <p class="block tag" data-step="2" style="left:120px; top:640px; margin:0; width:640px"><span class="value fluo" style="font-size:88px">Sensitivity</span><span class="name" style="font-size:28px">on a rigid base, the gel barely deforms under ultra-low force</span></p>
-  <aside class="notes">[Step 1] How do they work? Take Meta's Digit 360: a rigid surface over structured light and a camera. The camera reads a dent from how the lights shade it, which only works while the lights, the gel and the camera keep their geometry. So the base has to be rigid. [Step 2] (An illustration: the same press with the rigid base taken away.) Without it, the gel sags under a press, the optical geometry shifts, and the image no longer shows the dent. [Step 3] But that rigid base costs both things a robot needs. Compliance: a rigid surface cannot grip gently, like gripping with a knuckle instead of a fingertip. And ultra-sensitivity: on a rigid base, the gel barely deforms under an ultra-low force.</aside>
+  <!-- Third click: what that rigid base costs, in the words and colours of slide 2, each with one short line. -->
+  <p class="block tag" data-step="2" style="left:120px; top:400px; margin:0; width:680px"><span class="value" style="font-size:88px; color:#9dbaff">Compliance</span><span class="name" style="font-size:42px; font-weight:700; letter-spacing:-0.01em; text-transform:none; color:#ffffff; margin-top:12px">bad for robot manipulation</span></p>
+  <p class="block tag" data-step="2" style="left:120px; top:640px; margin:0; width:680px"><span class="value fluo" style="font-size:88px">Sensitivity</span><span class="name" style="font-size:42px; font-weight:700; letter-spacing:-0.01em; text-transform:none; color:#ffffff; margin-top:12px">low force cannot deform it</span></p>
+  <aside class="notes">[Step 1] How do they work? Take Meta's Digit 360: a rigid surface over structured light and a camera. Each slope of a dent catches a different light, so the shading tells the camera the dent's shape. That only works while the gel stays fixed against the lights and the camera, so the base has to be rigid. [Step 2] (An illustration: the same press with the rigid base taken away.) Take the rigid base away, and under the same press the whole gel sags. The shading now shows the sag, not the object, so the dent can no longer be read. [Step 3] But that rigid base costs both things a robot needs. Compliance: a rigid surface cannot grip gently, like gripping with a knuckle instead of a fingertip. And ultra-sensitivity: on a rigid base, the gel barely deforms under an ultra-low force.</aside>
 </section>
 <section class="slide" id="related" data-shots="icon icon icon paradox" data-title="Related works" data-step-durations="9 8 15 14">
   <p class="block eyebrow r" data-until="2" style="left:120px; top:98px">Visuo-tactile sensors today</p>
@@ -156,7 +156,6 @@
   <img class="block rw-pic" data-step="1" src="assets/img/related/vitactip.webp" alt="ViTacTip" style="left:1056px; top:388px; width:84px; height:84px">
   <img class="block rw-pic" data-step="1" src="assets/img/related/insight.webp" alt="Insight" style="left:1056px; top:480px; width:84px; height:84px">
   <img class="block rw-pic" data-step="2" src="assets/img/related/softbubble.webp" alt="Soft-Bubble: a bubble module with the dots printed inside its membrane for tracking" style="left:1404px; top:723px; width:88px; height:88px">
-  <p class="block caption" data-step="1" style="left:880px; top:248px; width:920px; font-size:20px; text-align:right">Pictures: Sipos ’24 · Sou ’25 · Yuan ’17 · Do ’23 · Lin ’23 · Sun ’22 · Fan ’24 · Kuppuswamy ’20</p>
   <div class="block gap-mark" data-step="2" data-until="2" style="left:1466px; top:305px" aria-label="Nothing yet is both compliant and sensitive">?</div>
   <svg class="block" data-step="3" style="left:160px; top:270px" width="1600" height="720" viewBox="0 0 1600 720" aria-label="MoiréSkin in the empty corner: compliant and sensitive">
     <text x="1270" y="72" fill="url(#grad-ink)" font-size="30" font-weight="760" text-anchor="end">MoiréSkin</text>
@@ -180,10 +179,6 @@
   <p class="block tag" data-step="3" style="left:120px; top:745px; margin:0; width:460px"><span class="value fluo">mm</span><span class="name">the fringes move a lot</span></p>
   <p class="block chip" data-step="1" data-until="1" style="left:120px; top:900px">Scroll ↕ to bring them together</p>
   <p class="block chip" data-step="2" data-until="2" style="left:120px; top:900px">Scroll ↕ to deform more · hover to move the touch</p>
-  <figure class="block real round" data-step="2" data-until="2" style="left:1698px; top:770px; width:168px; height:168px">
-    <video muted playsinline loop data-autoplay data-fringe="19.0" poster="assets/media/real-light-contact.webp" src="assets/media/real-light-contact.mp4"></video>
-    <figcaption>Real sensor</figcaption>
-  </figure>
   <p class="block sim-tag r" data-until="2" style="left:1160px; top:906px; width:440px"><span>Simulation</span></p>
   <figure class="block real-cover" data-step="3">
     <video muted playsinline loop data-autoplay data-track="light" data-fringe="19.0" poster="assets/media/real-light-contact.webp" src="assets/media/real-light-contact.mp4"></video>
@@ -259,29 +254,23 @@
   <p class="block eyebrow r" style="left:120px; top:98px">How it works</p>
   <h2 class="block h1 r" style="left:120px; top:152px; width:1600px; font-size:72px"><span class="flag warn">Challenge 1</span>Sensitivity vs spatial resolution.</h2>
   <!-- Under the headline, each step's own statement, with a capsule: amber for the problem, blue for our solution. -->
-  <p class="block h2" data-step="0" data-until="0" style="left:120px; top:262px">A fingertip has <span class="grad">both, at once</span>.</p>
-  <p class="block h2" data-step="1" data-until="1" style="left:120px; top:262px">The grating angle is a trade-off.</p>
-  <p class="block flag warn" data-step="1" data-until="1" style="left:120px; top:340px">Smaller angle · more gain · wider fringes</p>
-  <p class="block h2" data-step="2" style="left:120px; top:262px">A balanced angle: 6.31°.</p>
+  <p class="block flag warn" data-step="1" data-until="1" style="left:120px; top:276px">Smaller angle · more gain · wider fringes</p>
+  <p class="block h2" data-step="2" style="left:120px; top:262px">Balance the trade-off.</p>
   <p class="block flag" data-step="2" style="left:120px; top:340px">Our solution</p>
   <!-- Why both: what a fingertip does. No figures; colours as on the chart that follows. -->
-  <div class="block human-touch" data-step="0" data-until="0" style="left:120px; top:384px; width:1680px">
+  <div class="block human-touch" data-step="0" data-until="0" style="left:120px; top:330px; width:1680px">
     <figure class="real round"><video muted playsinline loop data-autoplay poster="assets/media/human-light-touch.webp" src="assets/media/human-light-touch.mp4"></video></figure>
     <div class="stat"><span class="value" style="color:var(--air)">Force<br>sensitivity</span><span class="label">the lightest touch<br>a fingertip feels</span></div>
     <figure class="real round"><video muted playsinline loop data-autoplay poster="assets/media/human-braille.webp" src="assets/media/human-braille.mp4"></video></figure>
     <div class="stat fluo"><span class="value">Spatial<br>resolution</span><span class="label">how finely it tells<br>where the touch is</span></div>
   </div>
-  <p class="block caption" data-step="0" data-until="0" style="left:120px; top:724px; width:1680px; font-size:20px">Videos: Nui Malama, cottonbro studio · Pexels</p>
+  <p class="block caption" data-step="0" data-until="0" style="left:120px; top:670px; width:1680px; font-size:20px">Videos: Nui Malama, cottonbro studio · Pexels</p>
   <svg class="block" data-step="1" data-until="2" data-widget="alphaChart" style="left:100px; top:430px" width="780" height="361" viewBox="0 0 800 370" aria-label="Spatial resolution and sensitivity versus grating angle"></svg>
   <!-- Which angle: the lines of the two gratings, magnified as on the moiré slide, tied to the spot on the sensor by a ring and a line. The wheel turns one set against the other. -->
   <svg class="block" data-step="1" data-until="1" data-widget="crossings" style="left:825px; top:446px" width="230" height="230" viewBox="0 0 400 400" aria-label="Magnified view of the two gratings: their lines cross at the grating angle, and a fringe is a row of the crossing points"></svg>
   <p class="block caption" data-step="1" data-until="1" style="left:790px; top:680px; width:300px; margin:0; color:#ffffff; font-size:24px; font-weight:700; line-height:1.25; text-align:center">the angle between<br>the two gratings</p>
   <p class="block chip" data-step="1" data-until="1" style="left:120px; top:900px">Scroll ↕ to change the angle · hover to press</p>
   <figure class="block real-cover sim-cover" data-step="1" data-until="1"><figcaption>Simulation</figcaption></figure>
-  <figure class="block real round" data-step="1" data-until="1" style="left:1698px; top:770px; width:168px; height:168px">
-    <video muted playsinline loop data-autoplay data-fringe="20.7" poster="assets/media/real-touch.webp" src="assets/media/real-touch.mp4"></video>
-    <figcaption>Real sensor</figcaption>
-  </figure>
   <figure class="block real-cover" data-step="2" data-until="2">
     <video muted playsinline loop data-autoplay data-track="touch" data-fringe="20.7" poster="assets/media/real-touch.webp" src="assets/media/real-touch.mp4"></video>
     <figcaption>Real sensor · touch</figcaption>
