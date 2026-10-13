@@ -418,19 +418,15 @@
   <p class="block eyebrow r" style="left:120px; top:98px">How it works</p>
   <h2 class="block h1 r" data-until="2" style="left:120px; top:152px; width:1680px; font-size:72px"><span class="flag warn">Challenge 2</span>How to read the internal pressure?</h2>
   <h2 class="block h1" data-step="3" style="left:120px; top:152px; width:1680px; font-size:72px"><span class="flag warn">Challenge 3</span>Outside air pressure causes drift.</h2>
-  <!-- Under the headline, each step's own statement, with a capsule: amber for the problem, blue for our solution. -->
+  <!-- Under the headline, each step's own statement. -->
   <p class="block h2 r" data-until="0" style="left:120px; top:262px">Actuating the skin turns the fringes.</p>
   <p class="block h2" data-step="1" data-until="2" style="left:120px; top:262px">Fringe rotation angle → internal pressure.</p>
-  <p class="block flag" data-step="1" data-until="2" style="left:120px; top:340px">Our solution · for actuation control</p>
   <p class="block h2" data-step="3" data-until="3" style="left:120px; top:262px">Outside air turns the fringes too.</p>
-  <p class="block flag warn" data-step="3" data-until="3" style="left:120px; top:340px">Drift · without any force</p>
   <p class="block h2" data-step="4" style="left:120px; top:262px">Pump until centre and rim line up.</p>
-  <p class="block flag" data-step="4" style="left:120px; top:340px">Our solution · zero-state calibration</p>
   <svg class="block" data-step="0" data-widget="section" style="left:100px; top:396px" width="820" height="330" viewBox="0 0 820 330" aria-label="Cross-section of the sensing film: two gratings on the two faces of a soft film"></svg>
-  <dl class="block readouts" data-step="1" data-until="1" style="left:120px; top:720px; width:850px; grid-template-columns:1.15fr 1fr 0.9fr">
+  <dl class="block readouts" data-step="1" data-until="1" style="left:120px; top:720px; width:600px; grid-template-columns:1.15fr 1fr">
     <div><dt>Chamber</dt><dd data-readout="pressure" class="air">0.0 hPa</dd></div>
     <div><dt>Centre turns</dt><dd data-readout="dthetaInflate" class="fluo">0.0°</dd></div>
-    <div><dt>Rim turns</dt><dd data-readout="dthetaRim">0.0°</dd></div>
   </dl>
   <p class="block chip air" data-step="0" data-until="1" style="left:120px; top:900px">Scroll ↕ to pump air</p>
   <dl class="block readouts" data-step="3" data-until="3" style="left:120px; top:720px; width:850px; grid-template-columns:1.15fr 1fr 0.9fr">
@@ -457,7 +453,7 @@
     <figcaption data-from="0" data-to="2.53">Real sensor · pumping</figcaption>
     <figcaption class="fluo" data-from="2.53" data-to="99">Real sensor · zeroed ✓</figcaption>
   </figure>
-  <aside class="notes">[Step 1] So our second challenge: how do we read the internal pressure? We read it from the fringes themselves, with no external pressure sensor: actuating the skin turns the fringes. (Scroll to pump.) [Step 2] When the skin inflates, the centre is stretched while the rim is compressed, so their fringes turn in opposite directions, and the rotation angle tells us the pressure. [Step 3] (The real sensor takes the simulation's place.) Here is the real sensor as its internal pressure changes. [Step 4] Our third challenge is drift. The chamber is sealed, so as the outside air pressure changes by 10 to 20 hectopascals a day, the fringes turn without any force. So how do we find the zero state automatically, where the inner and outer pressures are equal? [Step 5] Recall that whenever the film bulges or sags, the centre and rim fringes turn in opposite directions. So we pump until they line up: the film is flat, and that is zero, found without any extra sensor. [Step 6] (The real sensor takes the simulation's place: the pump straightens the fringes.) Here is the real sensor during zero-state calibration.</aside>
+  <aside class="notes">[Step 1] So our second challenge: how do we read the internal pressure? We read it from the fringes themselves, with no external pressure sensor: actuating the skin turns the fringes. (Scroll to pump.) [Step 2] When the skin inflates, its centre is stretched, so the fringes there turn, and their rotation angle tells us the pressure. [Step 3] (The real sensor takes the simulation's place.) Here is the real sensor as its internal pressure changes. [Step 4] Our third challenge is drift. The chamber is sealed, so as the outside air pressure changes by 10 to 20 hectopascals a day, the fringes turn without any force. So how do we find the zero state automatically, where the inner and outer pressures are equal? [Step 5] Whenever the film bulges or sags, the centre and rim fringes turn in opposite directions. So we pump until they line up: the film is flat, and that is zero, found without any extra sensor. [Step 6] (The real sensor takes the simulation's place: the pump straightens the fringes.) Here is the real sensor during zero-state calibration.</aside>
 </section>
 <section class="slide" id="softness" data-shots="softness" data-title="Case study: softness classification" data-duration="40">
   <p class="block eyebrow r" style="left:120px; top:98px">Sense + actuate</p>
