@@ -789,6 +789,16 @@ svg text {
   text-transform: uppercase;
 }
 
+/* An everyday example under a tag, in plain words. */
+.tag .eg {
+  display: block;
+  margin-top: 12px;
+  color: #ffffff;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
 /* Chart lines draw themselves in; data flows along diagram arrows. */
 @keyframes draw {
   from {
