@@ -734,6 +734,119 @@ svg text {
   transform-origin: left;
 }
 
+/* ---------- Slide bar ----------
+   A strip of cells along the bottom of the window, one per slide, grouped
+   into the parts of the talk. Fixed to the window, outside the stage; its
+   left and right edges follow the footer's margins (src/deck.js). It shows
+   and hides at once, with no transition. */
+
+#slide-nav {
+  position: fixed;
+  z-index: 100;
+  bottom: 12px;
+  display: flex;
+  gap: 14px;
+  visibility: hidden;
+  cursor: default;
+}
+
+#slide-nav.open {
+  visibility: visible;
+}
+
+/* A black screen stays black. */
+body.blackout #slide-nav {
+  visibility: hidden;
+}
+
+/* Where the strip lies over the stage, it takes the footer's place. */
+body.slide-nav-open #chrome {
+  visibility: hidden;
+}
+
+/* A dark band behind the strip keeps it legible over the scene. */
+#slide-nav::before {
+  position: fixed;
+  z-index: -1;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 110px;
+  background: linear-gradient(to top, rgb(4 7 13 / 92%), rgb(4 7 13 / 0%));
+  content: "";
+  pointer-events: none;
+}
+
+#slide-nav .group {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+}
+
+#slide-nav .part {
+  overflow: hidden;
+  color: var(--ink-3);
+  font-size: 13px;
+  font-weight: 750;
+  letter-spacing: 0.14em;
+  line-height: 1.4;
+  text-overflow: ellipsis;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+#slide-nav .part.current {
+  color: var(--fluo);
+}
+
+#slide-nav .cells {
+  display: flex;
+  gap: 4px;
+}
+
+/* The visible cell is the 14 px at the bottom; the padding above it makes
+   the target easier to hit. */
+#slide-nav button {
+  min-width: 0;
+  height: 24px;
+  flex: 1 1 0;
+  padding: 10px 0 0;
+  border: 0;
+  border-radius: 3px;
+  background: rgb(238 243 251 / 16%);
+  background-clip: content-box;
+  cursor: pointer;
+}
+
+#slide-nav button.current {
+  background-color: var(--ink);
+}
+
+#slide-nav button:hover {
+  background-color: var(--fluo);
+}
+
+#slide-nav .tip {
+  position: absolute;
+  bottom: calc(100% + 10px);
+  left: 0;
+  padding: 7px 14px;
+  border: 1px solid var(--line-strong);
+  border-radius: 10px;
+  background: rgb(9 16 29 / 92%);
+  color: #fff;
+  font-size: 17px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  visibility: hidden;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+#slide-nav .tip.on {
+  visibility: inherit;
+}
+
 /* Logo lockups. The CSE lockup shows the official file when
    assets/logos/umich-cse.png is present, and a text stand-in otherwise. */
 .lockup {
