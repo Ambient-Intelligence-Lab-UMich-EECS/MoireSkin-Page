@@ -16,7 +16,7 @@
 <main id="slides">
 
 
-<section class="slide" id="title" data-part="Intro" data-shots="heroGrip heroDesign" data-chrome="off" data-title="MoiréSkin" data-step-durations="3 23">
+<section class="slide" id="title" data-part="Intro" data-shots="heroGrip heroDesign" data-chrome="off" data-title="MoiréSkin" data-step-durations="3 18">
   <p class="block eyebrow r" style="left:120px; top:228px">ACM MobiCom 2026 · Austin, TX</p>
   <h1 class="block display r" style="left:110px; top:292px"><span class="grad">MoiréSkin</span></h1>
   <p class="block lead r" style="left:120px; top:470px; width:820px; color:var(--ink); font-size:38px">Ultra-Sensitive Sensor–Actuator<br>Visuo-Tactile Skin using Moiré Patterns</p>
@@ -43,7 +43,7 @@
   <div class="callout left r" data-step="1" data-side="left" data-anchor="lower" data-x="1236"><b class="fluo">Sensing</b><span>moiré film</span></div>
   <div class="callout left r" data-step="1" data-side="left" data-anchor="chamber" data-x="1236"><b class="air">Actuation</b><span>air chamber + pump</span></div>
   <div class="callout left r" data-step="1" data-side="left" data-anchor="camera" data-x="1236"><b>Imaging</b><span>camera + LEDs</span></div>
-  <aside class="notes">[Step 1] Thanks for the introduction. [Step 2] Today I'll introduce MoiréSkin: one of the most sensitive visuo-tactile sensors in the world, and it is also an actuator. It is built from three parts: sensing, actuation, and imaging, and I'll introduce them one by one later.</aside>
+  <aside class="notes">[Step 1] Thanks for the introduction. [Step 2] Today I'll introduce MoiréSkin: one of the most sensitive visuo-tactile sensors in the world, and it is also an actuator. It is built from three parts: sensing, actuation, and imaging.</aside>
 </section>
 <section class="slide" id="crush" data-shots="icon icon" data-title="Robots need both" data-step-durations="16 10">
   <p class="block eyebrow r" style="left:120px; top:98px">Why it matters</p>
@@ -84,7 +84,7 @@
   </figure>
   <aside class="notes">It turns touch into a visual signal, as the image on the right shows: a camera watches a soft gel deform as it is pressed. The color changes reflect the applied force and the object's texture.</aside>
 </section>
-<section class="slide" id="structured" data-shots="gelDemo gelSoft gelLight" data-title="How they work: photometric stereo on a rigid base" data-step-durations="48 27 29">
+<section class="slide" id="structured" data-shots="gelDemo gelSoft gelLight" data-title="How they work: photometric stereo on a rigid base" data-step-durations="47 28 27">
   <p class="block eyebrow r" data-until="0" style="left:120px; top:98px">How they work</p>
   <p class="block eyebrow" data-step="1" data-until="1" style="left:120px; top:98px">Why a rigid base</p>
   <h2 class="block h1 r" data-until="1" style="left:120px; top:152px; width:1500px">Photometric stereo on a <span style="color:#ffbe7d">rigid base</span>.</h2>
@@ -107,7 +107,7 @@
   <!-- Third click: what that rigid base costs, in the words and colours of slide 2, each with one short line. -->
   <p class="block tag" data-step="2" style="left:120px; top:400px; margin:0; width:680px"><span class="value" style="font-size:88px; color:#9dbaff">Compliance</span><span class="name" style="font-size:42px; font-weight:700; letter-spacing:-0.01em; text-transform:none; color:#ffffff; margin-top:12px">bad for robot manipulation</span></p>
   <p class="block tag" data-step="2" style="left:120px; top:640px; margin:0; width:680px"><span class="value fluo" style="font-size:88px">Sensitivity</span><span class="name" style="font-size:42px; font-weight:700; letter-spacing:-0.01em; text-transform:none; color:#ffffff; margin-top:12px">low force cannot deform it</span></p>
-  <aside class="notes">[Step 1] How do they work? Take Meta's Digit three-sixty: a rigid gel, lit by colored lights from different sides, and a camera. When an object presses in, each side of the dent faces a different light and takes its color, so the colors reveal the dent's shape. This is photometric stereo. But it only works if the gel, lights and camera never move, because the camera learned which color means which slope. So the whole system has to be rigid. [Step 2] Take the rigid base away, and the same press deforms the whole gel instead of denting it. The gel has left the plane where the lights and the camera were calibrated, so the colors can no longer tell the shape of the dent reliably. [Step 3] But that rigid structure sacrifices both things a robot needs. First, compliance: a rigid surface cannot grip gently. Imagine how hard it is to grip a fragile berry with your knuckle instead of your fingertip. Second, sensitivity: on a rigid base, the gel barely deforms under a tiny force.</aside>
+  <aside class="notes">[Step 1] How do they actually work? Take Meta's Digit three-sixty: a rigid gel, colored lights from different sides, and a camera. When an object presses in, each side of the dent faces a different light and takes its color, so the colors reveal the dent's shape. This is photometric stereo. But it only works if the gel, lights and camera never move, because the camera learned which color means which slope. So the whole system has to be rigid. [Step 2] If we take the rigid base away, the same press deforms the whole gel instead of denting it. The gel has left the plane where the lights and the camera were calibrated, so the colors can no longer tell the shape of the dent reliably. [Step 3] But that rigid structure sacrifices two things. First, compliance: a rigid surface cannot grip gently. Imagine how hard it is to grip a fragile berry with your knuckle instead of your fingertip. Second, sensitivity: on a rigid base, the gel barely deforms under a tiny force.</aside>
 </section>
 <section class="slide" id="related" data-shots="icon icon icon paradox" data-title="Related works" data-step-durations="9 5 17 14">
   <p class="block eyebrow r" data-until="2" style="left:120px; top:98px">Visuo-tactile sensors today</p>
@@ -167,7 +167,7 @@
   </svg>
   <aside class="notes">[Step 1] So, today's visuo-tactile sensors face a paradox: none is both sensitive and compliant. [Step 2] Most of them are rigid, not compliant. [Step 3] Compliant ones, like Soft-Bubble, replace the rigid base with an air chamber and read the deformation with a depth camera and sparse markers: soft, but far less sensitive. [Step 4] Our MoiréSkin fills this gap: it is compliant, and more sensitive than any of them. So how do we achieve both properties?</aside>
 </section>
-<section class="slide" id="moire" data-part="Moiré" data-shots="pApart pOverlap pTouch insightReal" data-title="Moiré amplifies touch" data-step-durations="17 13 41 16">
+<section class="slide" id="moire" data-part="Moiré" data-shots="pApart pOverlap pTouch insightReal" data-title="Moiré amplifies touch" data-step-durations="17 13 37 16">
   <p class="block eyebrow r" data-until="1" style="left:120px; top:98px">Background</p>
   <p class="block eyebrow" data-step="2" style="left:120px; top:98px">Our insight</p>
   <h2 class="block h1" data-step="0" data-until="0" style="left:120px; top:152px; width:1200px">The answer: moiré pattern.</h2>
@@ -188,7 +188,7 @@
     <video muted playsinline loop data-autoplay data-track="light" data-fringe="19.0" poster="assets/media/real-light-contact.webp" src="assets/media/real-light-contact.mp4"></video>
     <figcaption>Real sensor · light touch</figcaption>
   </figure>
-  <aside class="notes">[Step 1] Our solution is to leverage a visual interference phenomenon, called the moiré pattern. It is generated when two layers of high-frequency patterns overlap at a small angle. [Step 2] We put them on the two faces of one soft film. Where they overlap, moiré fringes appear. (Scroll to bring the two gratings together.) [Step 3] Now touch the film. The dent squeezes the upper face and stretches the lower one, but only by a tiny amount. Like nearly closed scissors, the two sets of lines barely move, yet their crossing points slide a long way: the fringes there distort significantly. So this film is actually a metasurface that amplifies touch. (Scroll to deform it more; hover to touch another place.) [Step 4] And here is our real sensor. Any tiny touch, even a yellow bean lighter than one gram, is enough to deform these super-sensitive fringes.</aside>
+  <aside class="notes">[Step 1] Our solution is to leverage a visual interference phenomenon, called the moiré pattern. It is generated when two layers of high-frequency patterns overlap at a small angle. [Step 2] We put them on the two faces of one soft film. Where they overlap, moiré fringes appear. (Scroll to bring the two gratings together.) [Step 3] Now touch the film. The dent squeezes the upper face and stretches the lower one. Like nearly closed scissors, the two sets of lines barely move, yet their crossing points slide a long way: the fringes therefore distort significantly. So this film is actually a metasurface that amplifies touch. (Scroll to deform it more; hover to touch another place.) [Step 4] And here is our real sensor. Any tiny touch, even a yellow bean lighter than one gram, is enough to deform these super-sensitive fringes.</aside>
 </section>
 <section class="slide" id="stack" data-part="Hardware" data-shots="stack stack stack" data-title="Inside MoiréSkin" data-step-durations="18 12 12">
   <p class="block eyebrow r" style="left:120px; top:98px">Hardware</p>
@@ -228,7 +228,7 @@
   </figure>
   <aside class="notes">We make the film with a technique from microfabrication. We build the fluorescent lower grating, then imprint the clear upper grating on the other side. Please see the details in our paper.</aside>
 </section>
-<section class="slide" id="design" data-shots="design" data-title="Design" data-duration="43">
+<section class="slide" id="design" data-shots="design" data-title="Design" data-duration="44">
   <p class="block eyebrow r" style="left:120px; top:98px">Design</p>
   <h2 class="block h1 r" style="left:120px; top:152px; width:1300px">Clear fringes, clear skin, low cost.</h2>
   <div class="block tiles cycling r" style="left:120px; top:320px; width:1160px">
@@ -252,7 +252,7 @@
       <p>≈ $50 for the whole system</p>
     </div>
   </div>
-  <aside class="notes">Two more designs make this work. First, the grating is fluorescent: blue LEDs excite it, so the fringes stay high-contrast in any light, even in darkness. Second, the camera can see through the skin, so the robot sees an object before touching it, for example, which side of a USB plug is up. And each cell costs under two dollars. (Hover a tile to show it on the sensor.)</aside>
+  <aside class="notes">We also have several features. First, the grating is fluorescent: blue LEDs excite it, so the fringes stay high-contrast in any light, even in darkness. Second, the camera can see through the skin, so the robot sees an object before even touching it, for example, to tell which side of a USB plug is up. And each cell costs under two dollars. (Hover a tile to show it on the sensor.)</aside>
 </section>
 <section class="slide" id="challenge1" data-part="Sensing" data-shots="icon pAmplify pAmplifyReal" data-title="Challenge 1: sensitivity vs resolution" data-step-durations="27 26 16">
   <p class="block eyebrow r" style="left:120px; top:98px">How it works</p>
@@ -275,7 +275,7 @@
     <video muted playsinline loop data-autoplay data-track="touch" data-fringe="20.7" poster="assets/media/real-touch.webp" src="assets/media/real-touch.mp4"></video>
     <figcaption>Real sensor · touch</figcaption>
   </figure>
-  <aside class="notes">[Step 1] To make it actually work, our first challenge is that a skin needs both force sensitivity and spatial resolution, just like our own fingertips, which feel a light touch and tell exactly where that touch is. [Step 2] The challenge is how to balance the two. A smaller angle between the two gratings gives more gain, so we can detect smaller forces, but it creates wider fringes with lower spatial resolution. (Scroll to change the angle; hover to press.) [Step 3] (The real sensor takes the simulation's place.) So we choose a balanced setup during fabrication, with ten fringes across the sensing area. Here is the real sensor as a finger presses it.</aside>
+  <aside class="notes">[Step 1] To make it actually work, our first challenge is that a skin needs both force sensitivity and spatial resolution, just like our own fingertips, which feel a light touch and tell exactly where that touch is. [Step 2] The challenge is how to balance these two. A smaller angle between the two gratings gives more gain, so we can detect smaller forces, but it creates wider fringes with lower spatial resolution. (Scroll to change the angle; hover to press.) [Step 3] (The real sensor takes the simulation's place.) So we choose a balanced setup during fabrication, with ten fringes across the sensing area. Here is the real sensor as a finger presses it.</aside>
 </section>
 <section class="slide" id="inference" data-shots="inference" data-title="How we detect force and position" data-duration="16">
   <p class="block eyebrow r" style="left:120px; top:98px">Sensing</p>
@@ -350,7 +350,7 @@
   <svg class="block r" data-widget="forceBars" style="left:1080px; top:380px" width="720" height="429" viewBox="0 0 840 500" aria-label="Force error of MoiréSkin and prior visuo-tactile sensors"></svg>
   <aside class="notes">MoiréSkin reaches a normal force error of 3.78 millinewtons and a position error of 0.094 millimeters. That makes it the most sensitive visuo-tactile sensor reported to date: it senses the weight of a sticky note, and locates a touch within a hair's width.</aside>
 </section>
-<section class="slide" id="lego" data-part="Actuation" data-shots="whyActuate icon" data-title="Actuation: why, and a toy LEGO arm" data-step-durations="24 32">
+<section class="slide" id="lego" data-part="Actuation" data-shots="whyActuate icon" data-title="Actuation: why, and a toy LEGO arm" data-step-durations="26 32">
   <p class="block eyebrow r" style="left:120px; top:98px">Actuation</p>
   <h2 class="block h1 r" style="left:120px; top:152px; width:1600px">Why do we need actuation?</h2>
   <!-- First the reasons, beside the skin at work on a gripper; then the demo. -->
@@ -385,7 +385,7 @@
     <li data-from="15.88" data-to="20.99"><b>4</b>Without feedback, it would fall</li>
     <li data-from="21.25" data-to="29"><b>5</b>Holds steady, sets it down</li>
   </ol>
-  <aside class="notes">[Step 1] MoiréSkin is not only a sensor: it also actuates. A gripper already moves, so why actuate the skin? It adds a compliant layer right at the contact, which regulates the contact force and compensates for a low-precision arm. [Step 2] We show a demo on a 50-dollar, low-precision toy arm. The arm grasps a cup. When water is poured in, the skin feels the weight and inflates to grip it firmly. Without this feedback, the cup would fall, as illustrated on the left. Then the arm sets the cup down.</aside>
+  <aside class="notes">[Step 1] MoiréSkin is not only a sensor: it also actuates. A gripper already moves, so why actuate the skin? This is because it actually adds a compliant layer right at the contact, which regulates the contact force and compensates for a low-precision arm. [Step 2] We show a demo on a 50-dollar, low-precision toy arm. The arm grasps a cup. When water is poured in, the skin feels the weight and inflates to grip it firmly. Without this feedback, the cup would fall, as illustrated on the left. Then the arm sets the cup down.</aside>
 </section>
 <section class="slide" id="principle" data-shots="pPressure pPressureReal pWeather pZero pZeroReal" data-title="Challenges 2 and 3: internal pressure, drift" data-step-durations="30 12 25 29 8">
   <p class="block eyebrow r" style="left:120px; top:98px">How it works</p>
@@ -459,7 +459,7 @@
   </figure>
   <aside class="notes">MoiréSkin can also sense shear force. Holding a cup from the side, it weighs the water in real time as it is poured in. The error is about 4 grams.</aside>
 </section>
-<section class="slide" id="backbone" data-shots="inference backboneSoft backboneShear" data-title="One pre-trained backbone" data-duration="19">
+<section class="slide" id="backbone" data-shots="inference backboneSoft backboneShear" data-title="One pre-trained backbone" data-duration="18">
   <p class="block eyebrow r" style="left:120px; top:98px">Sense + actuate</p>
   <h2 class="block h1 r" style="left:120px; top:152px; width:1600px">One pre-trained backbone, <span class="grad">two new skills</span>.</h2>
   <svg class="block r" data-dim-from="1" style="left:600px; top:292px" width="1200" height="615" viewBox="0 0 1170 600" aria-label="The same pre-trained pipeline, with softness and shear force branching off the normal force readout">
@@ -523,7 +523,7 @@
     <text x="968" y="298" fill="#d9f272" font-size="29" font-weight="760">Shear force</text>
     <text x="968" y="325" fill="#dce4ee" font-size="24" font-weight="650">fine-tuned + new head</text>
   </svg>
-  <aside class="notes">Both new capabilities reuse the same pre-trained backbone. Softness uses its features directly, with no fine-tuning, and shear force only fine-tunes it with a new head.</aside>
+  <aside class="notes">Both capabilities reuse the same pre-trained backbone. Softness uses its features directly, with no fine-tuning, and shear force only fine-tunes it with a new head.</aside>
 </section>
 <section class="slide" id="umi" data-shots="icon" data-title="Data collection kit" data-duration="25">
   <p class="block eyebrow r" style="left:120px; top:98px">Data collection kit</p>
