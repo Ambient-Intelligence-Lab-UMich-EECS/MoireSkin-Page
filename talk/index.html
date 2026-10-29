@@ -45,7 +45,7 @@
   <div class="callout left r" data-step="1" data-side="left" data-anchor="camera" data-x="1236"><b>Imaging</b><span>camera + LEDs</span></div>
   <aside class="notes">[Step 1] Thanks for the introduction. [Step 2] Today I'll introduce MoiréSkin: one of the most sensitive visuo-tactile sensors in the world, and it is also an actuator. It is built from three parts: sensing, actuation, and imaging.</aside>
 </section>
-<section class="slide" id="crush" data-shots="icon icon" data-title="Robots need both" data-step-durations="16 10">
+<section class="slide" id="crush" data-shots="icon icon" data-title="Robots need both" data-step-durations="17 10">
   <p class="block eyebrow r" style="left:120px; top:98px">Why it matters</p>
   <h2 class="block h1 r" style="left:120px; top:152px; width:940px">Are you afraid of interacting with a <span class="grad">humanoid robot</span>?</h2>
   <p class="block tag" data-step="1" style="left:120px; top:470px; margin:0; width:900px"><span class="value fluo" style="font-size:92px">Sensitivity</span><span class="name" style="font-size:28px">to handle fragile things</span></p>
@@ -56,7 +56,7 @@
     <p class="flag warn" style="margin-top:16px">Failure case</p>
     <figcaption class="caption" style="font-size:20px; margin-top:8px">Video: ROBOTIS · youtube.com/watch?v=1-ymnFMMVgk</figcaption>
   </figure>
-  <aside class="notes">[Step 1] Let me start with a question. Are you afraid of interacting with a humanoid robot? Here is a failure case: this robot hand simply crushes the cake. [Step 2] We believe dexterous robot manipulation requires sensitivity, to handle fragile things, and compliance, to grip them gently.</aside>
+  <aside class="notes">[Step 1] Let me start with a question. Are you afraid of interacting with a humanoid robot? Here is a failure case when robots manipulate objects: this robot hand crushes the cake. [Step 2] We believe dexterous robot manipulation requires sensitivity, to handle fragile things, and compliance, to grip them gently.</aside>
 </section>
 <section class="slide" id="vts" data-part="State of the art" data-shots="icon" data-title="SoTA: photometric-stereo visuo-tactile sensors" data-duration="21">
   <p class="block eyebrow r" style="left:120px; top:98px">Existing solution</p>
@@ -423,7 +423,7 @@
   </figure>
   <aside class="notes">[Step 1] Our second challenge is reading the internal pressure for actuation. We read it from the fringes themselves, without an external pressure sensor: when the skin inflates, its upper and lower faces are stretched differently, so the fringes turn, and their rotation angle tells us the pressure. (Scroll to pump.) [Step 2] Here is the real sensor as its internal pressure changes. You can clearly see the fringes rotate. [Step 3] Our third challenge is drift. The chamber is sealed, so as the outside air pressure drifts by up to 10 to 20 hectopascals over a few days, the fringes turn without any force. So how do we find the zero state automatically? [Step 4] Whenever the film bulges or sags, the center and rim fringes turn in opposite directions, because they are stretched differently. So we pump until they line up, which means the film is completely flat. That is our zero, found without any extra sensor. [Step 5] Here is the real sensor during zero-state calibration.</aside>
 </section>
-<section class="slide" id="softness" data-part="Case studies" data-shots="softness" data-title="Case study: softness classification" data-duration="32">
+<section class="slide" id="softness" data-part="Case studies" data-shots="softness" data-title="Case study: softness classification" data-duration="31">
   <p class="block eyebrow r" style="left:120px; top:98px">Sense + actuate</p>
   <h2 class="block h1 r" style="left:120px; top:152px; width:1700px">Case study: softness classification.</h2>
   <div class="block r" style="left:120px; top:320px; width:740px; display:grid; gap:34px">
@@ -443,7 +443,7 @@
     <video muted playsinline loop data-autoplay data-track="soft" data-lead data-fringe="18.2" poster="assets/media/real-soft.webp" src="assets/media/real-soft.mp4"></video>
     <figcaption>Real sensor</figcaption>
   </figure>
-  <aside class="notes">We further show two case studies. First, like a fingertip, it feels softness by pressing: it inflates to press on an object. And because it is sensitive, it tells apart seven ultra-soft materials, from tofu-like to skin-like softness, all of them softer than a marshmallow, with up to 99.7 percent accuracy.</aside>
+  <aside class="notes">We further show two case studies. First, like a fingertip, it feels softness by pressing: it inflates to press on an object. And because it is sensitive, it tells apart seven ultra-soft materials, from tofu-like to skin-like softness, all of them softer than a marshmallow, with over 99 percent accuracy.</aside>
 </section>
 <section class="slide" id="shear" data-shots="shear" data-title="Case study: shear force sensing" data-duration="21">
   <p class="block eyebrow r" style="left:120px; top:98px">Sense + actuate</p>
